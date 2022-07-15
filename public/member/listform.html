@@ -7,280 +7,283 @@
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 	<!-- cdn = 온라인 해석기 --> 
 	<style type="text/css">
-		ul, li{
-			box-sizing: border-box;
-			list-style-type: none;
-		}
-		
-	
-		li a:hover{
-			font-weight: bolder;
-			text-decoration: underline;
-			cursor: pointer;
-		}
-		
-		ul ul{
-			display: none;
-		}
-		
-		li:hover ul{
-			display: block;
-		}
+
 		#headbar {
 			height: 100px;
-		}
-		
-		#searchbar{
-			height:100px;
-		}
-		
-		#leftsidebar{
-			float: left;
-			width: 15%;
-		}
-		
-		#maintable{
-			float: left;
-			width: 70%;
-		}
-		#rightsidevoid{
-			float: left;
-			width: 15%;
-		}
-		.searchselect{
-			width: 100px;
-			height: 30px;
-		}
-		.searchtext{
-			width: 150px;
-		}	
+
 	</style>
 	<link href="./member_css/formcss.css" rel="stylesheet" type="text/css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://kit.fontawesome.com/dca973ab96.js" crossorigin="anonymous"></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 </head>
 <body>
 <!-- start -->
 	<form>
+		<nav class="navbar navbar-dark bg-dark">
+		  <div class="container-fluid">
+		    <button class="navbar-toggler color-white" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar" aria-controls="sidebar">
+		      <span class="navbar-toggler-icon"></span>
+		    </button>
+		    <a class="navbar-brand navbar-dark" href="#">JHJ</a>
+		    <div class="offcanvas offcanvas-start" tabindex="-1" id="sidebar" aria-labelledby="sidebarLabel">
+		      <div class="offcanvas-header bg-dark">
+		        <h5 class="offcanvas-title" id="sidebarLabel" style="color: white;">관리 메뉴</h5>
+		        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+		      </div>
+		      <div class="offcanvas-body bg-dark navbar-dark">
+		        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+		          <li class="nav-item">
+		            <a class="nav-link active" aria-current="page" href="#">회원관리</a>
+		          </li>
+		          <li class="nav-item">
+		            <a class="nav-link" href="#">코드그룹관리</a>
+		          </li>
+		          <li class="nav-item">
+		            <a class="nav-link" href="#">코드관리</a>
+		          </li>
+		        </ul>
+		      </div>
+		    </div>
+		  </div>
+		</nav>
 		<div id="headbar">
-			<h1 style="text-align: center;">회원 관리</h1>
+			<h1 style="text-align: center; font-family: 'Pacifico', cursive;">Member managment</h1>
 		</div>
-		<div id="searchbar">
-			<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-				<div class="container-fluid">
-					<a class="navbar-brand" href="#">정렬 바</a>
-					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#searchdar" aria-controls="searchdar" aria-expanded="false" aria-label="Toggle navigation">
-						<span class="navbar-toggler-icon"></span>
-					</button>
-					<div class="collapse navbar-collapse" id="searchdar">
-						<ul class="navbar-nav">
-							<li class="nav-item dropdown">
-								<a class="nav-link dropdown-toggle" href="#" id="searchdar" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-									회원번호
-								</a>
-								<ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="searchdarMenuLink">
-									<li><a class="dropdown-item" href="#">오름차순</a></li>
-									<li><a class="dropdown-item" href="#">내림차순</a></li>
-								</ul>
-							</li>
-							<li class="nav-item dropdown">
-								<a class="nav-link dropdown-toggle" href="#" id="searchdar" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-									성별
-								</a>
-								<ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="searchdarMenuLink">
-									<li><a class="dropdown-item" href="#">남자</a></li>
-									<li><a class="dropdown-item" href="#">여자</a></li>
-								</ul>
-							</li>
-							<li class="nav-item dropdown">
-								<a class="nav-link dropdown-toggle" href="#" id="searchdar" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-									생일
-								</a>
-								<ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="searchdarMenuLink">
-									<li><a class="dropdown-item" href="#">오름차순</a></li>
-									<li><a class="dropdown-item" href="#">내림차순</a></li>
-								</ul>
-							</li>
-							<li class="nav-item dropdown">
-								<a class="nav-link dropdown-toggle" href="#" id="searchdar" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-									회원등급
-								</a>
-								<ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="searchdarMenuLink">
-									<li><a class="dropdown-item" href="#">오름차순</a></li>
-									<li><a class="dropdown-item" href="#">내림차순</a></li>
-								</ul>
-							</li>
-							<li class="nav-item dropdown">
-								<a class="nav-link dropdown-toggle" href="#" id="searchdar" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-									가입일
-								</a>
-								<ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="searchdarMenuLink">
-									<li><a class="dropdown-item" href="#">오름차순</a></li>
-									<li><a class="dropdown-item" href="#">내림차순</a></li>
-								</ul>
-							</li>
-							<li class="nav-item dropdown">
-								<a class="nav-link dropdown-toggle" href="#" id="searchdar" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-									최종 로그인 날짜
-								</a>
-								<ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="searchdarMenuLink">
-									<li><a class="dropdown-item" href="#">오름차순</a></li>
-									<li><a class="dropdown-item" href="#">내림차순</a></li>
-								</ul>
-							</li>
-							<li class="nav-item dropdown">
-								<a class="nav-link dropdown-toggle" href="#" id="searchdar" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-									수신동의
-								</a>
-								<ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="searchdarMenuLink">
-									<li><a class="dropdown-item" href="#">동의</a></li>
-									<li><a class="dropdown-item" href="#">비동의</a></li>
-								</ul>
-							</li>
-						</ul>
-						<form class="d-flex" role="search" style="float:right;">
-							<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" style="width:300px;">
-							<button class="btn btn-outline-success" type="submit">
-								<i class="fa fa-search" aria-hidden="true"></i>
-							</button>
-						</form>
-					</div>
-				</div>
-			</nav>
-		</div>
-		<div id="leftsidebar">
-			<ul style="line-height: 200%; text-align: left;">
-				<a herf="#">
-					<li class="leftmenupadding">회원 관리
-				</a>
-					<ul>
-						<a herf="#"><li>로그인 내역</a>
-						<a herf="#"><li>회원 정보 수정</a>
-						<a herf="#"><li>회원 정보 삭제</a>
-					</ul>
-				<a herf="#"><li class="leftmenupadding">사이트 관리</a>
-				<a herf="#"><li class="leftmenupadding">시스템 관리</a>
-				<a herf="#"><li class="leftmenupadding">커뮤니케이션 관리</a>
-				<a herf="#"><li class="leftmenupadding">템플릿 관리</a>
-				<a herf="#"><li class="leftmenupadding">통계</a>
-				<a herf="#"><li class="leftmenupadding">로그 관리</a>
-			</ul>
-		</div>
-		<div id="maintable">
-			<table class="table table-striped table-hover border" style="text-align:center;">
-				<caption style="caption-side: top;">
-					<div style="float:right">
-						<select style="width: 50px;">
-							<option>5</option>
-							<option>10</option>
-							<option>15</option>
-							<option>20</option>
+		<div class="container">
+			<div class="container-fluid border border-dark">
+				<!-- 빈공간을 위해 col은 10까지만 -->
+				<div class="row">
+					<div class="col-2">
+						<select class="form-select bg-light" name="membernumber" aria-label="membernumber">
+							<option selected>회원번호</option>
+							<option value="asmembernumber">오름차순</option>
+							<option value="dsmembernumber">내림차순</option>
 						</select>
 					</div>
-				</caption>
-			<thead>
-				<tr>
-					<td class="checkboxsize"> 
-						<input class="form-check-input" type="checkbox" name="allmembercheck" value="allmemberchecked" onclick="selectall(this);">
-					</td>
-					<th class="small">번호</th>
-					<th class="middle">아이디</th>
-					<th class="small">이름</th>
-					<th class="small">성별</th>
-					<th class="middle">생일</th>
-					<th class="large">이메일</th>
-					<th class="large">모바일</th>
-					<th class="small">회원등급</th>
-					<th class="middle">가입일</th>
-					<th class="large">최종 로그인 날짜</th>
-					<th class="small">수신동의</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>
-						<input class="form-check-input" type="checkbox" name="membercheck" value="memberchecked" onclick="checkSelectAll();">
-					</td>
-					<td>1</td>
-					<td>share</td>
-					<td>공유</td>
-					<td>남자</td>
-					<td>1979.05.06</td>
-					<td>share@naver.com</td>
-					<td>010-1234-5678</td>
-					<td>gold</td>
-					<td>2019.04.14</td>
-					<td>2022.07.08</td>
-					<td>O</td>
-				</tr>
-				<tr>
-					<td>
-						<input class="form-check-input" type="checkbox" name="membercheck" value="memberchecked" onclick="checkSelectAll();">
-					</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>
-						<input class="form-check-input" type="checkbox" name="membercheck" value="memberchecked" onclick="checkSelectAll();">
-					</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>
-						<input class="form-check-input" type="checkbox" name="membercheck" value="memberchecked" onclick="checkSelectAll();">
-					</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>
-						<input class="form-check-input" type="checkbox" name="membercheck" value="memberchecked" onclick="checkSelectAll();">
-					</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-			</tbody>
-			</table>
-		</div>
-		<div id="rightsidebar" style="display:hidden">
-		</div>
+					<div class="col-2">
+						<select class="form-select bg-light" name="gender" aria-label="gender">
+							<option selected>성별</option>
+							<option value="man">남자</option>
+							<option value="woman">여자</option>
+						</select>
+					</div>
+					<div class="col-2">
+						<select class="form-select bg-light" name="grade" aria-label="grade">
+							<option selected>회원등급</option>
+							<option value="asgrade">오름차순</option>
+							<option value="dsgrade">내림차순</option>
+						</select>
+					</div>
+					<div class="col-2">
+						<select class="form-select bg-light" name="birthday" aria-label="birthday">
+							<option selected>생일</option>
+							<option value="asbirthday">오름차순</option>
+							<option value="dsbirthday">내림차순</option>
+						</select>
+					</div>	
+					<div class="col-2">
+						<select class="form-select bg-light" name="joinday" aria-label="joinday">
+							<option selected>가입일</option>
+							<option value="asjoinday">오름차순</option>
+							<option value="dsjoinday">내림차순</option>
+						</select>
+					</div>
+					<div class="col-2">
+						<select class="form-select bg-light" name="finallogin" aria-label="finallogin">
+							<option selected>최종 로그인</option>
+							<option value="asfinallogin">오름차순</option>
+							<option value="dsfinallogin">내림차순</option>
+						</select>
+					</div>
+				</div>
+				<div class="row" style="height: 20px;"></div>
+				<div class="row">
+					<div class="col-2">
+						<select class="form-select bg-light" name="Response" aria-label="Response">
+							<option selected>수신 동의</option>
+							<option value="Responseyes">O</option>
+							<option value="Responseno">X</option>
+						</select>
+					</div>	
+				</div>
+				<div class="row" style="height: 20px;"></div>
+				<div class="row">
+					<div class="col" style="width: 1px;"></div>
+					<form class="d-flex" role="search">
+						<select class="form-select bg-light" aria-label="selectsearch" style="width: 150px;">
+							<option selected>정렬기준</option>
+							<option value="idword">아이디</option>
+							<option value="name">이름</option>
+							<option value="moblie">전화번호</option>
+						</select>
+						<input class="form-control" type="search" placeholder="Search" aria-label="Search" style="width:300px;">
+						<button class="col-1 btn btn-outline-dark" type="submit">
+							<i class="fa fa-search" aria-hidden="true"></i>
+						</button>
+						<button class="col-1 btn btn-warning" type="reset">
+							<i class="fa-solid fa-arrow-rotate-left"></i>
+						</button>
+					</form>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<table class="table table-striped table-hover border" style="text-align:center;">
+						<caption style="caption-side: top;">
+							<div style="float:right">
+								<select style="width: 50px;">
+									<option>5</option>
+									<option>10</option>
+									<option>15</option>
+									<option>20</option>
+								</select>
+							</div>
+						</caption>
+					<thead>
+						<tr>
+							<td class="checkboxsize"> 
+								<input class="form-check-input" type="checkbox" name="allmembercheck" value="allmemberchecked" onclick="selectall(this);">
+							</td>
+							<th class="small">번호</th>
+							<th class="middle">아이디</th>
+							<th class="middle">닉네임</th>
+							<th class="small">이름</th>
+							<th class="small">성별</th>
+							<th class="middle">생일</th>
+							<th class="large">이메일</th>
+							<th class="large">전화번호</th>
+							<th class="small">회원등급</th>
+							<th class="middle">가입일</th>
+							<th class="large">최종 로그인 날짜</th>
+							<th class="middle">수신동의</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+								<input class="form-check-input" type="checkbox" name="membercheck" value="memberchecked" onclick="checkSelectAll();">
+							</td>
+							<td>1</td>
+							<td>share</td>
+							<td>publicoil</td>
+							<td>공유</td>
+							<td>남자</td>
+							<td>1979.05.06</td>
+							<td>share@naver.com</td>
+							<td>010-1234-5678</td>
+							<td>gold</td>
+							<td>2019.04.14</td>
+							<td>2022.07.08</td>
+							<td>O</td>
+						</tr>
+						<tr>
+							<td>
+								<input class="form-check-input" type="checkbox" name="membercheck" value="memberchecked" onclick="checkSelectAll();">
+							</td>
+							<td>2</td>
+							<td>notant</td>
+							<td>antman</td>
+							<td>이현구</td>
+							<td>남자</td>
+							<td>1995.08.16</td>
+							<td>notant@naver.com</td>
+							<td>010-5456-7894</td>
+							<td>platium</td>
+							<td>2009.02.11</td>
+							<td>2020.05.12</td>
+							<td>O</td>
+						</tr>
+						<tr>
+							<td>
+								<input class="form-check-input" type="checkbox" name="membercheck" value="memberchecked" onclick="checkSelectAll();">
+							</td>
+							<td>3</td>
+							<td>goldwish</td>
+							<td>wish</td>
+							<td>김소명</td>
+							<td>여자</td>
+							<td>1999.02.03</td>
+							<td>goldwish@naver.com</td>
+							<td>010-2138-8456</td>
+							<td>silver</td>
+							<td>2022.06.27</td>
+							<td>2022.07.14</td>
+							<td>X</td>
+						</tr>
+						<tr>
+							<td>
+								<input class="form-check-input" type="checkbox" name="membercheck" value="memberchecked" onclick="checkSelectAll();">
+							</td>
+							<td>4</td>
+							<td>mutual</td>
+							<td>multiple</td>
+							<td>김상호</td>
+							<td>남자</td>
+							<td>1983.07.03</td>
+							<td>mutual@naver.com</td>
+							<td>010-2418-8746</td>
+							<td>gold</td>
+							<td>2000.06.13</td>
+							<td>2022.07.14</td>
+							<td>X</td>
+						</tr>
+						<tr>
+							<td>
+								<input class="form-check-input" type="checkbox" name="membercheck" value="memberchecked" onclick="checkSelectAll();">
+							</td>
+							<td>5</td>
+							<td>holyland</td>
+							<td>holy</td>
+							<td>성지영</td>
+							<td>여자</td>
+							<td>1997.07.23</td>
+							<td>holyland@naver.com</td>
+							<td>010-7895-4123</td>
+							<td>gold</td>
+							<td>2019.08.27</td>
+							<td>2022.05.14</td>
+							<td>O</td>
+						</tr>
+						
+					</tbody>
+					</table>
+					<div class="d-flex justify-content-center">
+						<nav aria-label="Page navigation example">
+						  <ul class="pagination">
+						    <li class="page-item"><a class="page-link" href="#"><<</a></li>
+						    <li class="page-item"><a class="page-link" href="#"><</a></li>
+						    <li class="page-item"><a class="page-link" href="#">1</a></li>
+						    <li class="page-item"><a class="page-link" href="#">2</a></li>
+						    <li class="page-item"><a class="page-link" href="#">3</a></li>
+						    <li class="page-item"><a class="page-link" href="#">4</a></li>
+						    <li class="page-item"><a class="page-link" href="#">5</a></li>
+						    <li class="page-item"><a class="page-link" href="#">></a></li>
+						    <li class="page-item"><a class="page-link" href="#">>></a></li>
+						  </ul>
+						</nav>
+					</div>
+					<div>
+						<div style="float: left;">
+							<button type="button" class="btn btn-danger">
+								<i class="fa-solid fa-trash"></i> 삭제
+							</button>
+							<button type="button" class="btn btn-outline-danger">
+								<i class="fa-regular fa-trash-can"></i> 삭제
+							</button>
+						</div>
+						<div style="float: right;">
+							<button type="button" class="btn btn-success">
+								<i class="fa-solid fa-file-excel"></i> 액셀
+							</button>
+							<button type="button" class="btn btn-primary">
+								<i class="fa-solid fa-square-plus"></i> 추가
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</form>
 	<script type="text/javascript">
