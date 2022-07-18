@@ -48,13 +48,13 @@
 			<div class="col">
 				<ul class="nav nav-tabs">
 				  <li class="nav-item">
-				    <a class="nav-link active" aria-current="page" href="#">코드그룹관리</a>
+				    <a class="nav-link active" aria-current="page" href="#">회원관리</a>
 				  </li>
 				  <li class="nav-item">
 				    <a class="nav-link" href="#">코드관리</a>
 				  </li>
 				  <li class="nav-item">
-				    <a class="nav-link" href="#">회원관리</a>
+				    <a class="nav-link" href="#">코드그룹관리</a>
 				  </li>
 				</ul>
 			</div>
@@ -118,8 +118,23 @@
 							<option value="Responseno">X</option>
 						</select>
 					</div>	
+					<form class="d-flex" role="search">
+						<select class="form-select bg-light" aria-label="selectsearch" style="width: 150px;">
+							<option selected>검색기준</option>
+							<option value="idword">아이디</option>
+							<option value="name">이름</option>
+							<option value="moblie">전화번호</option>
+						</select>
+						<input class="form-control" type="search" placeholder="Search" aria-label="Search" style="width:300px;">
+						<button class="col-1 btn btn-outline-dark" type="submit" style="width: 80px;">
+							<i class="fa fa-search" aria-hidden="true"></i>
+						</button>
+						<button class="col-1 btn btn-warning" type="reset" style="width: 80px;">
+							<i class="fa-solid fa-arrow-rotate-left"></i>
+						</button>
+					</form>	
 				</div>
-				<div class="row" style="height: 20px;"></div>
+				<!-- <div class="row" style="height: 20px;"></div>
 				<div class="row">
 					<div class="col" style="width: 1px;"></div>
 					<form class="d-flex" role="search">
@@ -137,7 +152,7 @@
 							<i class="fa-solid fa-arrow-rotate-left"></i>
 						</button>
 					</form>
-				</div>
+				</div> -->
 			</div>
 			<div class="row">
 				<div class="col">
