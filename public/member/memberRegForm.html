@@ -117,31 +117,74 @@
 			    </div>
 			</div>
 			<div class="mb-3 row">
+				<label for="regphonenumberstart" class="col-sm-1 offset-2 col-form-label">전화번호</label>
+				<div class="col-4">
+					<div class="input-group text-align-center">
+							<select class="form-select" id="regphonenumberstart" aria-label="regphonenumberstart">
+								<option value="010">010</option>
+								<option value="011">011</option>
+								<option value="017">017</option>
+								<option value="019">019</option>
+							</select>
+							<span class="input-group-text">-</span>
+							<input type="text" class="form-control" id="regphonenumbermiddle" aria-label="regphonenumbermiddle">
+							<span class="input-group-text">-</span>
+							<input type="text" class="form-control" id="regphonenumberend" aria-label="regphonenumberend">
+					</div>
+				</div>
+			</div>
+			<div class="mb-3 row">
 				<label for="regemailfirst" class="col-sm-1 offset-2 col-form-label">이메일</label>
 				<div class="col-6">
 					<div class="input-group">
 					  <input type="text" class="form-control" id="regemailfirst" aria-label="regemailfirst">
 					  <span class="input-group-text">@</span>
 					  <input type="text" class="form-control" id="regemailsecond" aria-label="regemailsecond">
-						<button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" id="regemailsecondbutton" aria-expanded="false">직접입력</button>
-						<ul class="dropdown-menu dropdown-menu-end">
-						  <li><a class="dropdown-item" href="#" value="naver.com">네이버</a></li>
-						  <li><a class="dropdown-item" href="#" value="google.com">구글</a></li>
-						  <li><a class="dropdown-item" href="#" value="kakao.com">카카오</a></li>
-						</ul>
+					  	<select class="form-select" id="regmailsecondselect" aria-expanded="false">
+					  	  <option value="" selected>직접입력</option>
+						  <option value="naver.com">네이버</option>
+						  <option value="google.com">구글</option>
+						  <option value="kakao.com">카카오</option>
+						</select>
 					 </div>
 				</div>				
 			</div>
 			<div class="mb-3 row">
-			   <label for="regaddress" class="col-sm-1 offset-2 col-form-label">주소</label>
+			   <label for="regaddressnumber" class="col-sm-1 offset-2 col-form-label">주소</label>
 			   <div class="col-sm-3">
-			   	 <input type="text" class="form-control" id="regaddress" value="">
+			   	 <input type="text" class="form-control" id="regaddressnumber" value="">
 			   </div>
 			   <div class="col-sm-2">
 				   <button type="button" class="btn btn-secondary">상세주소</button>
 			   </div>
-			   <div class="col-sm-7">
-				   <input type="text" class="form-control" id="regaddress"	
+			   <div class="col-sm-6 offset-3 gy-3">
+				   <input type="text" class="form-control" id="regfirstaddress">
+			   </div>
+			   <div class="col-sm-6 offset-3 gy-3">
+				   <input type="text" class="form-control" id="regfirstaddress">
+			   </div>
+			</div>
+			<div class="mb-3 row">	
+				<label for="regresponse" class="col-sm-1 offset-2 col-form-label">정보수신 동의</label> 
+				<div class="col-sm-1 gy-2 form-check form-check-inline">
+				  <input class="form-check-input" type="radio" name="regresponse" id="regregresponseyes" value="yes">
+				  <label class="form-check-label" for="reggenderman">동의</label>
+				</div>
+				<div class="col-sm-1 gy-2 form-check form-check-inline">
+				  <input class="form-check-input" type="radio" name="regresponse" id="regresponseno" value="no">
+				  <label class="form-check-label" for="reggenderwoman">비동의</label>
+				</div>
+			</div>
+			<div class="mb=5 row justify-content-evenly">
+			   <div class="col-1 offset-2">
+			      <button type="button" class="btn btn-danger">
+			      	<i class="fa-solid fa-xmark"></i> 취소
+			      </button>
+			   </div>
+			   <div class="col-4">
+			     <button type="button" class="btn btn-primary">
+			     <i class="fa-solid fa-plus"></i> 추가
+			     </button>
 			   </div>
 			</div>
 	</div>
