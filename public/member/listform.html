@@ -156,7 +156,7 @@
 			</div>
 			<div class="row">
 				<div class="col">
-					<table class="table table-striped table-hover border" style="text-align:center;">
+					<table class="table table-striped table-hover border" id="membertable" style="text-align:center;">
 						<caption style="caption-side: top;">
 							<div style="float:right">
 								<select style="width: 50px;">
@@ -338,21 +338,7 @@
 		}
 		
 	</script>
-	<script>
-		$('tabledelect').click(function() {
-			if ($("input:checkbox[name='membercheck']:checked").length === 0) {
-			alert("삭제할 항목이 없습니다.");
-			return;
-			}
-			
-			$("inputcheckbox[name='membercheck']:checked").each(function(k,kal){
-			console.log("kVal ::", kVal.parentElement.parentElement.parentElement);
-			let a = kVal.parentElement.parentElement.parentElement;
-			$(a).remove();
-			});
-		});
-	
-	</script>
+
 <!-- end -->
 
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
