@@ -292,7 +292,7 @@
 					</div>
 					<div>
 						<div style="float: left;">
-							<button type="button" class="btn btn-danger">
+							<button type="button" id="tabledelect" class="btn btn-danger">
 								<i class="fa-solid fa-trash"></i> 삭제
 							</button>
 							<button type="button" class="btn btn-outline-danger">
@@ -336,6 +336,22 @@
 		    checkbox.checked = selectall.checked
 		  })
 		}
+		
+	</script>
+	<script>
+		$('tabledelect').click(function() {
+			if ($("input:checkbox[name='membercheck']:checked").length === 0) {
+			alert("삭제할 항목이 없습니다.");
+			return;
+			}
+			
+			$("inputcheckbox[name='membercheck']:checked").each(function(k,kal){
+			console.log("kVal ::", kVal.parentElement.parentElement.parentElement);
+			let a = kVal.parentElement.parentElement.parentElement;
+			$(a).remove();
+			});
+		});
+	
 	</script>
 <!-- end -->
 
