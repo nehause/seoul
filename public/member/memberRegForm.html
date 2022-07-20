@@ -89,47 +89,47 @@
 			<div class="mb-3 row">
 			   <label for="regid" class="col-sm-1 offset-2 col-form-label">아이디</label>
 			   <div class="col-sm-3">
-			   	 <input type="text" class="form-control" id="regid" value="">
+			   	 <input type="text" class="form-control" name="regid" id="regid" value="">
 			   </div>
 			   <div class="col-sm-2">
-				   <button type="button" class="btn btn-outline-success">중복확인</button>
+				   <button type="button" name="regidoverlap" id="regidoverlap" class="btn btn-outline-success">중복확인</button>
 			   </div>
 			</div>
 			<div class="mb-3 row">
 			   <label for="regnickname" class="col-sm-1 offset-2 col-form-label">닉네임</label>
 			   <div class="col-sm-3">
-			   	 <input type="text" class="form-control" id="regnickname" value="">
+			   	 <input type="text" class="form-control" name="regnickname" id="regnickname" value="">
 			   </div>
 			   <div class="col-sm-2">
-				   <button type="button" class="btn btn-outline-success">중복확인</button>
+				   <button type="button" name="regnicknameoverlap" id="regnicknameoverlap" class="btn btn-outline-success">중복확인</button>
 			   </div>
 			</div>
 			<div class="mb-3 row">
 				<label for="regpassword" class="col-sm-1 offset-2 col-form-label">비밀번호</label>
 			    <div class="col-sm-4">
-			      <input type="password" class="form-control" id="regpassword">
+			      <input type="password" name="regpassword" id="regpassword" class="form-control">
 			    </div>
 		    </div>
 		    <div class="mb-3 row">
 				<label for="regpasswordcheck" class="col-sm-1 offset-2 col-form-label">번호 재확인</label>
 			    <div class="col-sm-4">
-			      <input type="password" class="form-control" id="regpasswordcheck">
+			      <input type="password" name="regpasswordcheck" id="regpasswordcheck" class="form-control">
 			    </div>
 			</div>
 			<div class="mb-3 row">
 				<label for="regphonenumberstart" class="col-sm-1 offset-2 col-form-label">전화번호</label>
 				<div class="col-4">
 					<div class="input-group text-align-center">
-						<select class="form-select" id="regphonenumberstart" aria-label="regphonenumberstart">
+						<select class="form-select" name="regphonenumberstart" id="regphonenumberstart" aria-label="regphonenumberstart">
 							<option value="010">010</option>
 							<option value="011">011</option>
 							<option value="017">017</option>
 							<option value="019">019</option>
 						</select>
 						<span class="input-group-text">-</span>
-						<input type="text" class="form-control" id="regphonenumbermiddle" aria-label="regphonenumbermiddle">
+						<input type="text" class="form-control" name="regphonenumbermiddle" id="regphonenumbermiddle" aria-label="regphonenumbermiddle">
 						<span class="input-group-text">-</span>
-						<input type="text" class="form-control" id="regphonenumberend" aria-label="regphonenumberend">
+						<input type="text" class="form-control" name="regphonenumberend" id="regphonenumberend" aria-label="regphonenumberend">
 					</div>
 				</div>
 			</div>
@@ -137,9 +137,9 @@
 				<label for="regemailfirst" class="col-sm-1 offset-2 col-form-label">이메일</label>
 				<div class="col-6">
 					<div class="input-group">
-					  <input type="text" class="form-control" id="regemailfirst" aria-label="regemailfirst">
+					  <input type="text" class="form-control" name="regemailfirst" id="regemailfirst" aria-label="regemailfirst">
 					  <span class="input-group-text">@</span>
-					  <input type="text" class="form-control" id="regemailsecond" aria-label="regemailsecond">
+					  <input type="text" class="form-control" name="regemailsecond" id="regemailsecond" aria-label="regemailsecond">
 					  	<select class="form-select" id="regmailsecondselect" aria-expanded="false">
 					  	  <option value="" selected>직접입력</option>
 						  <option value="naver.com">네이버</option>
@@ -152,7 +152,7 @@
 			<div class="mb-3 row">
 			   <label for="regaddressnumber" class="col-sm-1 offset-2 col-form-label">주소</label>
 			   <div class="col-sm-3">
-			   	 <input type="text" class="form-control" id="regaddressnumber" value="">
+			   	 <input type="text" class="form-control" name="regaddressnumber" id="regaddressnumber" value="">
 			   </div>
 			   <div class="col-sm-2">
 				   <button type="button" class="btn btn-secondary">상세주소</button>
@@ -160,12 +160,12 @@
 			</div>
 			<div class="row">   
 			   <div class="col-sm-6 offset-3 gy-2">
-				   <input type="text" class="form-control" id="regfirstaddress">
+				   <input type="text" class="form-control" name="regaddressfirst" id="regaddressfirst">
 			   </div>
 			</div>
 			<div class="row">
 			   <div class="col-sm-6 offset-3 gy-2">
-				   <input type="text" class="form-control" id="regfirstaddress">
+				   <input type="text" class="form-control" name="regaddresssecond" id="regaddresssecond">
 			   </div>
 			</div>
 			<div class="mb-3 row">	
@@ -180,13 +180,13 @@
 				</div>
 			</div>
 			<div class="mb-5">
-			   <div class="col-1" style="float: left;" onclick="regcancel();">
-			      <button type="button" class="btn btn-danger">
+			   <div class="col-1" style="float: left;">
+			      <button type="button" class="btn btn-danger" id="regformcancel" onclick="regcancel();">
 			      	<i class="fa-solid fa-xmark"></i> 취소
 			      </button>
 			   </div>
-			   <div class="col-1" style="float: right;" onclick="regsubmit();">
-			     <button type="button" class="btn btn-primary">
+			   <div class="col-1" style="float: right;">
+			     <button type="button" class="btn btn-primary" id="regformsubmit" onclick="regsubmit();">
 			     <i class="fa-solid fa-plus"></i> 추가
 			     </button>
 			   </div>
