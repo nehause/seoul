@@ -113,7 +113,9 @@
 		    <div class="mb-3 row">
 				<label for="regpasswordcheck" class="col-sm-1 offset-2 col-form-label">번호 재확인</label>
 			    <div class="col-sm-4">
-			      <input type="password" name="regpasswordcheck" id="regpasswordcheck" class="form-control">
+			      <input type="password" name="regpasswordcheck" id="regpasswordcheck" class="form-control" onkeyup="passwordck();">
+			      <label><div name="checkword" id="checkword" style="display:none; color:red;" >동일한 암호를 입력하세요.</div></label>
+			      
 			    </div>
 			</div>
 			<div class="mb-3 row">
@@ -198,6 +200,14 @@
 			document.mrf.regemailsecond.value = document.mrf.regemailselect.value
 			
 		}
+		function ckpw(){
+			if(document.mrf.regpassword.value == document.mrf.regpasswordcheck.value)
+				{
+					
+				}
+			
+		}
+		
 		function regcancel() {
 			location.href='listform.html';
 		}
@@ -205,7 +215,19 @@
 		function regsubmit() {
 			document.getElementById("regform").submit();
 		}
-		
+		function passwordck(){
+		  var password = document.getElementById("regpassword");
+		  var check_password = document.getElementById("regpasswordcheck");
+
+		  if(password.value != check_password.value) {
+			  document.getElementById('checkword').style.display="block";
+		  } else {
+			  document.getElementById('checkword').style.display="none";
+		  }
+		}
+
+		password.onchange = validatePassword;
+		confirm_password.onkeyup = validatePassword;
 	</script>
 
 
