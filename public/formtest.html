@@ -11,19 +11,11 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-	<style>
-		.help-block{
-            display: none;
-        }
-        /* glyphicon 을 일단 보이지 않게 설정 */
-        .glyphicon{
-            display: none;
-        }
-	</style>
+	<title>reg_test</title>
 </head>
 <body>
 <!-- start -->
-	<form name='mrf' method="get" action="./listform.html" id="regform">
+	<form name='ft' id="regform" class="needs-validation" novalidate>
 		<nav class="navbar navbar-dark bg-dark">
 		  <div class="container-fluid">
 		    <button class="navbar-toggler color-white" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar" aria-controls="sidebar">
@@ -77,7 +69,10 @@
 			<div class="mb-3 row">	
 			    <label for="regname" class="col-sm-1 offset-2 col-form-label">이름</label>
 			    <div class="col-sm-3">
-			    	<input type="text" class="form-control" id="regname" value="">
+			    	<input type="text" class="form-control" id="regname" value="" required>
+				    <div class="invalid-feedback">
+				    	이름을 입력해주시기 바랍니다.
+				    </div>
 			    </div>
 				<label for="reggender" class="col-sm-1 col-form-label">성별</label> 
 				<div class="col-sm-1 gy-2 form-check form-check-inline">
@@ -92,56 +87,56 @@
 			<div class="mb-3 row">
 				<label for="regbirthday" class="col-sm-1 offset-2 col-form-label">생일</label>
 				<div class="col-sm-3">
-					<input type="text" class="form-control" id="regbirthday" placeholder="8자리로 입력해주세요 (ex:12340506)">
+					<input type="text" class="form-control" id="regbirthday" placeholder="8자리로 입력해주세요 (ex:12340506)" value="">
 				</div>
+				<div class="invalid-feedback">
+			    	생년월일을 입력해주세요
+			    </div>
 			</div>
 			<div class="mb-3 row">
 			   <label for="regid" class="col-sm-1 offset-2 col-form-label">아이디</label>
 			   <div class="col-sm-3">
-			   	 <input type="text" class="form-control" id="regid" value="">
+			   	 <input type="text" class="form-control" name="regid" id="regid" value="">
 			   </div>
 			   <div class="col-sm-2">
-				   <button type="button" class="btn btn-outline-success">중복확인</button>
+				   <button type="button" name="regidoverlap" id="regidoverlap" class="btn btn-outline-success">중복확인</button>
 			   </div>
 			</div>
 			<div class="mb-3 row">
 			   <label for="regnickname" class="col-sm-1 offset-2 col-form-label">닉네임</label>
 			   <div class="col-sm-3">
-			   	 <input type="text" class="form-control" id="regnickname" value="">
+			   	 <input type="text" class="form-control" name="regnickname" id="regnickname" value="">
 			   </div>
 			   <div class="col-sm-2">
-				   <button type="button" class="btn btn-outline-success">중복확인</button>
+				   <button type="button" name="regnicknameoverlap" id="regnicknameoverlap" class="btn btn-outline-success">중복확인</button>
 			   </div>
 			</div>
-			<div class="mb-3 row form-group has-feedback">
-				<label for="regpassword" class="col-sm-1 offset-2 col-form-label control-label">비밀번호</label>
+			<div class="mb-3 row">
+				<label for="regpassword" class="col-sm-1 offset-2 col-form-label">비밀번호</label>
 			    <div class="col-sm-4">
-			      <input type="password" class="form-control" name="regpassword" id="regpassword">
-			      <span class="glyphicon glyphicon-ok form-controlfeedback"></span>
+			      <input type="password" name="regpassword" id="regpassword" class="form-control">
 			    </div>
 		    </div>
 		    <div class="mb-3 row">
-				<label for="regpasswordcheck" class="col-sm-1 offset-2 col-form-label control-label">번호 재확인</label>
+				<label for="regpasswordcheck" class="col-sm-1 offset-2 col-form-label">번호 재확인</label>
 			    <div class="col-sm-4">
-			      <input type="password" class="form-control" name="regwpasswordcheck" id="regpasswordcheck">
-			      <span id="passwordchecking" class="help-block">비밀번호와 일치하지 않습니다. 다시 입력해 주세요.</span>
-            <span class="glyphicon glyphicon-ok form-control-feedback"></span>
+			      <input type="password" name="regpasswordcheck" id="regpasswordcheck" class="form-control">
 			    </div>
 			</div>
 			<div class="mb-3 row">
 				<label for="regphonenumberstart" class="col-sm-1 offset-2 col-form-label">전화번호</label>
 				<div class="col-4">
 					<div class="input-group text-align-center">
-						<select class="form-select" id="regphonenumberstart" aria-label="regphonenumberstart">
+						<select class="form-select" name="regphonenumberstart" id="regphonenumberstart" aria-label="regphonenumberstart">
 							<option value="010">010</option>
 							<option value="011">011</option>
 							<option value="017">017</option>
 							<option value="019">019</option>
 						</select>
 						<span class="input-group-text">-</span>
-						<input type="text" class="form-control" id="regphonenumbermiddle" aria-label="regphonenumbermiddle">
+						<input type="text" class="form-control" name="regphonenumbermiddle" id="regphonenumbermiddle" aria-label="regphonenumbermiddle">
 						<span class="input-group-text">-</span>
-						<input type="text" class="form-control" id="regphonenumberend" aria-label="regphonenumberend">
+						<input type="text" class="form-control" name="regphonenumberend" id="regphonenumberend" aria-label="regphonenumberend">
 					</div>
 				</div>
 			</div>
@@ -149,9 +144,9 @@
 				<label for="regemailfirst" class="col-sm-1 offset-2 col-form-label">이메일</label>
 				<div class="col-6">
 					<div class="input-group">
-					  <input type="text" class="form-control" id="regemailfirst" aria-label="regemailfirst">
+					  <input type="text" class="form-control" name="regemailfirst" id="regemailfirst" aria-label="regemailfirst">
 					  <span class="input-group-text">@</span>
-					  <input type="text" class="form-control" id="regemailsecond" aria-label="regemailsecond">
+					  <input type="text" class="form-control" name="regemailsecond" id="regemailsecond" aria-label="regemailsecond">
 					  	<select class="form-select" id="regmailsecondselect" aria-expanded="false">
 					  	  <option value="" selected>직접입력</option>
 						  <option value="naver.com">네이버</option>
@@ -164,7 +159,7 @@
 			<div class="mb-3 row">
 			   <label for="regaddressnumber" class="col-sm-1 offset-2 col-form-label">주소</label>
 			   <div class="col-sm-3">
-			   	 <input type="text" class="form-control" id="regaddressnumber" value="">
+			   	 <input type="text" class="form-control" name="regaddressnumber" id="regaddressnumber" value="">
 			   </div>
 			   <div class="col-sm-2">
 				   <button type="button" class="btn btn-secondary">상세주소</button>
@@ -172,12 +167,12 @@
 			</div>
 			<div class="row">   
 			   <div class="col-sm-6 offset-3 gy-2">
-				   <input type="text" class="form-control" id="regfirstaddress">
+				   <input type="text" class="form-control" name="regaddressfirst" id="regaddressfirst">
 			   </div>
 			</div>
 			<div class="row">
 			   <div class="col-sm-6 offset-3 gy-2">
-				   <input type="text" class="form-control" id="regfirstaddress">
+				   <input type="text" class="form-control" name="regaddresssecond" id="regaddresssecond">
 			   </div>
 			</div>
 			<div class="mb-3 row">	
@@ -192,13 +187,13 @@
 				</div>
 			</div>
 			<div class="mb-5">
-			   <div class="col-1" style="float: left;" onclick="regcancel();">
-			      <button type="button" class="btn btn-danger">
+			   <div class="col-1" style="float: left;">
+			      <button type="button" class="btn btn-danger" id="regformcancel" onclick="regcancel();">
 			      	<i class="fa-solid fa-xmark"></i> 취소
 			      </button>
 			   </div>
-			   <div class="col-1" style="float: right;" onclick="regsubmit();">
-			     <button type="button" class="btn btn-primary">
+			   <div class="col-1" style="float: right;">
+			     <button type="submit" class="btn btn-primary" id="regformsubmit">
 			     <i class="fa-solid fa-plus"></i> 추가
 			     </button>
 			   </div>
@@ -213,22 +208,26 @@
 		function regsubmit() {
 			document.getElementById("regform").submit();
 		}
+		// Example starter JavaScript for disabling form submissions if there are invalid fields
+		(() => {
+		  'use strict'
+
+		  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+		  const forms = document.querySelectorAll('.needs-validation')
+
+		  // Loop over them and prevent submission
+		  Array.from(forms).forEach(form => {
+		    form.addEventListener('submit', event => {
+		      if (!form.checkValidity()) {
+		        event.preventDefault()
+		        event.stopPropagation()
+		      }
+
+		      form.classList.add('was-validated')
+		    }, false)
+		  })
+		})()
 	</script>
-	<script>
-		$("#regpasswordcheck").keyup(function(){
-	        var rePwd=$(this).val();
-	        var pwd=$("#regpassword").val();
-	        // 비밀번호 같은지 확인
-	        if(rePwd==pwd){//비밀번호 같다면
-	            $("#passwordchecking").hide();
-	            successState("#rePwd");
-	        }else{//비밀번호 다르다면
-	            $("#rePwdErr").show();
-	            errorState("#rePwd");
-	        }
-	    });
-	</script>
-	
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>
 </html>

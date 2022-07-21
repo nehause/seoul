@@ -14,7 +14,7 @@
 </head>
 <body>
 <!-- start -->
-	<form name='mrf' method="get" action="./listform.html" id="regform" class="needs-validation" novalidate>
+	<form name="mrf" method="get" action="./listform.html" id="regform" class="needs-validation" novalidate>
 		<nav class="navbar navbar-dark bg-dark">
 		  <div class="container-fluid">
 		    <button class="navbar-toggler color-white" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar" aria-controls="sidebar">
@@ -139,9 +139,9 @@
 					<div class="input-group">
 					  <input type="text" class="form-control" name="regemailfirst" id="regemailfirst" aria-label="regemailfirst">
 					  <span class="input-group-text">@</span>
-					  <input type="text" class="form-control" name="regemailsecond" id="regemailsecond" aria-label="regemailsecond">
-					  	<select class="form-select" id="regmailsecondselect" aria-expanded="false">
-					  	  <option value="" selected>직접입력</option>
+					  <input type="text" class="form-control" name="regemailsecond" id="regemailsecond" aria-label="regemailsecond" value="">
+					  	<select class="form-select" name="regemailselect" id="regemailselect" aria-expanded="false" onchange="selemail();">
+					  	  <option value="">직접입력</option>
 						  <option value="naver.com">네이버</option>
 						  <option value="google.com">구글</option>
 						  <option value="kakao.com">카카오</option>
@@ -194,12 +194,22 @@
 		</div>
 <!-- end -->
 	<script type="text/javascript">
+		function selemail() {
+			document.mrf.regemailsecond.value = document.mrf.regemailselect.value
+			
+		}
 		function regcancel() {
 			location.href='listform.html';
 		}
+		
 		function regsubmit() {
 			document.getElementById("regform").submit();
 		}
+		
+	</script>
+
+
+
 	</script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>
