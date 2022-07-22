@@ -141,7 +141,7 @@
 					<div class="input-group">
 					  <input type="text" class="form-control" name="modemailfirst" id="modemailfirst" aria-label="modemailfirst" value="share">
 					  <span class="input-group-text">@</span>
-					  <input type="text" class="form-control" name="modemailsecond" id="modemailsecond" aria-label="modemailsecond" value="">
+					  <input type="text" class="form-control" name="modemailsecond" id="modemailsecond" aria-label="modemailsecond" value="naver.com">
 					  	<select class="form-select" name="modemailselect" id="modemailselect" aria-expanded="false" onchange="selemail();">
 					  	  <option value="">직접입력</option>
 						  <option value="naver.com" selected>네이버</option>
@@ -208,11 +208,11 @@
 <!-- end -->
 	<script type="text/javascript">
 		function selemail() {
-			document.mrf.modemailsecond.value = document.mrf.modemailselect.value
+			document.mmf.modemailsecond.value = document.mmf.modemailselect.value
 			
 		}
 		function ckpw(){
-			if(document.mrf.modpassword.value == document.mrf.modpasswordcheck.value)
+			if(document.mmf.modpassword.value == document.mmf.modpasswordcheck.value)
 				{
 					
 				}
