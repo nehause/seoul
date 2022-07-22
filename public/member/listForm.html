@@ -169,7 +169,7 @@
 							</div>
 						</caption>
 					<thead>
-						<tr>
+						<tr onclick="location.href='./membermodform.html'" style="cursor: pointer;">
 							<td class="checkboxsize"> 
 								<input class="form-check-input" type="checkbox" name="allmembercheck" value="allmemberchecked" onclick="selectall(this);">
 							</td>
@@ -188,8 +188,8 @@
 						</tr>
 					</thead>
 					<tbody>
-						<tr>
-							<td>
+						<tr onclick="location.href='./membermodform.html'" style="cursor: pointer;">
+							<td onclick="event.cancelBubble=true">
 								<input class="form-check-input" type="checkbox" name="membercheck" value="memberchecked" onclick="checkSelectAll();">
 							</td>
 							<td>1</td>
