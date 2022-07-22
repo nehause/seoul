@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>list_form</title>
+	<title>memberListForm</title>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 	<!-- cdn = 온라인 해석기 --> 
 
@@ -169,7 +169,7 @@
 							</div>
 						</caption>
 					<thead>
-						<tr onclick="location.href='./memberModForm.html'" style="cursor: pointer;">
+						<tr>
 							<td class="checkboxsize"> 
 								<input class="form-check-input" type="checkbox" name="allmembercheck" value="allmemberchecked" onclick="selectall(this);">
 							</td>
@@ -188,7 +188,7 @@
 						</tr>
 					</thead>
 					<tbody>
-						<tr onclick="location.href='./membermodform.html'" style="cursor: pointer;">
+						<tr onclick="location.href='./memberModForm.html'" style="cursor: pointer;">
 							<td onclick="event.cancelBubble=true">
 								<input class="form-check-input" type="checkbox" name="membercheck" value="memberchecked" onclick="checkSelectAll();">
 							</td>
@@ -293,12 +293,55 @@
 					</div>
 					<div>
 						<div style="float: left;">
-							<button type="button" id="tabledelect" class="btn btn-danger" id="listtabledelect">
-								<i class="fa-solid fa-trash"></i> 삭제
+							<button type="button" class="btn btn-danger" name="tabledelect" id="tabledelect" data-bs-toggle="modal" data-bs-target="#tabledelectmodal">
+							  <i class="fa-solid fa-trash"></i> 삭제
 							</button>
-							<button type="button" class="btn btn-outline-danger" id="listdelect">
+							<div class="modal fade" id="tabledelectmodal" tabindex="-1" aria-labelledby="tabledelectmodallabel" aria-hidden="true">
+							  <div class="modal-dialog">
+							    <div class="modal-content">
+							      <div class="modal-header">
+							        <h5 class="modal-title" id="tabledelectmodalLabel">테이블에서 삭제하시겠습니까?</h5>
+							        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+							      </div>
+							      <div class="modal-body">
+							        테이블 뷰에서 보이지 않게 됩니다 삭제하시겠습니까?
+							      </div>
+							      <div class="modal-footer">
+							        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+							        	<i class="fa-solid fa-x"></i> 취소
+							        </button>
+							        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
+							        	<i class="fa-solid fa-trash"></i> 삭제
+							        </button>
+							      </div>
+							    </div>
+							  </div>
+							</div>
+							<button type="button" class="btn btn-outline-danger" id="listdelect" data-bs-toggle="modal" data-bs-target="#listdelectmodal">
 								<i class="fa-regular fa-trash-can"></i> 삭제
 							</button>
+							<div class="modal fade" id="listdelectmodal" tabindex="-1" aria-labelledby="listdelectmodallabel" aria-hidden="true">
+							  <div class="modal-dialog">
+							    <div class="modal-content">
+							      <div class="modal-header">
+							        <h5 class="modal-title" id="listdelectmodalLabel">리스트에서 삭제하시겠습니까?</h5>
+							        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+							      </div>
+							      <div class="modal-body">
+							        테이블 리스트에서 보이지 않게 됩니다 삭제하시겠습니까?
+							      </div>
+							      <div class="modal-footer">
+							        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+							        	<i class="fa-solid fa-x"></i> 취소
+							        </button>
+							        <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">
+							        	<i class="fa-solid fa-trash-can"></i> 삭제
+							        </button>
+							      </div>
+							    </div>
+							  </div>
+							</div>
+							
 						</div>
 						<div style="float: right;">
 							<button type="button" class="btn btn-success" id="listexecl">
