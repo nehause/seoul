@@ -12,6 +12,11 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+	<style type="text/css">
+		a:hover {
+			font-weight: bolder;
+		}
+	</style>
 </head>
 <body>
 <!-- start -->
@@ -29,7 +34,7 @@
 		      </div>
 		      <div class="offcanvas-body bg-dark navbar-dark">
 		        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-		          <li class="nav-item">
+		        <!--   <li class="nav-item">
 		            <a class="nav-link active" aria-current="page" href="#">회원관리</a>
 		          </li>
 		          <li class="nav-item">
@@ -38,8 +43,81 @@
 		          <li class="nav-item">
 		            <a class="nav-link" href="#">코드관리</a>
 		          </li>
-		        </ul>
+		        </ul> -->
 		        
+		       	<div class="accordion accordion-bg-dark accordion-border-color-dark" id="navbarAccordion">
+				  <div class="accordion-item">
+				    <h2 class="accordion-header" id="navbarMenuOne">
+				      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapseOne" aria-expanded="true" aria-controls="navbarCollapseOne">
+				        회원 관리
+				      </button>
+				    </h2>
+				    <div id="navbarCollapseOne" class="accordion-collapse collapse show" aria-labelledby="navbarMenuOne">
+				      <div class="accordion-body bg-dark">
+					       <ul>
+					       	<li class="nav-item"> 
+					       		<a class="nav-link" href="#">회원 추가</a>
+					       	</li>
+					       	<li class="nav-item">
+					       		<a class="nav-link" href="#">회원 수정</a>
+					       	</li>
+					       	<li class="nav-item">
+					       		<a class="nav-link" href="#">회원 삭제</a>
+					       	</li>
+					      </ul>
+				      </div>
+				    </div>
+				  </div>
+				  <div class="accordion-item">
+				    <h2 class="accordion-header" id="navbarMenuTwo">
+				      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarcollapseTwo" aria-expanded="true" aria-controls="navbarcollapseTwo">
+				        코드 관리
+				      </button>
+				    </h2>
+				    <div id="navbarcollapseTwo" class="accordion-collapse collapse" aria-labelledby="navbarMenuTwo">
+				      <div class="accordion-body bg-dark">
+					      <ul>
+					       	<li class="nav-item"> 
+					       		<a class="nav-link" href="#">코드 추가</a>
+					       	</li>
+					       	<li class="nav-item">
+					       		<a class="nav-link" href="#">코드 수정</a>
+					       	</li>
+					       	<li class="nav-item">
+					       		<a class="nav-link" href="#">코드 삭제</a>
+					       	</li>
+					      </ul>
+				      </div>
+				    </div>
+				  </div>
+				  <div class="accordion-item">
+				    <h2 class="accordion-header" id="navbarMenuThree">
+				      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarcollapseThree" aria-expanded="true" aria-controls="navbarcollapseThree">
+				        코드 그룹관리
+				      </button>
+				    </h2>
+				    <div id="navbarcollapseThree" class="accordion-collapse collapse" aria-labelledby="navbarMenuThree">
+				      <div class="accordion-body bg-dark">
+				      	<ul>
+					       	<li class="nav-item"> 
+					       		<a class="nav-link" href="#">코드그룹 추가</a>
+					       	</li>
+					       	<li class="nav-item">
+					       		<a class="nav-link" href="#">코드그룹 수정</a>
+					       	</li>
+					       	<li class="nav-item">
+					       		<a class="nav-link" href="#">코드그룹 삭제</a>
+					       	</li>
+					      </ul>
+				      </div>
+				    </div>
+				  </div>
+				</div>
+		      </div>
+		      <div class="offcanvas-footer bg-dark">
+		      	<button class="navbar-toggler" type="button">
+		      		로그아웃 <i class="fa-solid fa-right-from-bracket"></i>
+		      	</button>
 		      </div>
 		    </div>
 		  </div>
