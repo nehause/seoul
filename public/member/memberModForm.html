@@ -39,6 +39,11 @@
 		          </li>
 		        </ul>
 		      </div>
+		      <div class="offcanvas-footer bg-dark">
+		      	<button class="navbar-toggler" style="width:100%; height:80px; text-align:right;" type="button" onclick="logOut();">
+		      		로그아웃 <i class="fa-solid fa-right-from-bracket"></i>
+		      	</button>
+		      </div>
 		    </div>
 		  </div>
 		</nav>
@@ -218,7 +223,9 @@
 				}
 			
 		}
-		
+		function logOut() {
+			location.href='memberLoginForm.html';
+		}
 		function modcancel() {
 			location.href='./memberListForm.html';
 		}
