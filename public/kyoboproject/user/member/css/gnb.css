@@ -170,35 +170,6 @@ Version :1.0
 #header .navigation_bar .gnb_main li.item_7.on a.text span {background-position:0 -20px;}
 #header .navigation_bar .gnb_main li.parent.item_7 a.text {background:none;padding-right:17px;}
 
-/*
-#header .navigation_bar .gnb_main li.item_1 a.text {width:56px;}
-#header .navigation_bar .gnb_main li.item_2 a.text {width:56px;}
-#header .navigation_bar .gnb_main li.item_3 a.text {width:46px;}
-#header .navigation_bar .gnb_main li.item_4 a.text {width:45px;}
-#header .navigation_bar .gnb_main li.item_5 a.text {width:33px;}
-#header .navigation_bar .gnb_main li.item_6 a.text {width:56px;}
-#header .navigation_bar .gnb_main li.item_7 a.text {width:50px;}
-#header .navigation_bar .gnb_main li.item_8 a.text {width:58px;}
-
-#header .navigation_bar .gnb_main li.item_1 a.text span {background-position:0 0;}
-#header .navigation_bar .gnb_main li.item_2 a.text span {background-position:0 -40px;}
-#header .navigation_bar .gnb_main li.item_3 a.text span {background-position:0 -80px;}
-#header .navigation_bar .gnb_main li.item_4 a.text span {background-position:0 -120px;}
-#header .navigation_bar .gnb_main li.item_5 a.text span {background-position:0 -160px;}
-#header .navigation_bar .gnb_main li.item_6 a.text span {background-position:0 -200px;}
-#header .navigation_bar .gnb_main li.item_7 a.text span {background-position:0 -240px;}
-#header .navigation_bar .gnb_main li.item_8 a.text span {background-position:0 -280px;}
-
-#header .navigation_bar .gnb_main li.item_1.on a.text span {background-position:0 -20px;}
-#header .navigation_bar .gnb_main li.item_2.on a.text span {background-position:0 -60px;}
-#header .navigation_bar .gnb_main li.item_3.on a.text span {background-position:0 -100px;}
-#header .navigation_bar .gnb_main li.item_4.on a.text span {background-position:0 -140px;}
-#header .navigation_bar .gnb_main li.item_5.on a.text span {background-position:0 -180px;}
-#header .navigation_bar .gnb_main li.item_6.on a.text span {background-position:0 -220px;}
-#header .navigation_bar .gnb_main li.item_7.on a.text span {background-position:0 -260px;}
-#header .navigation_bar .gnb_main li.item_8.on a.text span {background-position:0 -300px;}
-*/
-
 #header .navigation_bar .gnb_main.add_1 {margin-left:9px;}
 #header .navigation_bar .gnb_main.add_1 li.parent ul li a {padding-left:8px;padding-right:4px;}
 #header .navigation_bar .gnb_main.add_1 a.text {padding-left:9px;padding-right:9px;}

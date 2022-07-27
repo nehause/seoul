@@ -1,8 +1,5 @@
 @charset "euc-kr";
-/*
-Cloud9 Web publishing Team (http://cloud9.co.kr/)
-Version : 1.0
-*/
+
 
 body {background:none;}
 #wrapper{/*min-width:1010px;*/background:url('http://image.kyobobook.co.kr/ink/images/common/bg_header3.png') 0 0 repeat-x;*position:relative;}
