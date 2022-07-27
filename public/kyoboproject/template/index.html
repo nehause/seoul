@@ -15,7 +15,7 @@
 	<!-- meta character set -->
 	<meta charset="UTF-8">
 	<!-- Site Title -->
-	<title>Karma Shop</title>
+	<title>JHJ Shop</title>
 	<!--
 		CSS
 		============================================= -->
@@ -30,6 +30,7 @@
 	<link rel="stylesheet" href="css/ion.rangeSlider.skinFlat.css" />
 	<link rel="stylesheet" href="css/magnific-popup.css">
 	<link rel="stylesheet" href="css/main.css">
+	<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -40,7 +41,7 @@
 			<nav class="navbar navbar-expand-lg navbar-light main_box">
 				<div class="container">
 					<!-- Brand and toggle get grouped for better mobile display -->
-					<a class="navbar-brand logo_h" href="index.html"><img src="img/logo.png" alt=""></a>
+					<a class="navbar-brand logo_h" href="index.html" style="font-family: 'Pacifico', cursive; color: orange;">JHJ</a>
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
 					 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 						<span class="icon-bar"></span>
@@ -50,13 +51,13 @@
 					<!-- Collect the nav links, forms, and other content for toggling -->
 					<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
 						<ul class="nav navbar-nav menu_nav ml-auto">
-							<li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
+							<li class="nav-item active"><a class="nav-link" href="index.html">메인</a></li>
 							<li class="nav-item submenu dropdown">
 								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-								 aria-expanded="false">Shop</a>
+								 aria-expanded="false">국내도서</a>
 								<ul class="dropdown-menu">
-									<li class="nav-item"><a class="nav-link" href="category.html">Shop Category</a></li>
-									<li class="nav-item"><a class="nav-link" href="single-product.html">Product Details</a></li>
+									<li class="nav-item"><a class="nav-link" href="category.html">책 목록</a></li>
+									<li class="nav-item"><a class="nav-link" href="single-product.html">책 상세</a></li>
 									<li class="nav-item"><a class="nav-link" href="checkout.html">Product Checkout</a></li>
 									<li class="nav-item"><a class="nav-link" href="cart.html">Shopping Cart</a></li>
 									<li class="nav-item"><a class="nav-link" href="confirmation.html">Confirmation</a></li>
@@ -64,13 +65,13 @@
 							</li>
 							<li class="nav-item submenu dropdown">
 								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-								 aria-expanded="false">Blog</a>
+								 aria-expanded="false">외국도서</a>
 								<ul class="dropdown-menu">
 									<li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
 									<li class="nav-item"><a class="nav-link" href="single-blog.html">Blog Details</a></li>
 								</ul>
 							</li>
-							<li class="nav-item submenu dropdown">
+							<!-- <li class="nav-item submenu dropdown">
 								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
 								 aria-expanded="false">Pages</a>
 								<ul class="dropdown-menu">
@@ -78,14 +79,8 @@
 									<li class="nav-item"><a class="nav-link" href="tracking.html">Tracking</a></li>
 									<li class="nav-item"><a class="nav-link" href="elements.html">Elements</a></li>
 								</ul>
-							</li>
-							<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-						</ul>
-						<ul class="nav navbar-nav navbar-right">
-							<li class="nav-item"><a href="#" class="cart"><span class="ti-bag"></span></a></li>
-							<li class="nav-item">
-								<button class="search"><span class="lnr lnr-magnifier" id="search"></span></button>
-							</li>
+							</li> -->
+							<li class="nav-item"><a class="nav-link" href="login.html">로그인</a></li>
 						</ul>
 					</div>
 				</div>
@@ -94,7 +89,7 @@
 		<div class="search_input" id="search_input_box">
 			<div class="container">
 				<form class="d-flex justify-content-between">
-					<input type="text" class="form-control" id="search_input" placeholder="Search Here">
+					<input type="text" class="form-control" id="search_input" placeholder="검색어를 입력해주세요">
 					<button type="submit" class="btn"></button>
 					<span class="lnr lnr-cross" id="close_search" title="Close Search"></span>
 				</form>
@@ -113,18 +108,20 @@
 						<div class="row single-slide align-items-center d-flex">
 							<div class="col-lg-5 col-md-6">
 								<div class="banner-content">
-									<h1>Nike New <br>Collection!</h1>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-										dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+									<h1>절대 읽지마라! <br>죽을때까지 순리자로 살고싶으면</h1>
+									<p>"내 꿈은 반월공단에 취직해 월 200을 받으며 게임만 하는 삻이였다. 그러나 단 하나의 공략집을 발견한 이후 인생은 즐거운 놀이터가 되었다!"
+										<br>오타쿠 흙수저에서 월 1억 자동 수익을 실현한 무자본 연쇄창업마, 라이프해커 자청의 인생 역주행 공식 대공개!</p>
 									<div class="add-bag d-flex align-items-center">
 										<a class="add-btn" href=""><span class="lnr lnr-cross"></span></a>
-										<span class="add-text text-uppercase">Add to Bag</span>
+										<span class="add-text text-uppercase">구매하러가기</span>
 									</div>
 								</div>
 							</div>
-							<div class="col-lg-7">
+							<div class="col-lg-5 offset-1">
 								<div class="banner-img">
-									<img class="img-fluid" src="img/banner/banner-img.png" alt="">
+									<a href="single-product.html">
+										<img class="img-fluid" src="img/banner/b3.jpg" alt="">
+									</a>
 								</div>
 							</div>
 						</div>
@@ -132,18 +129,22 @@
 						<div class="row single-slide">
 							<div class="col-lg-5">
 								<div class="banner-content">
-									<h1>Nike New <br>Collection!</h1>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-										dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+									<h1>2022 칸 영화제 감독상 수상작
+									<br>〈헤어질 결심〉 오리지널 각본을 만나다</h1>
+									<p>영화 각본이 선사하는 즐거움 중 하나는 촬영과 편집을 마친 최종 결과물과의 차이를 발견하는 것이다.<br>
+									  『헤어질 결심 각본』은 특히 이런 발견의 즐거움을 풍부하게 담고 있다. 예를 들어 서래가 직접 지어낸 『산해경』 이야기는 서래의 내면을 바라볼 수 있는 열쇠를 하나 더 제공하며, 이포로 떠난 해준이 전해 듣게 되는 질곡동 사건의 후일담은 불길한 기운을 풍긴다.<br>
+									   이렇듯 편집 과정에서 삭제된 부분들 역시 하나같이 〈헤어질 결심〉의 세계를 더 풍요롭게 만들어 주고 있어서, 이 책의 독자들은 자신만의 ‘관객판’ 편집본을 상상할 수 있을 것이다.</p>
 									<div class="add-bag d-flex align-items-center">
 										<a class="add-btn" href=""><span class="lnr lnr-cross"></span></a>
-										<span class="add-text text-uppercase">Add to Bag</span>
+										<span class="add-text text-uppercase">구매하러가기</span>
 									</div>
 								</div>
 							</div>
-							<div class="col-lg-7">
+							<div class="col-lg-5 offset-1">
 								<div class="banner-img">
-									<img class="img-fluid" src="img/banner/banner-img.png" alt="">
+									<a href="#">
+										<img class="img-fluid" src="img/banner/b4.jpg" alt="">
+									</a>
 								</div>
 							</div>
 						</div>
@@ -164,8 +165,8 @@
 						<div class="f-icon">
 							<img src="img/features/f-icon1.png" alt="">
 						</div>
-						<h6>Free Delivery</h6>
-						<p>Free Shipping on all order</p>
+						<h6>무료 배송</h6>
+						<p>배송비 걱정없이 자유롭게 쇼핑</p>
 					</div>
 				</div>
 				<!-- single features -->
@@ -174,8 +175,8 @@
 						<div class="f-icon">
 							<img src="img/features/f-icon2.png" alt="">
 						</div>
-						<h6>Return Policy</h6>
-						<p>Free Shipping on all order</p>
+						<h6>환불/취소 가능</h6>
+						<p>문제가 있다면 즉시 취소/환불</p>
 					</div>
 				</div>
 				<!-- single features -->
@@ -184,8 +185,8 @@
 						<div class="f-icon">
 							<img src="img/features/f-icon3.png" alt="">
 						</div>
-						<h6>24/7 Support</h6>
-						<p>Free Shipping on all order</p>
+						<h6>상시 문의 가능</h6>
+						<p>문의할게 있다면 언제나 가능</p>
 					</div>
 				</div>
 				<!-- single features -->
@@ -194,8 +195,8 @@
 						<div class="f-icon">
 							<img src="img/features/f-icon4.png" alt="">
 						</div>
-						<h6>Secure Payment</h6>
-						<p>Free Shipping on all order</p>
+						<h6>보안 결제</h6>
+						<p>해킹 걱정없이 결제해주세요</p>
 					</div>
 				</div>
 			</div>
@@ -290,7 +291,7 @@
 					<!-- single product -->
 					<div class="col-lg-3 col-md-6">
 						<div class="single-product">
-							<img class="img-fluid" src="img/product/p1.jpg" alt="">
+							<img class="img-fluid" src="img/product/B1.jpg" alt="">
 							<div class="product-details">
 								<h6>addidas New Hammer sole
 									for Sports person</h6>

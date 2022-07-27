@@ -364,6 +364,39 @@ h1, h2, h3, h4, h5, h6 {
     background: #f9f9ff;
     border: 1px solid transparent;
     cursor: not-allowed; }
+  .genric-btn.naver {
+    color: #fff;
+    background: #2DB400;
+    border: 1px solid transparent; }
+    .genric-btn.naver:hover {
+      color: #2DB400;
+      border: 1px solid #2DB400;
+      background: #fff; }
+  .genric-btn.naver-border {
+    color: #2DB400;
+    border: 1px solid #2DB400;
+    background: #fff; }
+  .genric-btn.naver-border:hover {
+    color: #fff;
+    background: #2DB400;
+    border: 1px solid transparent; }
+  .genric-btn.facebook {
+    color: #fff;
+    background: #3b5998;
+    border: 1px solid transparent; }
+    .genric-btn.facebook:hover {
+      color: #3b5998;
+      border: 1px solid #3b5998;
+      background: #fff; }
+  .genric-btn.facebook-border {
+    color: #3b5998;
+    border: 1px solid #3b5998;
+    background: #fff; }
+  .genric-btn.facebook-border:hover {
+    color: #fff;
+    background: #3b5998;
+    border: 1px solid transparent; }
+
 
 .generic-blockquote {
   padding: 30px 50px 30px 30px;
