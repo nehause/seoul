@@ -24,10 +24,6 @@
 	textarea{font-size:12px;font-family:dotum;color:#666;}
 	select{margin:0;}
 	form{line-height:1.2em!important;}
-	
-	/* 공통값 */
-	/* .png24 {tmp:expression(setPng24(this))} 20140616 IE6 대응함수 지원 중단 */
-	
 	.clear{*zoom:1;}
 	.clear:after{content:"";display:block;clear:both;}
 	
@@ -47,103 +43,6 @@
 	<link  rel="stylesheet" type="text/css" href="./css/layout.css" />
 	<link  rel="stylesheet" type="text/css" href="./css/gnb.css" />
 	<link  rel="stylesheet" type="text/css" href="./css/welcome.css" />
-	<script type="text/javascript">
-		//타이틀 세팅
-	function getTitle(loc){
-		var title = '교보문고>';
-		var param = '';
-		
-		if(loc.indexOf('/index.laf') != -1 && loc.indexOf('retURL') == -1){
-			title = title + '홈';
-		}
-		else if(loc.indexOf('/member/MemBenefitDormancy.laf') != -1 && loc.indexOf('retURL') == -1){
-			title = title + '회원혜택';
-		}
-		else if(loc.indexOf('/member/joinMain.laf') != -1 && loc.indexOf('retURL') == -1){
-			title = title + '회원가입';
-		}
-		else if(loc.indexOf('/login/login.laf') != -1){
-			title = title + '로그인';
-		}
-		else if(loc.indexOf('/event/dailyCheckSpci.laf') != -1 && loc.indexOf('retURL') == -1){
-			title = title + '출석체크';
-		}
-		else if(loc.indexOf('/eventRenewal/eventViewByPid.laf') != -1 && loc.indexOf('retURL') == -1){
-			var gaEventNm = '';
-			if(gaEventNm == ''){
-				gaEventNm = '';
-			}
-			title = title + '이벤트_' + gaEventNm;
-		}
-		else if(loc.indexOf('/categoryRenewal/categoryMain.laf') != -1 && loc.indexOf('retURL') == -1){
-			var gaMallGb = getParamGA('mallGb');
-			var gaLinkClassNm = '';
-			
-			if(gaMallGb == 'KOR'){
-				title = title + '국내도서>';
-			}
-			else if(gaMallGb == 'ENG'){
-				title = title + '외국도서>';
-			}
-			if(gaLinkClassNm != ''){
-				if(gaLinkClassNm.split('&gt;').length == 2){
-					gaLinkClassNm = gaLinkClassNm.split('&gt;')[0].trim() + '>' + gaLinkClassNm.split('&gt;')[1].trim();
-				}
-				else if(gaLinkClassNm.split('&gt;').length == 3){
-					gaLinkClassNm = gaLinkClassNm.split('&gt;')[0].trim() + '>' + gaLinkClassNm.split('&gt;')[1].trim() + '>' + gaLinkClassNm.split('&gt;')[2].trim();
-				}
-			}
-			
-			title = title + gaLinkClassNm;
-		}
-		else if(loc.indexOf('/indexKor.laf') != -1 && loc.indexOf('retURL') == -1){
-			title = title + '국내도서';
-		}
-		else if(loc.indexOf('/indexEng.laf') != -1 && loc.indexOf('retURL') == -1){
-			title = title + '외국도서';
-		}
-		else if(loc.indexOf('/newproduct/newProductList.laf') != -1 && loc.indexOf('retURL') == -1){
-			title = title + '신상품';
-		}
-		else if((loc.indexOf('/product/detailViewKor.laf') != -1 || loc.indexOf('/product/detailViewEng.laf') != -1) && loc.indexOf('retURL') == -1){
-			var gaBookNm = '';
-			title = title + '상품상세_' + gaBookNm;
-		}
-		else if(loc.indexOf('/login/memberPWSearchForm.laf') != -1 && loc.indexOf('retURL') == -1){
-			title = title + '비밀번호 찾기';
-		}
-		else if(loc.indexOf('/bestSellerNew/bestseller.laf') != -1 && loc.indexOf('retURL') == -1){
-			title = '교보문고>베스트셀러';
-			
-		}
-		else if(loc.indexOf('/myroom/joinModFormIframe.laf') != -1 && loc.indexOf('retURL') == -1){
-			title = title + '마이룸>회원정보수정';
-		}
-		else if(loc.indexOf('/myroom/newGradeIframe.laf') != -1 && loc.indexOf('retURL') == -1){
-			title = title + '마이룸>회원등급조회/혜택안내';
-		}
-		else if(loc.indexOf('/myroom/pointListIframe.laf') != -1 && loc.indexOf('retURL') == -1){
-			title = title + '마이룸>통합포인트';
-		}
-		else if(loc.indexOf('/myroom/userPWChangeIframe.laf') != -1 && loc.indexOf('retURL') == -1){
-			title = title + '마이룸>비밀번호변경';
-		}
-		else if(loc.indexOf('/myroom/qnaListIframe.laf') != -1 && loc.indexOf('retURL') == -1){
-			title = title + '마이룸>문의내역';
-		}
-		else if(loc.indexOf('/myroom/myAddrBookListIframe.laf') != -1 && loc.indexOf('retURL') == -1){
-			title = title + '마이룸>나의주소록';
-		}
-		else if(loc.indexOf('/product/detailPickUpRespectTime.laf') != -1 && loc.indexOf('retURL') == -1){
-			var gaBookNm = '';
-			title = title + '상품상세_' + gaBookNm + '>바로드림';
-		}
-		else{
-			title = ''
-		}
-	
-		return title;	
-	}
 	</script>
 	<iframe name="HiddenActionFrame" frameborder="0" width="0" height="0" style="display:none;" title="빈 프레임"></iframe>
 </head>
@@ -187,63 +86,63 @@
 						</ul>
 						<div class="store_list wide" id="storeList" style="display:none;" data-ga-category="교보문고_공통_PC" data-ga-action="상단컨텐츠LNB">
 						<div class="link_main">
-						<a href="http://www.kyobobook.co.kr/storen/MainStore.laf?SITE=01&Kc=GNHHNOoffstore&orderClick=rvd" data-ga-label="매장안내">매장 안내</a></div>
+						<a href="#" data-ga-label="매장안내">매장 안내</a></div>
 						<ul class="first" data-ga-group="매장안내_서울">
 							<li class="list_title"><strong>서울</strong></li>
-							<li><a href="http://www.kyobobook.co.kr/storen/MainStore.laf?SITE=01&Kc=GNHHNOoffstore&orderClick=rvd" data-ga-label>광화문점</a></li>
-							<li><a href="http://www.kyobobook.co.kr/storen/MainStore.laf?SITE=58&Kc=GNHHNOoffstore&orderClick=rvd" data-ga-label>가든파이브<br /> 바로드림센터</a></li>
-							<li><a href="http://www.kyobobook.co.kr/storen/MainStore.laf?SITE=15&Kc=GNHHNOoffstore&orderClick=rvd" data-ga-label>강남점</a></li>
-							<li><a href="http://www.kyobobook.co.kr/storen/MainStore.laf?SITE=23&Kc=GNHHNOoffstore&orderClick=rvd" data-ga-label>건대 바로드림센터</a></li>
-							<li><a href="http://www.kyobobook.co.kr/storen/MainStore.laf?SITE=41&Kc=GNHHNOoffstore&orderClick=rvd" data-ga-label>동대문<br /> 바로드림센터</a></li>
-							<li><a href="http://www.kyobobook.co.kr/storen/MainStore.laf?SITE=66&Kc=GNHHNOoffstore&orderClick=rvd" data-ga-label>디큐브시티<br /> 바로드림센터</a></li>
-							<li><a href="http://www.kyobobook.co.kr/storen/MainStore.laf?SITE=33&Kc=GNHHNOoffstore&orderClick=rvd" data-ga-label>목동점</a></li>
-							<li><a href="http://www.kyobobook.co.kr/storen/MainStore.laf?SITE=72&Kc=GNHHNOoffstore&orderClick=rvd" data-ga-label>서울대<br /> 교내서점</a></li>
-							<li><a href="http://www.kyobobook.co.kr/storen/MainStore.laf?SITE=68&Kc=GNHHNOoffstore&orderClick=rvd" data-ga-label>수유<br /> 바로드림센터</a></li>
-							<li><a href="http://www.kyobobook.co.kr/storen/MainStore.laf?SITE=E6&Kc=GNHHNOoffstore&orderClick=rvd" data-ga-label>신논현역스토어</a></li>
+							<li><a href="#" data-ga-label>광화문점</a></li>
+							<li><a href="#" data-ga-label>가든파이브<br /> 바로드림센터</a></li>
+							<li><a href="#" data-ga-label>강남점</a></li>
+							<li><a href=# data-ga-label>건대 바로드림센터</a></li>
+							<li><a href="#" data-ga-label>동대문<br /> 바로드림센터</a></li>
+							<li><a href="#" data-ga-label>디큐브시티<br /> 바로드림센터</a></li>
+							<li><a href="#" data-ga-label>목동점</a></li>
+							<li><a href="#" data-ga-label>서울대<br /> 교내서점</a></li>
+							<li><a href="#" data-ga-label>수유<br /> 바로드림센터</a></li>
+							<li><a href="#" data-ga-label>신논현역스토어</a></li>
 							
-							<li><a href="http://www.kyobobook.co.kr/storen/MainStore.laf?SITE=36&Kc=GNHHNOoffstore&orderClick=rvd" data-ga-label>영등포점</a></li>
-							<li><a href="http://www.kyobobook.co.kr/storen/MainStore.laf?SITE=46&Kc=GNHHNOoffstore&orderClick=rvd" data-ga-label>은평<br /> 바로드림센터</a></li>
-							<li><a href="http://www.kyobobook.co.kr/storen/MainStore.laf?SITE=74&Kc=GNHHNOoffstore&orderClick=rvd" data-ga-label>이화여대<br /> 교내서점</a></li>
-							<li><a href="http://www.kyobobook.co.kr/storen/MainStore.laf?SITE=29&Kc=GNHHNOoffstore&orderClick=rvd" data-ga-label>잠실점</a></li>
-							<li><a href="http://www.kyobobook.co.kr/storen/MainStore.laf?SITE=90&Kc=GNHHNOoffstore&orderClick=rvd" data-ga-label>천호점</a></li>
-							<li><a href="http://www.kyobobook.co.kr/storen/MainStore.laf?SITE=56&Kc=GNHHNOoffstore&orderClick=rvd" data-ga-label>청량리<br /> 바로드림센터</a></li>
-							<li><a href="http://www.kyobobook.co.kr/storen/MainStore.laf?SITE=49&Kc=GNHHNOoffstore&orderClick=rvd" data-ga-label>합정점</a></li>
+							<li><a href="#" data-ga-label>영등포점</a></li>
+							<li><a href="#" data-ga-label>은평<br /> 바로드림센터</a></li>
+							<li><a href="#" data-ga-label>이화여대<br /> 교내서점</a></li>
+							<li><a href="#" data-ga-label>잠실점</a></li>
+							<li><a href="#" data-ga-label>천호점</a></li>
+							<li><a href="#" data-ga-label>청량리<br /> 바로드림센터</a></li>
+							<li><a href="#" data-ga-label>합정점</a></li>
 						</ul>
 						<ul data-ga-group="매장안내_경기/인천">
 							<li class="list_title"><strong>경기/인천</strong></li>
 							
-							<li><a href="http://www.kyobobook.co.kr/storen/MainStore.laf?SITE=70&Kc=GNHHNOoffstore&orderClick=rvd" data-ga-label>광교점</a></li>
-							<li><a href="http://www.kyobobook.co.kr/storen/MainStore.laf?SITE=52&Kc=GNHHNOoffstore&orderClick=rvd" data-ga-label>광교<br /> 월드스퀘어센터</a></li>
-							<li><a href="http://www.kyobobook.co.kr/storen/MainStore.laf?SITE=13&Kc=GNHHNOoffstore&orderClick=rvd" data-ga-label>부천점</a></li>
-							<li><a href="http://www.kyobobook.co.kr/storen/MainStore.laf?SITE=47&Kc=GNHHNOoffstore&orderClick=rvd" data-ga-label>분당점</a></li>
+							<li><a href="#" data-ga-label>광교점</a></li>
+							<li><a href="#" data-ga-label>광교<br /> 월드스퀘어센터</a></li>
+							<li><a href="#" data-ga-label>부천점</a></li>
+							<li><a href="#" data-ga-label>분당점</a></li>
 							
-							<li><a href="http://www.kyobobook.co.kr/storen/MainStore.laf?SITE=42&Kc=GNHHNOoffstore&orderClick=rvd" data-ga-label>송도<br /> 바로드림센터</a></li>
-							<li><a href="http://www.kyobobook.co.kr/storen/MainStore.laf?SITE=25&Kc=GNHHNOoffstore&orderClick=rvd" data-ga-label>인천점</a></li>
-							<li><a href="http://www.kyobobook.co.kr/storen/MainStore.laf?SITE=38&Kc=GNHHNOoffstore&orderClick=rvd" data-ga-label>일산점</a></li>
-							<li><a href="http://www.kyobobook.co.kr/storen/MainStore.laf?SITE=69&Kc=GNHHNOoffstore&orderClick=rvd" data-ga-label>판교점</a></li>
-							<li><a href="http://www.kyobobook.co.kr/storen/MainStore.laf?SITE=57&Kc=GNHHNOoffstore&orderClick=rvd" data-ga-label>평촌점</a></li>
+							<li><a href="#" data-ga-label>송도<br /> 바로드림센터</a></li>
+							<li><a href="#" data-ga-label>인천점</a></li>
+							<li><a href="#" data-ga-label>일산점</a></li>
+							<li><a href="#" data-ga-label>판교점</a></li>
+							<li><a href="#" data-ga-label>평촌점</a></li>
 						</ul>
 						<ul data-ga-group="매장안내_수도권 외">
 							<li class="list_title"><strong>수도권 외</strong></li>
-							<li><a href="http://www.kyobobook.co.kr/storen/MainStore.laf?SITE=59&Kc=GNHHNOoffstore&orderClick=rvd" data-ga-label>경성대&middot;부경대<br /> 센터</a></li>
-							<li><a href="http://www.kyobobook.co.kr/storen/MainStore.laf?SITE=87&Kc=GNHHNOoffstore&orderClick=rvd" data-ga-label>광주상무 센터</a></li>
-							<li><a href="http://www.kyobobook.co.kr/storen/MainStore.laf?SITE=04&Kc=GNHHNOoffstore&orderClick=rvd" data-ga-label>대구점</a></li>
-							<li><a href="http://www.kyobobook.co.kr/storen/MainStore.laf?SITE=02&Kc=GNHHNOoffstore&orderClick=rvd" data-ga-label>대전점</a></li>
+							<li><a href="#" data-ga-label>경성대&middot;부경대<br /> 센터</a></li>
+							<li><a href="#" data-ga-label>광주상무 센터</a></li>
+							<li><a href="#" data-ga-label>대구점</a></li>
+							<li><a href="#" data-ga-label>대전점</a></li>
 							
 							
-							<li><a href="http://www.kyobobook.co.kr/storen/MainStore.laf?SITE=05&Kc=GNHHNOoffstore&orderClick=rvd" data-ga-label>부산점</a></li>
-							<li><a href="http://www.kyobobook.co.kr/storen/MainStore.laf?SITE=24&Kc=GNHHNOoffstore&orderClick=rvd" data-ga-label>세종<br /> 바로드림센터</a></li>
+							<li><a href="#" data-ga-label>부산점</a></li>
+							<li><a href="#" data-ga-label>세종<br /> 바로드림센터</a></li>
 							
-							<li><a href="http://www.kyobobook.co.kr/storen/MainStore.laf?SITE=45&Kc=GNHHNOoffstore&orderClick=rvd" data-ga-label>센텀시티점</a></li>
-							<li><a href="http://www.kyobobook.co.kr/storen/MainStore.laf?SITE=39&Kc=GNHHNOoffstore&orderClick=rvd" data-ga-label>울산점</a></li>
-							<li><a href="http://www.kyobobook.co.kr/storen/MainStore.laf?SITE=77&Kc=GNHHNOoffstore&orderClick=rvd" data-ga-label>전북대<br /> 교내서점</a></li>
-							<li><a href="http://www.kyobobook.co.kr/storen/MainStore.laf?SITE=31&Kc=GNHHNOoffstore&orderClick=rvd" data-ga-label>전주<br /> 바로드림센터</a></li>
-							<li><a href="http://www.kyobobook.co.kr/storen/MainStore.laf?SITE=28&Kc=GNHHNOoffstore&orderClick=rvd" data-ga-label>창원점</a></li>
+							<li><a href="#" data-ga-label>센텀시티점</a></li>
+							<li><a href="#" data-ga-label>울산점</a></li>
+							<li><a href="#" data-ga-label>전북대<br /> 교내서점</a></li>
+							<li><a href="#" data-ga-label>전주<br /> 바로드림센터</a></li>
+							<li><a href="#" data-ga-label>창원점</a></li>
 							
-							<li><a href="http://www.kyobobook.co.kr/storen/MainStore.laf?SITE=34&Kc=GNHHNOoffstore&orderClick=rvd" data-ga-label>천안점</a></li>
-							<li><a href="http://www.kyobobook.co.kr/storen/MainStore.laf?SITE=48&Kc=GNHHNOoffstore&orderClick=rvd" data-ga-label>칠곡 센터</a></li>
-							<li><a href="http://www.kyobobook.co.kr/storen/MainStore.laf?SITE=75&Kc=GNHHNOoffstore&orderClick=rvd" data-ga-label>포항공대<br /> 교내서점</a></li>
-							<li><a href="http://www.kyobobook.co.kr/storen/MainStore.laf?SITE=43&Kc=GNHHNOoffstore&orderClick=rvd" data-ga-label>해운대<br />센터</a></li>
+							<li><a href="#" data-ga-label>천안점</a></li>
+							<li><a href="#" data-ga-label>칠곡 센터</a></li>
+							<li><a href="#" data-ga-label>포항공대<br /> 교내서점</a></li>
+							<li><a href="#" data-ga-label>해운대<br />센터</a></li>
 						</ul>
 						<div class="btn_close"><a href="#"><img src="http://image.kyobobook.co.kr/ink/images/gnb/btn_up3.gif" alt="닫기" /></a></div>
 						</div>
@@ -686,17 +585,10 @@
 							<li><a href="#" data-ga-label>베스트</a></li>
 							<li><a href="#" data-ga-label>이벤트</a></li>
 						</ul>
-						
-						
-
-						
 						<div class="add_url"><a href="#" target="_blank" data-ga-label>고마운 마음을 선물하는 <em><!-- 교보문고상품권드림카드 -->교보문고 기프트카드</em></a></div><!-- //20190902 명칭변경 -->
-
-						
 					</div>
 				</div>
 			</li>
-
 			<li id="gnb_menu07" class="gnbGroup">
 				<div class="navigation_title">
 					<a href="#" data-ga-label>음반</a>
@@ -716,9 +608,6 @@
 							<li><a href="#" data-ga-label>일본음악</a></li>
 							<li><a href="#" data-ga-label>유아/아동</a></li>
 						</ul>
-						<!--
-						<div class="btn_more"><a href="http://music.kyobobook.co.kr/ht/recordMain?orderClick=cb6" data-ga-label>전체보기</a></div>
-						-->
 					</div>
 					<div class="column_1">
 						<div class="title linked"><strong><a href="#" data-ga-label>DVD</a></strong></div>
@@ -832,25 +721,14 @@
 						<ul class="category">
                             <li><a href="#" data-ga-label>365 인생학교</a></li>
 							<li><a href="#" data-ga-label><em>명강의 Big10</em> <img src="../images/icon_new02.gif" alt="new" /></a>
-<!--
-							<li><a href="http://www.kyobobook.co.kr/prom/2017/pube/02/170203_en.jsp?orderClick=c65" data-ga-label>원데이 살롱</a></li>
--->
                             <li><a href="#" data-ga-label>원데이 살롱</a></li>
 						</ul>
-                        
-                        <!-- 17-02-07 -->
 						<div class="title linked second"><strong><a href="#" target="_blank" data-ga-label>스토리</a></strong></div>
 						<ul class="category">
-						
-<!-- 19-03-12 수정 -->
-
 							<li><a href="#" target="_blank" data-ga-label><em>공모전</em> <img src="../images/icon_new02.gif" alt="new" class="icon_new" /></a></li>
 							<li><a href="#" target="_blank" data-ga-label>스토리업</em></a></li>
 							<li><a href="#" target="_blank" data-ga-label>스토리마켓</a></li>
-<!-- //19-03-12 수정 -->
-						</ul><!-- //17-02-07 -->
-                        
-                        
+						</ul>
 					</div>
 					<div class="column_1">
 						<div class="title"><strong>스페셜 코너</strong></div>
