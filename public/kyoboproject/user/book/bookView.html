@@ -108,11 +108,11 @@
 		<div class="container">
 			<div class="breadcrumb-banner d-flex flex-wrap align-items-center justify-content-end">
 				<div class="col-first">
-					<h1>Product Details Page</h1>
+					<h1>도서 상세 페이지</h1>
 					<nav class="d-flex align-items-center">
-						<a href="index.html">Home<span class="lnr lnr-arrow-right"></span></a>
-						<a href="#">Shop<span class="lnr lnr-arrow-right"></span></a>
-						<a href="single-product.html">product-details</a>
+						<a href="index.html">메인<span class="lnr lnr-arrow-right"></span></a>
+						<a href="#">도서 구매<span class="lnr lnr-arrow-right"></span></a>
+						<a href="single-product.html">도서 상세 페이지</a>
 					</nav>
 				</div>
 			</div>
@@ -125,39 +125,57 @@
 		<div class="container">
 			<div class="row s_product_inner">
 				<div class="col-lg-6">
-					<div class="s_Product_carousel">
-						<div class="single-prd-item">
-							<img class="img-fluid" src="img/category/s-p1.jpg" alt="">
-						</div>
-						<div class="single-prd-item">
-							<img class="img-fluid" src="img/category/s-p1.jpg" alt="">
-						</div>
-						<div class="single-prd-item">
-							<img class="img-fluid" src="img/category/s-p1.jpg" alt="">
-						</div>
+					<div class="single-deal">
+						<div class="overlay"></div>
+						<img class="img-fluid" src="images/bp1.png" alt="">
+						<a href="images/bp1.png" class="img-pop-up" target="_blank">
+							<div class="deal-details">
+								<h6 class="deal-title">이미지 보기</h6>
+							</div>
+						</a>
 					</div>
+					<!-- <div class="s_Product_carousel">
+						<div class="single-prd-item">
+							<img class="img-fluid" src="img/category/s-p1.jpg" alt="">
+						</div>
+						<div class="single-prd-item">
+							<img class="img-fluid" src="img/category/s-p1.jpg" alt="">
+						</div>
+						<div class="single-prd-item">
+							<img class="img-fluid" src="img/category/s-p1.jpg" alt="">
+						</div>
+					</div> -->
 				</div>
 				<div class="col-lg-5 offset-lg-1">
 					<div class="s_product_text">
-						<h3>Faded SkyBlu Denim Jeans</h3>
-						<h2>$149.99</h2>
+						<h3>역행자</h3>
+						<h4 style="color: gray">돈.시간.운명으로부터 완전한 자유를 얻는 7단계 인생 공략집</h4>
+						<h2>₩15,750</h2>
 						<ul class="list">
-							<li><a class="active" href="#"><span>Category</span> : Household</a></li>
-							<li><a href="#"><span>Availibility</span> : In Stock</a></li>
+							<li>
+								<a><span>작가</span> : 자청</a>
+							</li>
+							<li>
+								<a><span>출판사</span> : 웅진지식하우스</a>
+							</li>
+							<li><a class="active" href="#"><span>분야</span> : 자기계발 > 성공/처세 > 성공스토리
+							</a></li>
+							<li><a><span>구매가능수량</span> : 재고 한도 내</a></li>
 						</ul>
-						<p>Mill Oil is an innovative oil filled radiator with the most modern technology. If you are looking for
-							something that can make your interior look awesome, and at the same time give you the pleasant warm feeling
-							during the winter.</p>
+						<p><b style="color: black">“절대 읽지 마라! 죽을 때까지 순리자로 살고 싶다면!”
+							<br>오타쿠 흙수저에서
+							월 1억 자동 수익을 실현한 무자본 연쇄창업마,
+							라이프해커 자청의 인생 역주행 공식 대공개! </b></p>
 						<div class="product_count">
-							<label for="qty">Quantity:</label>
+							<label for="qty">수량:</label>
 							<input type="text" name="qty" id="sst" maxlength="12" value="1" title="Quantity:" class="input-text qty">
 							<button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;"
 							 class="increase items-count" type="button"><i class="lnr lnr-chevron-up"></i></button>
-							<button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) &amp; &amp; sst > 0 ) result.value--;return false;"
+							<button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 1 ) result.value--;return false;"
 							 class="reduced items-count" type="button"><i class="lnr lnr-chevron-down"></i></button>
 						</div>
 						<div class="card_area d-flex align-items-center">
-							<a class="primary-btn" href="#">Add to Cart</a>
+							<a class="primary-btn" href="#">구매하기</a>
 							<a class="icon_btn" href="#"><i class="lnr lnr lnr-diamond"></i></a>
 							<a class="icon_btn" href="#"><i class="lnr lnr lnr-heart"></i></a>
 						</div>
@@ -173,65 +191,253 @@
 		<div class="container">
 			<ul class="nav nav-tabs" id="myTab" role="tablist">
 				<li class="nav-item">
-					<a class="nav-link" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Description</a>
+					<a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">상세설명</a>
 				</li>
 				<li class="nav-item">
+					<a class="nav-link" id="writer-tab" data-toggle="tab" href="#writer" role="tab" aria-controls="writer"
+					 aria-selected="false">작가 소개</a>
+				</li>
+				<!-- <li class="nav-item">
 					<a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile"
-					 aria-selected="false">Specification</a>
-				</li>
-				<li class="nav-item">
+					 aria-selected="false">도서 상세</a>
+				</li> -->
+				<!-- <li class="nav-item">
 					<a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact"
 					 aria-selected="false">Comments</a>
-				</li>
+				</li> -->
 				<li class="nav-item">
-					<a class="nav-link active" id="review-tab" data-toggle="tab" href="#review" role="tab" aria-controls="review"
-					 aria-selected="false">Reviews</a>
+					<a class="nav-link" id="review-tab" data-toggle="tab" href="#review" role="tab" aria-controls="review"
+					 aria-selected="false">리뷰</a>
 				</li>
 			</ul>
 			<div class="tab-content" id="myTabContent">
-				<div class="tab-pane fade" id="home" role="tabpanel" aria-labelledby="home-tab">
-					<p>Beryl Cook is one of Britain’s most talented and amusing artists .Beryl’s pictures feature women of all shapes
-						and sizes enjoying themselves .Born between the two world wars, Beryl Cook eventually left Kendrick School in
-						Reading at the age of 15, where she went to secretarial school and then into an insurance office. After moving to
-						London and then Hampton, she eventually married her next door neighbour from Reading, John Cook. He was an
-						officer in the Merchant Navy and after he left the sea in 1956, they bought a pub for a year before John took a
-						job in Southern Rhodesia with a motor company. Beryl bought their young son a box of watercolours, and when
-						showing him how to use it, she decided that she herself quite enjoyed painting. John subsequently bought her a
-						child’s painting set for her birthday and it was with this that she produced her first significant work, a
-						half-length portrait of a dark-skinned lady with a vacant expression and large drooping breasts. It was aptly
-						named ‘Hangover’ by Beryl’s husband and</p>
-					<p>It is often frustrating to attempt to plan meals that are designed for one. Despite this fact, we are seeing
-						more and more recipe books and Internet websites that are dedicated to the act of cooking for one. Divorce and
-						the death of spouses or grown children leaving for college are all reasons that someone accustomed to cooking for
-						more than one would suddenly need to learn how to adjust all the cooking practices utilized before into a
-						streamlined plan of cooking that is more efficient for one person creating less</p>
+				<div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+					<table class="table">
+						<tbody>
+							<tr>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<h5>ISBN</h5>
+								</td>
+								<td>
+									<h5>9788901260716(8901260719)</h5>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<h5>쪽수</h5>
+								</td>
+								<td>
+									<h5>314쪽</h5>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<h5>크기</h5>
+								</td>
+								<td>
+									<h5>143 * 195 * 26 mm /564g</h5>
+								</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td></td>
+							</tr>
+<!-- 								<tr>
+									<td>
+										<h5>Weight</h5>
+									</td>
+									<td>
+										<h5>52gm</h5>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<h5>Quality checking</h5>
+									</td>
+									<td>
+										<h5>yes</h5>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<h5>Freshness Duration</h5>
+									</td>
+									<td>
+										<h5>03days</h5>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<h5>When packeting</h5>
+									</td>
+									<td>
+										<h5>Without touch of hand</h5>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<h5>Each Box contains</h5>
+									</td>
+									<td>
+										<h5>60pcs</h5>
+									</td>
+								</tr> -->
+						</tbody>
+					</table>
+					<div class="first intro">
+					<br><br>
+					<p>대부분의 사람들은 유전자와 본성의 명령을 그대로 따르기 때문에 평범함을 벗어날 수 없다. 하지만 정작 자신은 이를 모른 채 ‘나는 달라’ 하는 자의식에 사로잡혀서 무한 합리화에 빠져 살아간다.
+					스스로가 얼마나 많은 정신적, 심리적 오류를 저지르는지 알지 못한 채 매일 똑같은 쳇바퀴를 돌 뿐이다. 왜 우리는 진짜 자유를 얻지 못하는가? 왜 늘 돈 이야기를 하면서도 평생 돈에 허덕이는가?
+					<br><br>저자 역시 스무 살까지는 이런 쳇바퀴에 갇혀 있었기 때문에, 그 상황을 누구보다 잘 알았다. 자청의 첫 책 『역행자』에는 가난한 인생에서 벗어나 경제적 자유와 행복을 얻은 저자가 깨달은 인생 레벨업 치트키가 빼곡히 담겨 있다. 
+					10대 때의 그는 외모, 돈, 공부, 그 어떤 것에서도 최하위였다. 그러던 스무 살 무렵, ‘인생에도 게임처럼 공략집이 있다’는 사실을 깨닫고 삶이 180도 바뀌기 시작한다. 200여 권의 책을 독파하며 얻은 인생의 치트키들을 활용해 창업에 연이어 성공한 것이다.
+					‘연봉 10억 무자본 창업가’로 유명해진 그는 2020년, 단 20개의 영상으로 10만 구독자를 넘어서며 화제를 모았으나 곧장 미련 없이 유튜브를 그만뒀다. 
+					이후 본업인 온라인 마케팅 비즈니스를 비롯해 다방면으로 사업을 확장하고 있다. 그 사이 ‘라이프해커 자청’이라는 캐릭터와 ‘무자본 창업’이라는 개념은 사람들의 고정관념을 깨는 상징이 됐다. 
+					자청이 찾아낸 ‘역행자의 7단계 모델’을 통해 함께 ‘인생의 추월차선’으로 향하자.</p>
+					<br><br>
+					</div>	
+					<div class="detail images">
+						<img alt="" src="images/bv1.png">  <!-- 이미지 크기는 가로 1050px -->
+					</div>
+					<div class="second intro">
+					<br><br>
+					<h4>목차</h4>
+					<br>프롤로그 30대 초반, 일하지 않아도 월 1억씩 버는 자동 수익이 완성되다
+					<br><br>
+					<br>CHAPTER1 나는 어떻게 경제적 자유에 이르게 되었나
+					<br>1막/ 3개의 벽_ 인생에서 절대 넘을 수 없을 거라 믿었던 것
+					<br>2막/ 하루 2시간, 기적의 시작_ 역행자의 첫 번째 단서
+					<br>3막/ 배수의 진_ “19000원이 입금되었습니다”
+					<br>4막/ 행운 뒤에 숨은 것_ ‘이보다 최악의 상황이 있을까?’
+					<br>5막/ 인간의 그릇_ 결국 사람은 제 그릇만큼의 돈을 모은다
+					<br>피날레/ 거슬러 오르기_ 돈, 시간, 정신으로부터 완벽한 자유를 얻다
+					<br><br>
+					<br>CHAPTER2 역행자 1단계_ 자의식 해체
+					<br>자의식이 인간을 망치는 이유
+					<br>내가 너무 소중한 사람들
+					<br>자의식 해체의 3가지 단계
+					<br>인생을 허비하는 특별한 방법
+					<br><br>
+					<br>CHAPTER3 역행자 2단계_ 정체성 만들기
+					<br>내 머리를 포맷할 수 있다면
+					<br>정체성 소프트웨어를 설치하기
+					<br>사람들은 자기 마음의 상처를 핥기에 여념이 없다
+					<br><br>
+					<br>CHAPTER4 역행자 3단계_ 유전자 오작동
+					<br>뇌는 어떻게 진화했을까
+					<br>진화의 목적은 완벽함이 아니라 생존이다
+					<br>유전자 오작동을 이기는 역행자의 사고방식
+					<br>오작동을 극복하고 30억을 취하다
+					<br><br>
+					<br>CHAPTER5 역행자 4단계_ 뇌 자동화
+					<br>뇌를 복리로 성장시킨다면
+					<br>뇌 최적화 1단계_ 22전략
+					<br>뇌 최적화 2단계_ 오목 이론
+					<br>뇌 최적화 3단계_ 뇌를 증폭시키는 3가지 방법
+					<br><br>
+					<br>CHAPTER6 역행자 5단계_ 역행자의 지식
+					<br>기버 이론_ 역행자는 1을 받으면 2를 준다
+					<br>확률 게임_ 역행자는 확률에만 베팅한다
+					<br>타이탄의 도구_ 유전자에 각인된 장인 정신을 역행하라
+					<br>메타인지_ 주관적인 판단은 순리자들의 전유물이다
+					<br>실행력 레벨과 관성
+					<br><br>
+					<br>CHAPTER7 역행자 6단계_ 경제적 자유를 얻는 구체적 루트
+					<br>돈을 버는 근본 원리
+					<br>경제적 자유라는 성을 함락시키는 방법
+					<br>당신이 직장인이든 백수든 열아홉이든 쉰이든
+					<br>경제적 자유를 위한 5가지 공부법
+					<br>젊은 부자들은 어떻게 공부했을까
+					<br>경제적 자유로 가는 알고리즘 설계
+					<br><br>
+					<br>CHAPTER8 역행자 7단계_ 역행자의 쳇바퀴
+					<br><br>
+					<br>에필로그 역행자가 되어 완벽한 자유를 누려라
+					<br>참고 나를 역행자로 만들어준 책 리스트
+					<br>특별부록 곧바로 돈 버는 무자본 창업 아이템
+					</div>
+					<div class="book review">
+					<br><br>
+					<h4>책 속으로</h4>
+					<br>나는 인생의 공략집이라고 생각한 이 특별한 방법들에 ‘역행자의 7단계 모델’이라는 이름을 붙였다. 이 책엔 내가 겪은 10년의 시행착오를 3년으로 줄일 수 있는 모든 치트키가 담겨 있다. 
+					타임머신이 있다면 10년 전 나에게 이 책을 꼭 전해주고 싶을 정도다. 내가 이것들 중 일부라도 알았더라면 그렇게까지 고생하진 않았을 텐데, 멀리 돌아가진 않았을 텐데, 훨씬 더 빨리 자유를 찾았을 텐데 싶다. 
+					뭐 어쩔 수 없다. 나 대신 당신이라도 이 책을 읽고 지름길을 밟길 바란다. 행복해지길 바란다. 그게 내가 이 책을 쓴 이유다. _p.15-16
+					<br><br>
+					<br>꽤 많은 불행과 가난이 ‘나를 너무 사랑하기 때문에’ 일어난다. 자의식은 인간을 크게 성장시키는 원동력이기도 하면서, 인생을 불행과 가난으로 떨어뜨리는 아주 무서운 것이기도 하다. 
+					주위를 둘러보자. 어린 시절 무척 똑똑해 좋은 대학을 갔더라도, 책을 수백 권 읽었더라도, 이상할 정도로 아무것도 이루지 못한 사람들이 있다. 그런 사람들을 가까이서 들여다보면 대부분 자의식에 
+					갇혀 답답할 정도로 고집을 부리는 경우다. 그들은 타고난 재능을 더 키우지 못하고 퇴화해버리곤 한다. 주변에서 뭐라고들 할 때마다 대답할 변명거리도 늘 준비되어 있다. 부모가, 시대가, 적성이, 
+					취향이, 건강이 맞지 않아서 그렇다고 한다. 모두가 아는 진짜 원인을, 본인은 한사코 외면하고 만다. _p.82
+					<br><br>
+					<br>‘내가 지금껏 결심을 안 해서 그렇지, 진짜 독하게 한번 마음만 먹으면 뭐든지 할 수 있어!’ 그럴까? 응, 아니다. 예전의 나를 포함한 대다수 인간의 착각이다. 말했듯이 진짜 독한 마음을 
+					먹는 경험은 죽음 직전에나 가야 할 수 있는 것이다. 그런데 이렇게 자기가 마음만 먹으면 뭔가를 할 것처럼 착각하는 사람들은 늘 거창한 목표를 세운 후 실패하고는 자의식을 보호하기 위해 방어기제를
+					 펼치는 일을 평생 반복한다. _p.117
+					<br><br>
+					<br>사람들은 하고 싶은 게 생길 때마다 허황된 목표를 세우고 항상 실패한다. 실패 후에는 자의식을 보호하기 위해 변명하기 바쁘고, 남 탓, 환경 탓을 하며 자위를 한다. 이 짓을 죽을 때까지 반복한다. 
+					자신이 어떤 존재이며, 어떤 과정을 거쳐서 지금의 결과에 이르게 됐는지, 그 진실을 보려고 하지 않는다. 그저 내 마음의 상처를 핥기에 여념이 없다.
+					나는 애초에 잃을 것이 없었다. 그야말로 바닥에 있었기 때문에 대단한 자의식이 없었던 것 같다. 그래서 비교적 쉽게 있는 그대로의 나를 인정할 수 있었다. ‘저는 그냥 게으른 동물이에요.’ 
+					그래서 나 스스로 목표를 잡을 때면, 나 자신을 믿는 대신 목표를 이룰 수밖에 없는 환경을 세팅한다. _p.118
+					<br><br>
+					<br>이 책을 읽은 사람 중 이걸 실천하는 비율은 0.1퍼센트도 안 될 것이고, 1주일에 한두 번 이상 실천하는 비율은 그중 5퍼센트 정도일 것이다. 이래서 인생이 참 쉬운 것이다. 
+					아무도 이 쉬운 것을 하지 않기 때문이다. 유전자의 명령과 본능에 사로잡혀서 온갖 핑계를 만들어내며 포기하는 사람이 대다수다. 매일 아침 천근같은 몸을 일으켜 회사에는 나가면서 
+					저녁에 책상에 앉아 글 한 줄 쓰는 것은 하지 않는다. 당장의 보상이 없기 때문이라고? 평생에 걸친 복리 저축임을 내가 보여주지 않았나? 자수성가한 수많은 역행자가 그토록 많은 책에서 
+					입이 닳도록 말하는데도? 그냥 다 핑계일 뿐이다. 95퍼센트의 사람들은 곧 포기할 것이다. 그게 인간의 본성이기 때문이다. _p.156
+					<br><br>
+					<br>순리자들은 안 되는 이유에 대해서만 떠든다. 되는 이유보다 안 되는 이유를 찾아야 본인의 자의식을 다치지 않기 때문이다. 그러나 항상 인생을 역행해야 자유를 얻을 수 
+					있다는 것을 기억하라. 우리의 타고난 원시 본성은 자유로 가는 길과 반대 방향임을 명심하라. 본성과 유전자의 지배를 받는 순리자들의 부정적인 말에 속지 마라. _p.297
+					<br><br>
+					<br>대부분의 순리자나 사업 경험이 없는 사람들은 내 이야기에 바로 이런 소리를 한다. “그걸 누가 2만 원이나 주고 시켜요?” 장담컨대 내가 이걸 직접 하면 1주일 안에, 매일 10건 이상 조립 신청을 받을 수 있다. 
+					이별 재회 상담 사업을 사람들에게 소개할 때마다 지겹게 듣는 질문이 있다. “이별 상담을 진짜 돈 주고 하는 사람이 있어요?” 안타깝게도 나는 이 사업으로 한 달에 1억 넘게 벌어들인다.
+					당신이 세상의 중심이 아니다. 세상엔 정말 다양한 사람들이 다양한 니즈를 갖고 살아가고 있다. 어떤 사업에 대해 이야기를 들었을 때 ‘정말 그런 니즈가 있다고?’ 하는 생각부터 든다면, 자의식 방어가 발동하는 
+					건 아닌지 돌아볼 필요가 있다. 대부분의 경우 당신은 그런 니즈 자체를 모르는 것이지, 그런 사업이 안 되는 이유를 정확히 알고 있는 게 아니다. _p.299
+					
+					</div>
+					
 				</div>
-				<div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+				<div class="tab-pane fade" id="writer" role="tabpanel" aria-labelledby="writer-tab">
+					<div class= "writer image" style="float: left; padding: 30px; padding-top: 0px">
+					<img alt="" src="./images/w1.png">
+					</div>
+					<p style="font-size: large; font-weight: bolder;">저자: 자청</p>
+					<a class="active" href="#"><span>분야</span> : 자기계발작가, 경영인, 사업가 </a>
+					<p>‘무자본 창업가’로 유명해진 저자는 2019년, 20편의 영상으로 10만 구독자를 넘어서며 화제를 모은 후 미련 없이 유튜브 〈라이프해커 자청〉을 그만뒀다.
+					이후 본업인 온라인 마케팅 비즈니스를 비롯해 다방면으로 사업을 확장했다. 대표적으로 ‘이상한마케팅’, ‘프드프’, ‘아트라상’, ‘큐어릴’부터 지분 투자로 참여한 ‘라이프해킹스쿨’, ‘유튜디오’, 오프라인 사업으로 ‘욕망의북카페’, ‘인피니’ 등이 있다.
+					이미 30대 초반 무렵에 어떤 일을 하지 않아도 월 1억씩 버는 자동 수익을 완성했으며, 소유한 자산으로 매년 20퍼센트 이상의 투자 수익률을 올리며 경제적 자유를 실현했다.
+					<br><br>
+					그러나 10대 때의 저자는 외모, 돈, 공부, 어떤 점에서도 최하위였다. 그러던 스무 살 무렵, ‘인생에도 게임처럼 공략집이 있다’는 사실을 깨달으면서 삶이 180도 바뀌기 시작한다.
+					200여 권의 책을 독파하며 얻은 치트키들을 활용해 창업에 연이어 성공한 것이다. 저자가 성공한 비즈니스 모델은 ‘초보가 왕초보를 가르치는 것’이다. 어느 분야든 저렴한 가격으로 도움을 받고 싶은 왕초보의 수요는 분명히 존재한다.
+					이들에겐 기본만 알아도 일의 진척을 도울 수 있다. 이에 착안해 저자는 여러 비즈니스를 설계했다.
+					공통점은 투자비용 자체가 들어가지 않는 ‘무자본 창업’, 그리고 일하지 않아도 돈이 들어오는 ‘자동화 수익’이다. 어느새 유튜버 ‘라이프해커 자청’이라는 캐릭터와 ‘무자본 창업’이라는 개념은 사람들의 고정관념을 깨는 상징이 됐다.
+					2022년 현재, 저자는 ‘이상한마케팅’, ‘프드프’, ‘아트라상’ 등의 회사를 비롯해 총 6개의 사업과 4개의 지분 투자 사업으로 자동 수익을 만들어내고 있으며, 약 130명의 직원들과 함께 재미난 일들을 벌이고 있다.</p>
+				</div>
+				<!-- <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
 					<div class="table-responsive">
 						<table class="table">
 							<tbody>
 								<tr>
 									<td>
-										<h5>Width</h5>
+										<h5>ISBN</h5>
 									</td>
 									<td>
-										<h5>128mm</h5>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<h5>Height</h5>
-									</td>
-									<td>
-										<h5>508mm</h5>
+										<h5>9788901260716(8901260719)</h5>
 									</td>
 								</tr>
 								<tr>
 									<td>
-										<h5>Depth</h5>
+										<h5>쪽수</h5>
 									</td>
 									<td>
-										<h5>85mm</h5>
+										<h5>314쪽</h5>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<h5>크기</h5>
+									</td>
+									<td>
+										<h5>143 * 195 * 26 mm /564g</h5>
 									</td>
 								</tr>
 								<tr>
@@ -277,8 +483,8 @@
 							</tbody>
 						</table>
 					</div>
-				</div>
-				<div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+				</div> -->
+				<!-- <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
 					<div class="row">
 						<div class="col-lg-6">
 							<div class="comment_list">
@@ -360,8 +566,8 @@
 							</div>
 						</div>
 					</div>
-				</div>
-				<div class="tab-pane fade show active" id="review" role="tabpanel" aria-labelledby="review-tab">
+				</div> -->
+				<div class="tab-pane fade" id="review" role="tabpanel" aria-labelledby="review-tab">
 					<div class="row">
 						<div class="col-lg-6">
 							<div class="row total_rate">
@@ -492,9 +698,298 @@
 		</div>
 	</section>
 	<!--================End Product Description Area =================-->
+	<!-- start product Area -->
+	<section class="owl-carousel active-product-area section_gap">
+		<!-- single product slide -->
+		<div class="single-product-slider">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-lg-6 text-center">
+						<div class="section-title">
+							<h1>베스트셀러</h1>
+							<p>몇주간 가장 인기 있었던 책들을 모아놓은 곳입니다.</p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<!-- single product -->
+					<div class="col-lg-3 col-md-6">
+						<div class="single-product">
+							<img class="img-fluid" src="./images/product/pb1.png" alt="">
+							<div class="product-details">
+								<h6>역행자</h6>
+								<div class="price">
+									<h6>₩15,750</h6>
+									<h6 class="l-through">₩17,000</h6>
+								</div>
+								<div class="prd-bottom">
 
+									<a href="" class="social-info">
+										<span class="ti-bag"></span>
+										<p class="hover-text">구매하기</p>
+									</a>
+									<a href="" class="social-info">
+										<span class="lnr lnr-heart"></span>
+										<p class="hover-text">관심상품</p>
+									</a>
+									<a href="" class="social-info">
+										<span class="lnr lnr-sync"></span>
+										<p class="hover-text">리스트가기</p>
+									</a>
+									<a href="../book/bookView.html" class="social-info">
+										<span class="lnr lnr-move"></span>
+										<p class="hover-text">상세보기</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- single product -->
+					<div class="col-lg-3 col-md-6">
+						<div class="single-product">
+							<img class="img-fluid" src="./images/product/pb2.png" alt="">
+							<div class="product-details">
+								<h6>헤어질 결심 각본</h6>
+								<div class="price">
+									<h6>₩13,500</h6>
+									<h6 class="l-through">₩15,000</h6>
+								</div>
+								<div class="prd-bottom">
+
+									<a href="" class="social-info">
+										<span class="ti-bag"></span>
+										<p class="hover-text">구매하기</p>
+									</a>
+									<a href="" class="social-info">
+										<span class="lnr lnr-heart"></span>
+										<p class="hover-text">관심상품</p>
+									</a>
+									<a href="" class="social-info">
+										<span class="lnr lnr-sync"></span>
+										<p class="hover-text">리스트가기</p>
+									</a>
+									<a href="" class="social-info">
+										<span class="lnr lnr-move"></span>
+										<p class="hover-text">상세보기</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- single product -->
+					<div class="col-lg-3 col-md-6">
+						<div class="single-product">
+							<img class="img-fluid" src="./images/product/pb3.png" alt="">
+							<div class="product-details">
+								<h6>세상의 마지막 기차역</h6>
+								<div class="price">
+									<h6>₩12,600</h6>
+									<h6 class="l-through">₩14,000</h6>
+								</div>
+								<div class="prd-bottom">
+
+									<a href="" class="social-info">
+										<span class="ti-bag"></span>
+										<p class="hover-text">구매하기</p>
+									</a>
+									<a href="" class="social-info">
+										<span class="lnr lnr-heart"></span>
+										<p class="hover-text">관심상품</p>
+									</a>
+									<a href="" class="social-info">
+										<span class="lnr lnr-sync"></span>
+										<p class="hover-text">리스트가기</p>
+									</a>
+									<a href="" class="social-info">
+										<span class="lnr lnr-move"></span>
+										<p class="hover-text">상세보기</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- single product -->
+					<div class="col-lg-3 col-md-6">
+						<div class="single-product">
+							<img class="img-fluid" src="./images/product/pb4.png" alt="">
+							<div class="product-details">
+								<h6>호감 가는 말투에는 비밀이 있다</h6>
+								<div class="price">
+									<h6>₩15,120</h6>
+									<h6 class="l-through">₩16,800</h6>
+								</div>
+								<div class="prd-bottom">
+
+									<a href="" class="social-info">
+										<span class="ti-bag"></span>
+										<p class="hover-text">구매하기</p>
+									</a>
+									<a href="" class="social-info">
+										<span class="lnr lnr-heart"></span>
+										<p class="hover-text">관심상품</p>
+									</a>
+									<a href="" class="social-info">
+										<span class="lnr lnr-sync"></span>
+										<p class="hover-text">리스트가기</p>
+									</a>
+									<a href="" class="social-info">
+										<span class="lnr lnr-move"></span>
+										<p class="hover-text">상세보기</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- single product slide -->
+		<div class="single-product-slider">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-lg-6 text-center">
+						<div class="section-title">
+							<h1>화제의 신간</h1>
+							<p>최근 가장 핫한 신간들을 모아놨습니다.</p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<!-- single product -->
+					<div class="col-lg-3 col-md-6">
+						<div class="single-product">
+							<img class="img-fluid" src="./images/product/ib1.png" alt="">
+							<div class="product-details">
+								<h6>비비안 마이어</h6>
+								<div class="price">
+									<h6>₩28,800</h6>
+									<h6 class="l-through">₩32,000</h6>
+								</div>
+								<div class="prd-bottom">
+
+									<a href="" class="social-info">
+										<span class="ti-bag"></span>
+										<p class="hover-text">구매하기</p>
+									</a>
+									<a href="" class="social-info">
+										<span class="lnr lnr-heart"></span>
+										<p class="hover-text">관심상품</p>
+									</a>
+									<a href="" class="social-info">
+										<span class="lnr lnr-sync"></span>
+										<p class="hover-text">리스트가기</p>
+									</a>
+									<a href="" class="social-info">
+										<span class="lnr lnr-move"></span>
+										<p class="hover-text">상세보기</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- single product -->
+					<div class="col-lg-3 col-md-6">
+						<div class="single-product">
+							<img class="img-fluid" src="./images/product/ib2.png" alt="">
+							<div class="product-details">
+								<h6>세 번째 위기, 세 번째 기회</h6>
+								<div class="price">
+									<h6>₩16,200</h6>
+									<h6 class="l-through">₩18,000</h6>
+								</div>
+								<div class="prd-bottom">
+
+									<a href="" class="social-info">
+										<span class="ti-bag"></span>
+										<p class="hover-text">구매하기</p>
+									</a>
+									<a href="" class="social-info">
+										<span class="lnr lnr-heart"></span>
+										<p class="hover-text">관심상품</p>
+									</a>
+									<a href="" class="social-info">
+										<span class="lnr lnr-sync"></span>
+										<p class="hover-text">리스트가기</p>
+									</a>
+									<a href="" class="social-info">
+										<span class="lnr lnr-move"></span>
+										<p class="hover-text">상세보기</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- single product -->
+					<div class="col-lg-3 col-md-6">
+						<div class="single-product">
+							<img class="img-fluid" src="./images/product/ib3.png" alt="">
+							<div class="product-details">
+								<h6>파칭코 1</h6>
+								<div class="price">
+									<h6>₩14,220</h6>
+									<h6 class="l-through">₩15,800</h6>
+								</div>
+								<div class="prd-bottom">
+
+									<a href="" class="social-info">
+										<span class="ti-bag"></span>
+										<p class="hover-text">구매하기</p>
+									</a>
+									<a href="" class="social-info">
+										<span class="lnr lnr-heart"></span>
+										<p class="hover-text">관심상품</p>
+									</a>
+									<a href="" class="social-info">
+										<span class="lnr lnr-sync"></span>
+										<p class="hover-text">리스트가기</p>
+									</a>
+									<a href="" class="social-info">
+										<span class="lnr lnr-move"></span>
+										<p class="hover-text">상세보기</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- single product -->
+					<div class="col-lg-3 col-md-6">
+						<div class="single-product">
+							<img class="img-fluid" src="./images/product/ib4.png" alt="">
+							<div class="product-details">
+								<h6>때로는 행복 대신 불행을 택하기도 한다</h6>
+								<div class="price">
+									<h6>₩14,400</h6>
+									<h6 class="l-through">₩16,000</h6>
+								</div>
+								<div class="prd-bottom">
+
+									<a href="" class="social-info">
+										<span class="ti-bag"></span>
+										<p class="hover-text">구매하기</p>
+									</a>
+									<a href="" class="social-info">
+										<span class="lnr lnr-heart"></span>
+										<p class="hover-text">관심상품</p>
+									</a>
+									<a href="" class="social-info">
+										<span class="lnr lnr-sync"></span>
+										<p class="hover-text">리스트가기</p>
+									</a>
+									<a href="" class="social-info">
+										<span class="lnr lnr-move"></span>
+										<p class="hover-text">상세보기</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- end product Area -->
 	<!-- Start related-product Area -->
-	<section class="related-product-area section_gap_bottom">
+	<!-- <section class="related-product-area section_gap_bottom">
 		<div class="container">
 			<div class="row justify-content-center">
 				<div class="col-lg-6 text-center">
@@ -627,7 +1122,7 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</section> -->
 	<!-- End related-product Area -->
 
 	<!-- start footer Area -->
