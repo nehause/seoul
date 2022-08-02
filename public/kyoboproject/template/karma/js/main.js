@@ -245,14 +245,14 @@ $(document).ready(function(){
     //----- Active No ui slider --------//
 
 
-
+	//원본
     $(function(){
 
         if(document.getElementById("price-range")){
         
         var nonLinearSlider = document.getElementById('price-range');
         
-        noUiSlider.create(nonLinearSlider, {
+        /*noUiSlider.create(nonLinearSlider, {
             connect: true,
             behaviour: 'tap',
             start: [ 500, 4000 ],
@@ -264,7 +264,22 @@ $(document).ready(function(){
                 '50%': [ 4000, 1000 ],
                 'max': [ 10000 ]
             }
+        });*/
+        
+        noUiSlider.create(nonLinearSlider, {
+            connect: true,
+            behaviour: 'tap',
+            start: [ 10000, 20000 ],
+            range: {
+                // Starting at 500, step the value by 500,
+                // until 4000 is reached. From there, step by 1000.
+                'min': [ 0 ],
+                '10%': [ 3000, 1000 ],
+                '50%': [ 10000, 1000 ],
+                'max': [ 30000 ]
+            }
         });
+
 
 
         var nodes = [
