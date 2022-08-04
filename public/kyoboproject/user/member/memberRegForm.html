@@ -123,24 +123,44 @@
                     <div class="col-lg-7">
                         <h3>회원가입</h3>
                         <form class="row contact_form" action="#" method="post" novalidate="novalidate">
-                            <div class="col-md-6 form-group p_star">
-                                <input type="text" class="form-control" id="first" name="name">
-                                <span class="placeholder" data-placeholder="First name"></span>
+                            <div class="col-md-4 form-group p_star">
+                                <input type="text" class="form-control" id="regName" name="regName">
+                                <span class="placeholder" data-placeholder="이름"></span>
+                            </div>
+                            <div class="col-md-6 form-group primary-radio">
+                            
+                            </div>
+                            <div class="col-md-4 form-group p_star">
+                                <input type="text" class="form-control" id="regId" name="regId">
+                                <span class="placeholder" data-placeholder="아이디"></span>
                             </div>
                             <div class="col-md-6 form-group p_star">
-                                <input type="text" class="form-control" id="last" name="name">
-                                <span class="placeholder" data-placeholder="Last name"></span>
+                                <input type="text" class="form-control" id="regPassword" name="regPassword">
+                                <span class="placeholder" data-placeholder="비밀번호"></span>
                             </div>
-                            <div class="col-md-12 form-group">
-                                <input type="text" class="form-control" id="company" name="company" placeholder="Company name">
+                            <div class="col-md-6 form-group p_star">
+                                <input type="text" class="form-control" id="regPasswordCheck" name="regPasswordCheck">
+                                <span class="placeholder" data-placeholder="비밀번호 확인"></span>
                             </div>
                             <div class="col-md-6 form-group p_star">
                                 <input type="text" class="form-control" id="number" name="number">
-                                <span class="placeholder" data-placeholder="Phone number"></span>
+                                <span class="placeholder" data-placeholder="'-' 를 뺀 전화번호를 입력해주세요 (ex:01012345678)"></span>
                             </div>
-                            <div class="col-md-6 form-group p_star">
+                            <div class="col-md-4 form-group p_star">
                                 <input type="text" class="form-control" id="email" name="compemailany">
                                 <span class="placeholder" data-placeholder="Email Address"></span>
+                            </div>
+                            <div class="col-md-4 form-group p_star">
+                                <input type="text" class="form-control" id="email" name="compemailany">
+                                <span class="placeholder" data-placeholder="Email Address"></span>
+                            </div>
+                            <div class="col-md-4 form-group p_star">
+                                <select class="country_select">
+                                    <option value="">직접입력</option>
+                                    <option value="naver.com">네이버</option>
+                                    <option value="google">구글</option>
+                                    <option value="kakao">카카오</option>
+                                </select>
                             </div>
                             <div class="col-md-12 form-group p_star">
                                 <select class="country_select">
