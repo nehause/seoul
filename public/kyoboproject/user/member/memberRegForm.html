@@ -117,8 +117,9 @@
 		</div>
 	</section>
 	<!-- End Banner Area -->
-	<section class="memberRegFormArea section_gap">
-		<div class="billing_details">
+	<form>
+		<section class="memberRegFormArea section_gap">
+			<div class="billing_details">
                 <div class="row justify-content-center">
                     <div class="col-lg-7">
                         <h3>회원가입</h3>
@@ -128,7 +129,15 @@
                                 <span class="placeholder" data-placeholder="이름"></span>
                             </div>
                             <div class="col-md-6 form-group primary-radio">
-                            
+                            	<label for="regGender" class="col-sm-1 col-form-label">성별</label> 
+								<div class="col-sm-1 gy-2 form-check form-check-inline">
+								  <input class="form-check-input" type="radio" name="regGender" id="regGenderMan" value="man">
+								  <label class="form-check-label" for="regGenderMan">남성</label>
+								</div>
+								<div>
+								  <input class="form-check-input" type="radio" name="regGender" id="regGenderWoman" value="woman">
+								  <label class="form-check-label" for="regGenderWoman">여성</label>
+								</div>
                             </div>
                             <div class="col-md-4 form-group p_star">
                                 <input type="text" class="form-control" id="regId" name="regId">
@@ -148,13 +157,14 @@
                             </div>
                             <div class="col-md-4 form-group p_star">
                                 <input type="text" class="form-control" id="email" name="compemailany">
-                                <span class="placeholder" data-placeholder="Email Address"></span>
+                                <span class="placeholder" data-placeholder="이메일"></span>
                             </div>
+                            <span> @ </span>
                             <div class="col-md-4 form-group p_star">
                                 <input type="text" class="form-control" id="email" name="compemailany">
                                 <span class="placeholder" data-placeholder="Email Address"></span>
                             </div>
-                            <div class="col-md-4 form-group p_star">
+                            <div class="col-md-3 form-group p_star">
                                 <select class="country_select">
                                     <option value="">직접입력</option>
                                     <option value="naver.com">네이버</option>
@@ -207,9 +217,10 @@
                             </div>
                         </form>
                     </div>
-                 </div>
-               </div>
-	</section>
+                </div>
+             </div>
+		</section>
+	</form>
 		<!-- start footer Area -->
 	<footer class="footer-area section_gap">
 		<div class="container">
