@@ -170,9 +170,9 @@
 						<div class="product_count">
 							<label for="qty">수량:</label>
 							<input type="text" name="qty" id="sst" maxlength="12" value="1" title="Quantity:" class="input-text qty">
-							<button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;"
+							<button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++; return false;"
 							 class="increase items-count" type="button"><i class="lnr lnr-chevron-up"></i></button>
-							<button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 1 ) result.value--;return false;"
+							<button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) && sst > 1 ) result.value--; return false;"
 							 class="reduced items-count" type="button"><i class="lnr lnr-chevron-down"></i></button>
 						</div>
 						<div class="card_area d-flex align-items-center">
@@ -398,7 +398,8 @@
 					당신이 세상의 중심이 아니다. 세상엔 정말 다양한 사람들이 다양한 니즈를 갖고 살아가고 있다. 어떤 사업에 대해 이야기를 들었을 때 ‘정말 그런 니즈가 있다고?’ 하는 생각부터 든다면, 자의식 방어가 발동하는 
 					건 아닌지 돌아볼 필요가 있다. 대부분의 경우 당신은 그런 니즈 자체를 모르는 것이지, 그런 사업이 안 되는 이유를 정확히 알고 있는 게 아니다. _p.299
 					</div>
-					<input type='button' id="bookBtn" value='더보기' onclick='bookReviewShow();'>
+					<input type='button' id="bookBtn" value='더보기' onclick="bookReviewShow()">
+					
 					<br><br>
 					</div>
 					
@@ -1261,29 +1262,29 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	
 	<script type="text/javascript">
 		function bookReviewShow() {
-			  const BRdiv = document.getElementById('bookReview');
-			  const Bbtn = document.getElementById('bookBtn');
-			  
-			  if(BRdiv.style.display === 'none')  {
-			    BRdiv.style.display = 'block';
-			    Bbtn.value = '닫기';
-			    
-			  }else {
-			    BRdiv.style.display = 'none';
-			    Bbtn.value = '더보기';
-			  }
-			} 
+		  var BRdiv = document.getElementById('bookReview');
+		  var Bbtn = document.getElementById('bookBtn');
+		  
+		  if(BRdiv.style.display == 'none')  {
+		    BRdiv.style.display = 'block';
+		    Bbtn.value = '닫기';
+		    
+		  }else {
+		    BRdiv.style.display = 'none';
+		    Bbtn.value = '더보기';
+		  }
+		} 
 		function publisherReviewShow() {
-		const PRdiv = document.getElementById('publiserReview');
-		const Pbtn = document.getElementById('publisherBtn');
-		
-		if(PRdiv.style.display === 'none')  {
-			  PRdiv.style.display = 'block';
-			  Pbtn.value = '닫기';
-		}else {
-			  PRdiv.style.display = 'none';
-			  Pbtn.value = '더보기';
-		}
+			var PRdiv = document.getElementById('publiserReview');
+			var Pbtn = document.getElementById('publisherBtn');
+			
+			if(PRdiv.style.display == 'none')  {
+				  PRdiv.style.display = 'block';
+				  Pbtn.value = '닫기';
+			}else {
+				  PRdiv.style.display = 'none';
+				  Pbtn.value = '더보기';
+			}
 		} 
 	</script>
 
