@@ -129,10 +129,6 @@
 	                                <input type="text" class="form-control" id="regName" name="regName">
 	                                <span class="placeholder" data-placeholder="이름"></span>
 	                            </div>
-	                            <div class="col-md-4 form-group p_star">
-	                                <input type="text" class="form-control" id="regId" name="regId">
-	                                <span class="placeholder" data-placeholder="아이디"></span>
-	                            </div>
 	                            <div class="col-md-3 form-group p_star">
 	                                <select class=" country_select" id="regGender" name="regGender">
 	                                    <option value="">성별</option>
@@ -140,6 +136,24 @@
 	                                    <option value="woman">여성</option>
 	                                </select>
 	                            </div>
+                            </div>
+                            <div class="row">
+                            	<div class="col-md-4 form-group p_star">
+	                                <input type="text" class="form-control" id="regId" name="regId">
+	                                <span class="placeholder" data-placeholder="아이디"></span>
+	                            </div>
+	                            <div class="col-md-2 form-group">
+        	                        <input type="button" class="form-control btn-success" id="regIdOverlap" name="regIdOverlap" value="중복확인">
+    	                        </div>
+                            </div>
+                            <div class="row">
+                            	<div class="col-md-4 form-group p_star">
+	                                <input type="text" class="form-control" id="regUserName" name="regUserName">
+	                                <span class="placeholder" data-placeholder="닉네임"></span>
+	                            </div>
+	                            <div class="col-md-2 form-group">
+        	                        <input type="button" class="form-control btn-success" id="regUserNameOverlap" name="regUserNameOverlap" value="중복확인">
+    	                        </div>
                             </div>
                             <div class="row">
 	                            <div class="col-md-5 form-group p_star">
@@ -151,13 +165,14 @@
 	                                <span class="placeholder" data-placeholder="비밀번호 확인"></span>
 	                            </div>
                             </div>
-                            <div class="row"><div class="col-md-6 form-group p_star">
+                            <div class="row">
+                            	<div class="col-md-5 form-group p_star">
 	                                <input type="text" class="form-control" id="regBirth" name="regBirth">
 	                                <ladel class="placeholder" for="regBirth" data-placeholder="생년월일을 입력해주세요 (ex:19990101)"></label>
 	                            </div>
-	                            <div class="col-md-6 form-group p_star">
+	                            <div class="col-md-5 form-group p_star">
 	                                <input type="text" class="form-control" id="regPhone" name="regPhone">
-	                                <ladel class="placeholder" for="regPhone" data-placeholder="'-' 를 뺀 전화번호를 입력해주세요 (ex:01012345678)"></label>
+	                                <ladel class="placeholder" for="regPhone" data-placeholder="전화번호를 입력해주세요 (ex:01012345678)"></label>
 	                            </div>
                             </div>
                             <div class="row">
