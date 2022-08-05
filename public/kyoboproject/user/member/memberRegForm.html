@@ -124,28 +124,28 @@
                     <div class="col-lg-6">
                         <h3>회원가입</h3>
                         <form class="row contact_form" action="#" method="post" novalidate="novalidate">
-                        	<div class="row">
-	                            <div class="col-md-4 form-group p_star">
+                        	<div class="row mb-3">
+	                            <div class="col-md-4 gy-3 form-group p_star">
 	                                <input type="text" class="form-control" id="regName" name="regName">
 	                                <span class="placeholder" data-placeholder="이름"></span>
 	                            </div>
-	                            <div class="col-md-1 form-group">
+	                            <div class="col-md-1 gy-3 form-group">
 	                            	<span class="align-self-center">성별</span>
 	                            </div>
-	                            <div class="col-md-2 form-group">
+	                            <div class="col-md-2 gy-3 form-group">
 	                                <div class="adReceive">
 	                                    <input type="radio" id="regGenderMan" name="regGender" value="man">
 	                                    <label for="regGenderMan">남성</label>
 	                                </div>
 	                            </div>    
-	                            <div class="col-md-2 form-group">
+	                            <div class="col-md-2 gy-3 form-group">
 	                                <div class="adReceive">
 	                                    <input type="radio" id="regGenderWoman" name="regGender" value="woman">
 	                                    <label for="regGenderWoman">여성</label>
 	                                </div>
 	                            </div>
                             </div>
-                            <div class="row">
+                            <div class="row mb-3">
                             	<div class="col-md-4 form-group p_star">
 	                                <input type="text" class="form-control" id="regId" name="regId">
 	                                <span class="placeholder" data-placeholder="아이디"></span>
@@ -154,7 +154,7 @@
         	                        <input type="button" class="form-control genric-btn primary" id="regIdOverlap" name="regIdOverlap" value="중복확인">
     	                        </div>
                             </div>
-                            <div class="row">
+                            <div class="row mb-3">
                             	<div class="col-md-4 form-group p_star">
 	                                <input type="text" class="form-control" id="regUserName" name="regUserName">
 	                                <span class="placeholder" data-placeholder="닉네임"></span>
@@ -163,7 +163,7 @@
         	                        <input type="button" class="form-control genric-btn primary" id="regUserNameOverlap" name="regUserNameOverlap" value="중복확인">
     	                        </div>
                             </div>
-                            <div class="row">
+                            <div class="row mb-3">
 	                            <div class="col-md-5 form-group p_star">
 	                                <input type="text" class="form-control" id="regPassword" name="regPassword">
 	                                <span class="placeholder" data-placeholder="비밀번호"></span>
@@ -173,7 +173,7 @@
 	                                <span class="placeholder" data-placeholder="비밀번호 확인"></span>
 	                            </div>
                             </div>
-                            <div class="row">
+                            <div class="row mb-3">
                             	<div class="col-md-5 form-group p_star">
 	                                <input type="text" class="form-control" id="regBirth" name="regBirth">
 	                                <ladel class="placeholder" for="regBirth" data-placeholder="생년월일을 입력해주세요 (ex:19990101)"></label>
@@ -183,7 +183,7 @@
 	                                <ladel class="placeholder" for="regPhone" data-placeholder="전화번호를 입력해주세요 (ex:01012345678)"></label>
 	                            </div>
                             </div>
-                            <div class="row">
+                            <div class="row mb-3">
 	                            <div class="col-md-4 form-group p_star">
 	                                <input type="text" class="form-control" id="regEmailFirst" name="regEmailFirst">
 	                                <span class="placeholder" data-placeholder="이메일"></span>
@@ -219,7 +219,7 @@
 	                                <span class="placeholder" data-placeholder="상세주소"></span>
 	                            </div>
                             </div>
-                            <div class="row">
+                            <div class="row mb-5">
 	                            <div class="col-md-12 form-group">
 	                                <div class="regPrivacy">
 	                                    <span class="align-self-center" style="font-weight: bolder;">개인정보 유효기간</span>
@@ -250,40 +250,45 @@
 	                                </div>
 	                            </div>
 	                        </div>
-                            <div class="row">
+                            <div class="row mb-5">
 	                            <div class="col-md-12 form-group">
 	                                <div class="adReceive">
 	                                    <input type="checkbox" id="adAllReceive" name="adAllReceive">
 	                                    <label for="adAllReceive" style="font-weight: bolder;">광고 전체 수신 동의</label>
 	                                </div>
 	                            </div>
-	                            <div class="col-md-4 form-group">
+	                            <div class="col-md-2 form-group">
 	                                <div class="adReceive">
 	                                    <input type="checkbox" id="adEmailReceive" name="adEmailReceive">
 	                                    <label for="adEmailReceive">이메일 수신</label>
 	                                </div>
 	                            </div>    
-	                            <div class="col-md-4 form-group">
+	                            <div class="col-md-2 form-group">
 	                                <div class="adReceive">
 	                                    <input type="checkbox" id="adKakaoReceive" name="adKakaoReceive">
 	                                    <label for="adKakaoReceive">카카오톡 수신</label>
 	                                </div>
 	                            </div>
-	                            <div class="col-md-4 form-group">
+	                            <div class="col-md-2 form-group">
 	                                <div class="adReceive">
 	                                    <input type="checkbox" id="adSmsReceive" name="adSmsReceive">
 	                                    <label for="adSmsReceive">SMS 수신 동의</label>
 	                                </div>
 	                            </div>
 	                        </div>
-                            <div class="col-md-12 form-group">
-                                <div class="adReceive">
-                                    <h3>Shipping Details</h3>
-                                    <input type="checkbox" id="f-option3" name="selector">
-                                    <label for="f-option3">Ship to a different address?</label>
-                                </div>
-                                <textarea class="form-control" name="message" id="message" rows="1" placeholder="Order Notes"></textarea>
-                            </div>
+	                        <div class="row" style="height: 40px;"></div>
+	                        <div class="row mb-5">
+							   <div class="col-2">
+							      <button type="button" class="genric-btn danger" id="regFormCancel" onclick="regcancel();">
+							      	<i class="fa-solid fa-xmark"></i> 취소
+							      </button>
+							   </div>
+							   <div class="col-2 offset-8">
+							     <button type="button" class="genric-btn info" id="regFormSubmit" onclick="regsubmit();">
+							     <i class="fa-solid fa-plus"></i> 추가
+							     </button>
+							   </div>
+							</div>
                         </form>
                     </div>
                 </div>
