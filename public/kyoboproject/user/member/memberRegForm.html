@@ -121,56 +121,62 @@
 		<section class="memberRegFormArea section_gap">
 			<div class="billing_details">
                 <div class="row justify-content-center">
-                    <div class="col-lg-7">
+                    <div class="col-lg-6">
                         <h3>회원가입</h3>
                         <form class="row contact_form" action="#" method="post" novalidate="novalidate">
-                            <div class="col-md-4 form-group p_star">
-                                <input type="text" class="form-control" id="regName" name="regName">
-                                <span class="placeholder" data-placeholder="이름"></span>
+                        	<div class="row">
+	                            <div class="col-md-4 form-group p_star">
+	                                <input type="text" class="form-control" id="regName" name="regName">
+	                                <span class="placeholder" data-placeholder="이름"></span>
+	                            </div>
+	                            <div class="col-md-4 form-group p_star">
+	                                <input type="text" class="form-control" id="regId" name="regId">
+	                                <span class="placeholder" data-placeholder="아이디"></span>
+	                            </div>
+	                            <div class="col-md-3 form-group p_star">
+	                                <select class=" country_select" id="regGender" name="regGender">
+	                                    <option value="">성별</option>
+	                                    <option value="man">남성</option>
+	                                    <option value="woman">여성</option>
+	                                </select>
+	                            </div>
                             </div>
-                            <div class="col-md-6 form-group primary-radio">
-                            	<label for="regGender" class="col-sm-1 col-form-label">성별</label> 
-								<div class="col-sm-1 gy-2 form-check form-check-inline">
-								  <input class="form-check-input" type="radio" name="regGender" id="regGenderMan" value="man">
-								  <label class="form-check-label" for="regGenderMan">남성</label>
-								</div>
-								<div>
-								  <input class="form-check-input" type="radio" name="regGender" id="regGenderWoman" value="woman">
-								  <label class="form-check-label" for="regGenderWoman">여성</label>
-								</div>
+                            <div class="row">
+	                            <div class="col-md-5 form-group p_star">
+	                                <input type="text" class="form-control" id="regPassword" name="regPassword">
+	                                <span class="placeholder" data-placeholder="비밀번호"></span>
+	                            </div>
+	                            <div class="col-md-5 form-group p_star">
+	                                <input type="text" class="form-control" id="regPasswordCheck" name="regPasswordCheck">
+	                                <span class="placeholder" data-placeholder="비밀번호 확인"></span>
+	                            </div>
                             </div>
-                            <div class="col-md-4 form-group p_star">
-                                <input type="text" class="form-control" id="regId" name="regId">
-                                <span class="placeholder" data-placeholder="아이디"></span>
+                            <div class="row"><div class="col-md-6 form-group p_star">
+	                                <input type="text" class="form-control" id="regBirth" name="regBirth">
+	                                <ladel class="placeholder" for="regBirth" data-placeholder="생년월일을 입력해주세요 (ex:19990101)"></label>
+	                            </div>
+	                            <div class="col-md-6 form-group p_star">
+	                                <input type="text" class="form-control" id="regPhone" name="regPhone">
+	                                <ladel class="placeholder" for="regPhone" data-placeholder="'-' 를 뺀 전화번호를 입력해주세요 (ex:01012345678)"></label>
+	                            </div>
                             </div>
-                            <div class="col-md-6 form-group p_star">
-                                <input type="text" class="form-control" id="regPassword" name="regPassword">
-                                <span class="placeholder" data-placeholder="비밀번호"></span>
-                            </div>
-                            <div class="col-md-6 form-group p_star">
-                                <input type="text" class="form-control" id="regPasswordCheck" name="regPasswordCheck">
-                                <span class="placeholder" data-placeholder="비밀번호 확인"></span>
-                            </div>
-                            <div class="col-md-6 form-group p_star">
-                                <input type="text" class="form-control" id="number" name="number">
-                                <span class="placeholder" data-placeholder="'-' 를 뺀 전화번호를 입력해주세요 (ex:01012345678)"></span>
-                            </div>
-                            <div class="col-md-4 form-group p_star">
-                                <input type="text" class="form-control" id="email" name="compemailany">
-                                <span class="placeholder" data-placeholder="이메일"></span>
-                            </div>
-                            <span> @ </span>
-                            <div class="col-md-4 form-group p_star">
-                                <input type="text" class="form-control" id="email" name="compemailany">
-                                <span class="placeholder" data-placeholder="Email Address"></span>
-                            </div>
-                            <div class="col-md-3 form-group p_star">
-                                <select class="country_select">
-                                    <option value="">직접입력</option>
-                                    <option value="naver.com">네이버</option>
-                                    <option value="google">구글</option>
-                                    <option value="kakao">카카오</option>
-                                </select>
+                            <div class="row">
+	                            <div class="col-md-4 form-group p_star">
+	                                <input type="text" class="form-control" id="regEmailFirst" name="regEmailFirst">
+	                                <span class="placeholder" data-placeholder="이메일"></span>
+	                            </div>
+	                            <span class="align-self-center" style="margin-bottom: 20px"> @ </span>
+	                            <div class="col-md-4 form-group p_star">
+	                                <input type="text" class="form-control" id="regEmailLast" name="regEmailLast">
+	                            </div>
+	                            <div class="col-md-3 form-group p_star">
+	                                <select class="country_select" id="regEmailLastSelect" name="regEmailLastSelect">
+	                                    <option value="">직접입력</option>
+	                                    <option value="naver.com">네이버</option>
+	                                    <option value="google">구글</option>
+	                                    <option value="kakao">카카오</option>
+	                                </select>
+	                            </div>
                             </div>
                             <div class="col-md-12 form-group p_star">
                                 <select class="country_select">
@@ -179,17 +185,23 @@
                                     <option value="4">Country</option>
                                 </select>
                             </div>
-                            <div class="col-md-12 form-group p_star">
-                                <input type="text" class="form-control" id="add1" name="add1">
-                                <span class="placeholder" data-placeholder="Address line 01"></span>
+                            <div class="row">
+                            <div class="col-md-3 form-group">
+                                <input type="text" class="form-control" id="zipCode" name="zipCode" placeholder="우편번호">
+                           	</div>
+                           	<div class="col-md-2 form-group">
+                                <input type="button" class="form-control btn-primary" id="regAddressSearch" name="regAddressSearch" value="주소검색">
                             </div>
-                            <div class="col-md-12 form-group p_star">
-                                <input type="text" class="form-control" id="add2" name="add2">
-                                <span class="placeholder" data-placeholder="Address line 02"></span>
                             </div>
-                            <div class="col-md-12 form-group p_star">
-                                <input type="text" class="form-control" id="city" name="city">
-                                <span class="placeholder" data-placeholder="Town/City"></span>
+                            <div class="row">
+                            <div class="col-md-7 form-group p_star">
+                                <input type="text" class="form-control" id="regAddress" name="regAddress">
+                                <span class="placeholder" data-placeholder="주소"></span>
+                            </div>
+                            <div class="col-md-7 form-group p_star">
+                                <input type="text" class="form-control" id="regAddressDetail" name="regAddressDetail">
+                                <span class="placeholder" data-placeholder="상세주소"></span>
+                            </div>
                             </div>
                             <div class="col-md-12 form-group p_star">
                                 <select class="country_select">
@@ -197,9 +209,6 @@
                                     <option value="2">District</option>
                                     <option value="4">District</option>
                                 </select>
-                            </div>
-                            <div class="col-md-12 form-group">
-                                <input type="text" class="form-control" id="zip" name="zip" placeholder="Postcode/ZIP">
                             </div>
                             <div class="col-md-12 form-group">
                                 <div class="creat_account">
