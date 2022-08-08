@@ -578,30 +578,3 @@ $(document).ready(function(){
   
 
  });
-// new function
-
-/*function bookReviewShow() {
-		  var BRdiv = document.getElementById('bookReview');
-		  var Bbtn = document.getElementById('bookBtn');
-		  
-		  if(BRdiv.style.display == 'none')  {
-		    BRdiv.style.display = 'block';
-		    Bbtn.value = '닫기';
-		    
-		  }else {
-		    BRdiv.style.display = 'none';
-		    Bbtn.value = '더보기';
-		  }
-		} 
-		function publisherReviewShow() {
-			var PRdiv = document.getElementById('publiserReview');
-			var Pbtn = document.getElementById('publisherBtn');
-			
-			if(PRdiv.style.display == 'none')  {
-				  PRdiv.style.display = 'block';
-				  Pbtn.value = '닫기';
-			}else {
-				  PRdiv.style.display = 'none';
-				  Pbtn.value = '더보기';
-			}
-		}*/

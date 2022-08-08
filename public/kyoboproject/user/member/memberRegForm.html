@@ -117,7 +117,7 @@
 		</div>
 	</section>
 	<!-- End Banner Area -->
-	<form>
+	<form name="memberRegForm" method="get" action="./loginForm.html" id="memberRegForm">
 		<section class="memberRegFormArea section_gap">
 			<div class="billing_details">
                 <div class="row justify-content-center">
@@ -126,8 +126,7 @@
                         <form class="row contact_form" action="#" method="post" novalidate="novalidate">
                         	<div class="row mb-3">
 	                            <div class="col-md-4 gy-3 form-group p_star">
-	                                <input type="text" class="form-control" id="regName" name="regName">
-	                                <span class="placeholder" data-placeholder="이름"></span>
+	                                <input type="text" class="form-control" id="regName" name="regName" placeholder="이름*">
 	                            </div>
 	                            <div class="col-md-1 gy-3 form-group">
 	                            	<span class="align-self-center">성별</span>
@@ -147,8 +146,7 @@
                             </div>
                             <div class="row mb-3">
                             	<div class="col-md-4 form-group p_star">
-	                                <input type="text" class="form-control" id="regId" name="regId">
-	                                <span class="placeholder" data-placeholder="아이디"></span>
+	                                <input type="text" class="form-control" id="regId" name="regId" placeholder="아이디*">
 	                            </div>
 	                            <div class="col-md-2 form-group">
         	                        <input type="button" class="form-control genric-btn primary" id="regIdOverlap" name="regIdOverlap" value="중복확인">
@@ -156,48 +154,44 @@
                             </div>
                             <div class="row mb-3">
                             	<div class="col-md-4 form-group p_star">
-	                                <input type="text" class="form-control" id="regUserName" name="regUserName">
-	                                <span class="placeholder" data-placeholder="닉네임"></span>
+	                                <input type="text" class="form-control" id="regUserName" name="regUserName" placeholder="닉네임*">
 	                            </div>
 	                            <div class="col-md-2 form-group">
         	                        <input type="button" class="form-control genric-btn primary" id="regUserNameOverlap" name="regUserNameOverlap" value="중복확인">
     	                        </div>
                             </div>
-                            <div class="row mb-3">
+                            <div class="row">
 	                            <div class="col-md-5 form-group p_star">
-	                                <input type="text" class="form-control" id="regPassword" name="regPassword">
-	                                <span class="placeholder" data-placeholder="비밀번호"></span>
+	                                <input type="password" class="form-control" id="regPassword" name="regPassword" placeholder="비밀번호*">
 	                            </div>
 	                            <div class="col-md-5 form-group p_star">
-	                                <input type="text" class="form-control" id="regPasswordCheck" name="regPasswordCheck">
-	                                <span class="placeholder" data-placeholder="비밀번호 확인"></span>
+	                                <input type="password" class="form-control" id="regPasswordCheck" name="regPasswordCheck" placeholder="비밀번호 확인*" onkeyup="regPasswordCheck();">
+	                                <label><div name="checkWord" id="checkWord" style="display: none; color:red;">동일한 암호를 입력하세요.</div></label>
 	                            </div>
                             </div>
                             <div class="row mb-3">
                             	<div class="col-md-5 form-group p_star">
-	                                <input type="text" class="form-control" id="regBirth" name="regBirth">
-	                                <ladel class="placeholder" for="regBirth" data-placeholder="생년월일을 입력해주세요 (ex:19990101)"></label>
+	                                <input type="text" class="form-control" id="regBirth" name="regBirth" placeholder="8자리로 입력해주세요 (ex:19990506)*" maxlength="8" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*)\./g, '$1');">
+	                       
 	                            </div>
 	                            <div class="col-md-5 form-group p_star">
-	                                <input type="text" class="form-control" id="regPhone" name="regPhone">
-	                                <ladel class="placeholder" for="regPhone" data-placeholder="전화번호를 입력해주세요 (ex:01012345678)"></label>
+	                                <input type="text" class="form-control" id="regPhone" name="regPhone" placeholder="전화번호를 입력해주세요 (ex:01012345678)*" maxlength="11" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*)\./g, '$1');">
 	                            </div>
                             </div>
                             <div class="row mb-3">
 	                            <div class="col-md-4 form-group p_star">
-	                                <input type="text" class="form-control" id="regEmailFirst" name="regEmailFirst">
-	                                <span class="placeholder" data-placeholder="이메일"></span>
+	                                <input type="text" class="form-control" id="regEmailFirst" name="regEmailFirst" placeholder="이메일*">
 	                            </div>
 	                            <span class="align-self-center" style="margin-bottom: 20px"> @ </span>
 	                            <div class="col-md-4 form-group p_star">
-	                                <input type="text" class="form-control" id="regEmailLast" name="regEmailLast">
+	                                <input type="text" class="form-control" id="regEmailLast" name="regEmailLast" placeholder="직접입력">
 	                            </div>
 	                            <div class="col-md-3 form-group p_star">
-	                                <select class="country_select" id="regEmailLastSelect" name="regEmailLastSelect">
+	                                <select class="country_select" id="regEmailLastSelect" name="regEmailLastSelect" onchange="selectEmail();">
 	                                    <option value="">직접입력</option>
 	                                    <option value="naver.com">네이버</option>
-	                                    <option value="google">구글</option>
-	                                    <option value="kakao">카카오</option>
+	                                    <option value="gmail.com">구글</option>
+	                                    <option value="kakao.com">카카오</option>
 	                                </select>
 	                            </div>
                             </div>
@@ -211,14 +205,13 @@
 	                            </div>
 	                            <div class="row">
 	                            <div class="col-md-7 form-group p_star">
-	                                <input type="text" class="form-control" id="regAddress" name="regAddress">
-	                                <span class="placeholder" data-placeholder="주소"></span>
+	                                <input type="text" class="form-control" id="regAddress" name="regAddress" placeholder="주소">
 	                            </div>
 	                            <div class="col-md-7 form-group p_star">
-	                                <input type="text" class="form-control" id="regAddressDetail" name="regAddressDetail">
-	                                <span class="placeholder" data-placeholder="상세주소"></span>
+	                                <input type="text" class="form-control" id="regAddressDetail" name="regAddressDetail" placeholder="상세주소">
 	                            </div>
                             </div>
+                            <div class="row" style="height: 30px;"></div>
                             <div class="row mb-5">
 	                            <div class="col-md-12 form-group">
 	                                <div class="regPrivacy">
@@ -227,25 +220,25 @@
 	                            </div>
 	                            <div class="col-md-2 form-group">
 	                                <div class="regPrivacy">
-	                                    <input type="radio" id="regPrivacy1" name="regPrivacy1" value="1">
+	                                    <input type="radio" id="regPrivacy1" name="regPrivacy" value="1">
 	                                    <label for="regPrivacy1">1년</label>
 	                                </div>
 	                            </div>    
 	                            <div class="col-md-2 form-group">
 	                                <div class="regPrivacy">
-	                                    <input type="radio" id="regPrivacy2" name="regPrivacy2" value="2">
+	                                    <input type="radio" id="regPrivacy2" name="regPrivacy" value="2">
 	                                    <label for="regPrivacy2">3년</label>
 	                                </div>
 	                            </div>
 	                            <div class="col-md-2 form-group">
 	                                <div class="regPrivacy">
-	                                    <input type="radio" id="regPrivacy3" name="regPrivacy3" value="3">
+	                                    <input type="radio" id="regPrivacy3" name="regPrivacy" value="3">
 	                                    <label for="regPrivacy3">5년</label>
 	                                </div>
 	                            </div>
 	                            <div class="col-md-2 form-group">
 	                                <div class="regPrivacy">
-	                                    <input type="radio" id="regPrivacy4" name="regPrivacy4" value="4">
+	                                    <input type="radio" id="regPrivacy4" name="regPrivacy" value="4">
 	                                    <label for="regPrivacy4">탈퇴시까지</label>
 	                                </div>
 	                            </div>
@@ -253,25 +246,25 @@
                             <div class="row mb-5">
 	                            <div class="col-md-12 form-group">
 	                                <div class="adReceive">
-	                                    <input type="checkbox" id="adAllReceive" name="adAllReceive">
+	                                    <input type="checkbox" id="adAllReceive" name="adAllReceive" value="adAllReceive" onclick="selectAll(this);">
 	                                    <label for="adAllReceive" style="font-weight: bolder;">광고 전체 수신 동의</label>
 	                                </div>
 	                            </div>
 	                            <div class="col-md-2 form-group">
 	                                <div class="adReceive">
-	                                    <input type="checkbox" id="adEmailReceive" name="adEmailReceive">
+	                                    <input type="checkbox" id="adEmailReceive" name="adReceive" onclick="checkSelectAll();">
 	                                    <label for="adEmailReceive">이메일 수신</label>
 	                                </div>
 	                            </div>    
 	                            <div class="col-md-2 form-group">
 	                                <div class="adReceive">
-	                                    <input type="checkbox" id="adKakaoReceive" name="adKakaoReceive">
+	                                    <input type="checkbox" id="adKakaoReceive" name="adReceive" onclick="checkSelectAll();">
 	                                    <label for="adKakaoReceive">카카오톡 수신</label>
 	                                </div>
 	                            </div>
 	                            <div class="col-md-2 form-group">
 	                                <div class="adReceive">
-	                                    <input type="checkbox" id="adSmsReceive" name="adSmsReceive">
+	                                    <input type="checkbox" id="adSmsReceive" name="adReceive" onclick="checkSelectAll();">
 	                                    <label for="adSmsReceive">SMS 수신 동의</label>
 	                                </div>
 	                            </div>
@@ -279,12 +272,12 @@
 	                        <div class="row" style="height: 40px;"></div>
 	                        <div class="row mb-5">
 							   <div class="col-2">
-							      <button type="button" class="genric-btn danger" id="regFormCancel" onclick="regcancel();">
+							      <button type="button" class="genric-btn danger" id="regFormCancel" onclick="regCancel();">
 							      	<i class="fa-solid fa-xmark"></i> 취소
 							      </button>
 							   </div>
 							   <div class="col-2 offset-8">
-							     <button type="button" class="genric-btn info" id="regFormSubmit" onclick="regsubmit();">
+							     <button type="button" class="genric-btn info" id="regFormSubmit" onclick="regSubmit();">
 							     <i class="fa-solid fa-plus"></i> 추가
 							     </button>
 							   </div>
@@ -375,40 +368,55 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	<!-- End footer Area -->
 	
 	<script type="text/javascript">
-		function selemail() {
-			document.mrf.regemailsecond.value = document.mrf.regemailselect.value
-			
-		}
-		function ckpw(){
-			if(document.mrf.regpassword.value == document.mrf.regpasswordcheck.value)
-				{
-					
-				}
+		function selectEmail() {
+			document.memberRegForm.regEmailLast.value = document.memberRegForm.regEmailLastSelect.value
 			
 		}
 		function logOut() {
 			location.href='memberLoginForm.html';
 		}
-		function regcancel() {
-			location.href='memberListForm.html';
+		function regCancel() {
+			location.href='memberLoginForm.html';
 		}
 		
-		function regsubmit() {
-			document.getElementById("regform").submit();
+		function regSubmit() {
+			document.getElementById("memberRegForm").submit();
 		}
-		function passwordck(){
-		  var password = document.getElementById("regpassword");
-		  var check_password = document.getElementById("regpasswordcheck");
+		
+		function regPasswordCheck(){
+		  var password = document.getElementById("regPassword");
+		  var passwordCheck = document.getElementById("regPasswordCheck");
+		  var warning = document.getElementById('checkWord')
 
-		  if(password.value != check_password.value) {
-			  document.getElementById('checkword').style.display="block";
+		  if(password.value != passwordCheck.value) {
+			  warning.style.display="block";
 		  } else {
-			  document.getElementById('checkword').style.display="none";
+			  warning.style.display="none";
 		  }
 		}
+		
+		function checkSelectAll()  {
 
-		password.onchange = validatePassword;
-		confirm_password.onkeyup = validatePassword;
+			const checkboxes = document.querySelectorAll('input[name="adReceive"]');
+
+			const checked = document.querySelectorAll('input[name="adReceive"]:checked');
+
+			const selectAll = document.querySelector('input[name="adAllReceive"]');
+			  
+			if(checkboxes.length === checked.length)  {
+			  selectAll.checked = true;
+			}else {
+			  selectAll.checked = false;
+			}
+		}
+		function selectAll(selectAll)  {
+			const checkboxes = document.getElementsByName('adReceive');
+			
+			checkboxes.forEach((checkbox) => {
+		    checkbox.checked = selectAll.checked
+		  })
+		}
+
 	</script>
 	
 	<script src="../../template/karma/js/vendor/jquery-2.2.4.min.js"></script>
