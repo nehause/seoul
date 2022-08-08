@@ -165,7 +165,7 @@
 	                                <input type="password" class="form-control" id="regPassword" name="regPassword" placeholder="비밀번호*">
 	                            </div>
 	                            <div class="col-md-5 form-group p_star">
-	                                <input type="password" class="form-control" id="regPasswordCheck" name="regPasswordCheck" placeholder="비밀번호 확인*" onkeyup="regPasswordCheck();">
+	                                <input type="password" class="form-control" id="regPasswordCheck" name="regPasswordCheck" placeholder="비밀번호 확인*" onkeyup="regPasswordCk();">
 	                                <label><div name="checkWord" id="checkWord" style="display: none; color:red;">동일한 암호를 입력하세요.</div></label>
 	                            </div>
                             </div>
@@ -382,13 +382,12 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 		function regSubmit() {
 			document.getElementById("memberRegForm").submit();
 		}
-		
-		function regPasswordCheck(){
-		  var password = document.getElementById("regPassword");
-		  var passwordCheck = document.getElementById("regPasswordCheck");
-		  var warning = document.getElementById('checkWord')
-
-		  if(password.value != passwordCheck.value) {
+		// 함수는 아이디와 같은 이름으로 하면 안됩니다. 바보야
+		function regPasswordCk(){
+			var password = document.getElementById("regPassword");
+			var passwordCheck = document.getElementById("regPasswordCheck")
+		 	var warning = document.getElementById('checkWord')
+			if(password.value != passwordCheck.value) {
 			  warning.style.display="block";
 		  } else {
 			  warning.style.display="none";
