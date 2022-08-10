@@ -50,7 +50,7 @@
 			<nav class="navbar navbar-expand-lg navbar-light main_box">
 				<div class="container">
 					<!-- Brand and toggle get grouped for better mobile display -->
-					<a class="navbar-brand logo_h" href="main.html" style="font-family: 'Pacifico', cursive; color: orange;">JHJ</a>
+					<a class="navbar-brand logo_h" href="../member/main.html" style="font-family: 'Pacifico', cursive; color: orange;">JHJ</a>
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
 					 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 						<span class="icon-bar"></span>
@@ -168,88 +168,172 @@
                     <div class="col-lg-8">
                         <h3>배송 정보</h3>
                         <form class="row contact_form" action="#" method="post" novalidate="novalidate">
-                            <div class="col-md-6 form-group p_star">
-                                <input type="text" class="form-control" id="first" name="name">
-                                <span class="placeholder" data-placeholder="First name"></span>
+                            <div class="col-md-4 	form-group p_star">
+                                <input type="text" class="form-control" id="orderName" name="orderName" placeholder="이름*">
                             </div>
-                            <div class="col-md-6 form-group p_star">
-                                <input type="text" class="form-control" id="last" name="name">
-                                <span class="placeholder" data-placeholder="Last name"></span>
+                            <div class="col-md-3">
+                                <input type="button" class="form-control genric-btn info" id="regUserNameOverlap" name="regUserNameOverlap" value="배송지 변경">
                             </div>
-                            <div class="col-md-12 form-group">
-                                <input type="text" class="form-control" id="company" name="company" placeholder="Company name">
+                            <div class="col-md-8 form-group p_star">
+                                <input type="text" class="form-control" id="number" name="number" placeholder="휴대폰 전화번호를 입력해주세요 (ex:01012345678)*" maxlength="11" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*)\./g, '$1');">
                             </div>
-                            <div class="col-md-6 form-group p_star">
-                                <input type="text" class="form-control" id="number" name="number">
-                                <span class="placeholder" data-placeholder="Phone number"></span>
+                            <div class="col-md-8 form-group p_star">
+                                <input type="text" class="form-control" id="email" name="compemailany" placeholder="집 전화번호를 입력해주세요 (ex:021234567)*" maxlength="9" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*)\./g, '$1');">
                             </div>
-                            <div class="col-md-6 form-group p_star">
-                                <input type="text" class="form-control" id="email" name="compemailany">
-                                <span class="placeholder" data-placeholder="Email Address"></span>
-                            </div>
-                            <div class="col-md-12 form-group p_star">
-                                <select class="country_select">
-                                    <option value="1">Country</option>
-                                    <option value="2">Country</option>
-                                    <option value="4">Country</option>
-                                </select>
-                            </div>
-                            <div class="col-md-12 form-group p_star">
-                                <input type="text" class="form-control" id="add1" name="add1">
-                                <span class="placeholder" data-placeholder="Address line 01"></span>
-                            </div>
-                            <div class="col-md-12 form-group p_star">
-                                <input type="text" class="form-control" id="add2" name="add2">
-                                <span class="placeholder" data-placeholder="Address line 02"></span>
-                            </div>
-                            <div class="col-md-12 form-group p_star">
-                                <input type="text" class="form-control" id="city" name="city">
-                                <span class="placeholder" data-placeholder="Town/City"></span>
-                            </div>
-                            <div class="col-md-12 form-group p_star">
-                                <select class="country_select">
-                                    <option value="1">District</option>
-                                    <option value="2">District</option>
-                                    <option value="4">District</option>
-                                </select>
-                            </div>
-                            <div class="col-md-12 form-group">
+                            <div class="col-md-5 form-group">
                                 <input type="text" class="form-control" id="zip" name="zip" placeholder="Postcode/ZIP">
+                            </div>
+                            <div class="col-md-3 form-group">
+                                <input type="button" class="form-control genric-btn success" id="regUserNameOverlap" name="regUserNameOverlap" value="주소 검색">
+                            </div>
+                            <div class="col-md-8 form-group p_star">
+                                <input type="text" class="form-control" id="add1" name="add1" placeholder="주소">
+                            </div>
+                            <div class="col-md-8 form-group p_star">
+                                <input type="text" class="form-control" id="add2" name="add2" placeholder="상세 주소">
                             </div>
                             <div class="col-md-12 form-group">
                                 <div class="creat_account">
                                     <input type="checkbox" id="f-option2" name="selector">
-                                    <label for="f-option2">Create an account?</label>
+                                    <label for="f-option2">배송지를 저장하시겠습니까?</label>
                                 </div>
                             </div>
-                            <div class="col-md-12 form-group">
-                                <div class="creat_account">
-                                    <h3>Shipping Details</h3>
-                                    <input type="checkbox" id="f-option3" name="selector">
-                                    <label for="f-option3">Ship to a different address?</label>
-                                </div>
-                                <textarea class="form-control" name="message" id="message" rows="1" placeholder="Order Notes"></textarea>
-                            </div>
+                            <div class="col-md-12 form-group" style="height: 30px;"></div>
                         </form>
-                    </div>
-                 	<div class="col-lg-4"	>
+                        <div class="cart_inner">
+			                <div class="table-responsive">
+			                	<h1>주문 상품</h1>
+			                    <table class="table">
+			                        <thead>
+			                            <tr>
+			                                <th scope="col">상품 정보</th>
+			                                <th scope="col">가격</th>
+			                                <th scope="col">개수</th>
+			                                <th scope="col">총합</th>
+			                            </tr>
+			                        </thead>
+			                        <tbody>
+			                            <tr>
+			                                <td>
+			                                    <div class="media">
+			                                        <div class="d-flex">
+			                                            <img src="../images/product/pb1.png" alt="" style="width: 150px;">
+			                                        </div>
+			                                        <div class="media-body">
+			                                            <p style="width: 240px;">[국내도서] 역행자</p>
+			                                        </div>
+			                                    </div>
+			                                </td>
+			                                <td>
+			                                    <h5>₩15,750</h5>
+			                                </td>
+			                                <td>
+			                                    <div class="product_count">
+			                                        <input type="text" name="qty" id="sst" maxlength="12" value="1" title="Quantity:"
+			                                            class="input-text qty">
+			                                        <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;;"
+			                                            class="increase items-count" type="button"><i class="lnr lnr-chevron-up"></i></button>
+			                                        <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) && sst > 0 ) result.value--;"
+			                                            class="reduced items-count" type="button"><i class="lnr lnr-chevron-down"></i></button>
+			                                    </div>
+			                                </td>
+			                                <td>
+			                                    <h5>₩15,750</h5>
+			                                </td>
+			                            </tr>
+			                            <!-- <tr>
+			                                <td>
+			                                    <div class="media">
+			                                        <div class="d-flex">
+			                                            <img src="../images/product/pb2.png" alt="" style="width: 150px;">
+			                                        </div>
+			                                        <div class="media-body">
+			                                            <p>Minimalistic shop for multipurpose use</p>
+			                                        </div>
+			                                    </div>
+			                                </td>
+			                                <td>
+			                                    <h5>$360.00</h5>
+			                                </td>
+			                                <td>
+			                                    <div class="product_count">
+			                                        <input type="text" name="qty" id="sst" maxlength="12" value="1" title="Quantity:"
+			                                            class="input-text qty">
+			                                        <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;"
+			                                            class="increase items-count" type="button"><i class="lnr lnr-chevron-up"></i></button>
+			                                        <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) && sst > 0 ) result.value--;"
+			                                            class="reduced items-count" type="button"><i class="lnr lnr-chevron-down"></i></button>
+			                                    </div>
+			                                </td>
+			                                <td>
+			                                    <h5>$720.00</h5>
+			                                </td>
+			                            </tr>
+			                            <tr>
+			                                <td>
+			                                    <div class="media">
+			                                        <div class="d-flex">
+			                                            <img src="../images/product/pb4.png" alt="" style="width: 150px;">
+			                                        </div>
+			                                        <div class="media-body">
+			                                            <p>Minimalistic shop for multipurpose use</p>
+			                                        </div>
+			                                    </div>
+			                                </td>
+			                                <td>
+			                                    <h5>$360.00</h5>
+			                                </td>
+			                                <td>
+			                                    <div class="product_count">
+			                                        <input type="text" name="qty" id="sst" maxlength="12" value="1" title="Quantity:"
+			                                            class="input-text qty">
+			                                        <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;"
+			                                            class="increase items-count" type="button"><i class="lnr lnr-chevron-up"></i></button>
+			                                        <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) && sst > 0 ) result.value--;"
+			                                            class="reduced items-count" type="button"><i class="lnr lnr-chevron-down"></i></button>
+			                                    </div>
+			                                </td>
+			                                <td>
+			                                    <h5>$720.00</h5>
+			                                </td>
+			                            </tr>  -->                       
+			                            <tr>
+			                                <td>
+			
+			                                </td>
+			                                <td>
+			
+			                                </td>
+			                                <td>
+			                                    <h5>합계</h5>
+			                                </td>
+			                                <td>
+			                                    <h5>₩15,750</h5>
+			                                </td>
+			                            </tr>
+			                        </tbody>
+			                    </table>
+			                </div>
+			            </div>
+		            </div>
+                 	<div class="col-lg-4">
                         <div class="order_box">
-                            <h2>Your Order</h2>
+                            <h2>주문 내역</h2>
                             <ul class="list">
-                                <li><a href="#">Product <span>Total</span></a></li>
-                                <li><a href="#">Fresh Blackberry <span class="middle">x 02</span> <span class="last">$720.00</span></a></li>
+                                <li><a href="#">상품 <span>총합</span></a></li>
+                                <li><a href="#">[국내도서] 역행자 <span class="middle">x 01</span> <span class="last">₩15,750</span></a></li><!-- 
                                 <li><a href="#">Fresh Tomatoes <span class="middle">x 02</span> <span class="last">$720.00</span></a></li>
-                                <li><a href="#">Fresh Brocoli <span class="middle">x 02</span> <span class="last">$720.00</span></a></li>
+                                <li><a href="#">Fresh Brocoli <span class="middle">x 02</span> <span class="last">$720.00</span></a></li> -->
                             </ul>
                             <ul class="list list_2">
-                                <li><a href="#">Subtotal <span>$2160.00</span></a></li>
-                                <li><a href="#">Shipping <span>Flat rate: $50.00</span></a></li>
-                                <li><a href="#">Total <span>$2210.00</span></a></li>
+                                <li><a href="#">상품 금액 <span>₩15,750</span></a></li>
+                                <li><a href="#">배송비 <span>무료</span></a></li>
+                                <li><a href="#">결제 예정 금액 <span>₩15,750</span></a></li>
                             </ul>
                             <div class="payment_item">
                                 <div class="radion_btn">
                                     <input type="radio" id="f-option5" name="selector">
-                                    <label for="f-option5">Check payments</label>
+                                    <label for="f-option5">카드 결제수단</label>
                                     <div class="check"></div>
                                 </div>
                                 <p>Please send a check to Store Name, Store Street, Store Town, Store State / County,
@@ -259,7 +343,7 @@
                                 <div class="radion_btn">
                                     <input type="radio" id="f-option6" name="selector">
                                     <label for="f-option6">Paypal </label>
-                                    <img src="img/product/card.jpg" alt="">
+                                    <img src="../../template/karma/img/product/card.jpg" alt="">
                                     <div class="check"></div>
                                 </div>
                                 <p>Pay via PayPal; you can pay with your credit card if you don’t have a PayPal
@@ -267,127 +351,12 @@
                             </div>
                             <div class="creat_account">
                                 <input type="checkbox" id="f-option4" name="selector">
-                                <label for="f-option4">I’ve read and accept the </label>
-                                <a href="#">terms & conditions*</a>
+                                <label for="f-option4">나는 주문 상태를 숙지하였으며 </label>
+                                <a href="#">이에 동의함*</a>
                             </div>
-                            <a class="primary-btn" href="#">Proceed to Paypal</a>
+                            <a class="primary-btn" href="#">결제하기</a>
                         </div>
                     </div>
-		            <div class="cart_inner">
-		                <div class="table-responsive">
-		                	<h1>주문 상품</h1>
-		                    <table class="table">
-		                        <thead>
-		                            <tr>
-		                                <th scope="col">Product</th>
-		                                <th scope="col">Price</th>
-		                                <th scope="col">Quantity</th>
-		                                <th scope="col">Total</th>
-		                            </tr>
-		                        </thead>
-		                        <tbody>
-		                            <tr>
-		                                <td>
-		                                    <div class="media">
-		                                        <div class="d-flex">
-		                                            <img src="../images/product/pb1.png" alt="" style="width: 150px;">
-		                                        </div>
-		                                        <div class="media-body">
-		                                            <p>Minimalistic shop for multipurpose use</p>
-		                                        </div>
-		                                    </div>
-		                                </td>
-		                                <td>
-		                                    <h5>$360.00</h5>
-		                                </td>
-		                                <td>
-		                                    <div class="product_count">
-		                                        <input type="text" name="qty" id="sst" maxlength="12" value="1" title="Quantity:"
-		                                            class="input-text qty">
-		                                        <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;;"
-		                                            class="increase items-count" type="button"><i class="lnr lnr-chevron-up"></i></button>
-		                                        <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) && sst > 0 ) result.value--;"
-		                                            class="reduced items-count" type="button"><i class="lnr lnr-chevron-down"></i></button>
-		                                    </div>
-		                                </td>
-		                                <td>
-		                                    <h5>$720.00</h5>
-		                                </td>
-		                            </tr>
-		                            <tr>
-		                                <td>
-		                                    <div class="media">
-		                                        <div class="d-flex">
-		                                            <img src="../images/product/pb2.png" alt="" style="width: 150px;">
-		                                        </div>
-		                                        <div class="media-body">
-		                                            <p>Minimalistic shop for multipurpose use</p>
-		                                        </div>
-		                                    </div>
-		                                </td>
-		                                <td>
-		                                    <h5>$360.00</h5>
-		                                </td>
-		                                <td>
-		                                    <div class="product_count">
-		                                        <input type="text" name="qty" id="sst" maxlength="12" value="1" title="Quantity:"
-		                                            class="input-text qty">
-		                                        <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;"
-		                                            class="increase items-count" type="button"><i class="lnr lnr-chevron-up"></i></button>
-		                                        <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) && sst > 0 ) result.value--;"
-		                                            class="reduced items-count" type="button"><i class="lnr lnr-chevron-down"></i></button>
-		                                    </div>
-		                                </td>
-		                                <td>
-		                                    <h5>$720.00</h5>
-		                                </td>
-		                            </tr>
-		                            <tr>
-		                                <td>
-		                                    <div class="media">
-		                                        <div class="d-flex">
-		                                            <img src="../images/product/pb4.png" alt="" style="width: 150px;">
-		                                        </div>
-		                                        <div class="media-body">
-		                                            <p>Minimalistic shop for multipurpose use</p>
-		                                        </div>
-		                                    </div>
-		                                </td>
-		                                <td>
-		                                    <h5>$360.00</h5>
-		                                </td>
-		                                <td>
-		                                    <div class="product_count">
-		                                        <input type="text" name="qty" id="sst" maxlength="12" value="1" title="Quantity:"
-		                                            class="input-text qty">
-		                                        <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;"
-		                                            class="increase items-count" type="button"><i class="lnr lnr-chevron-up"></i></button>
-		                                        <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) && sst > 0 ) result.value--;"
-		                                            class="reduced items-count" type="button"><i class="lnr lnr-chevron-down"></i></button>
-		                                    </div>
-		                                </td>
-		                                <td>
-		                                    <h5>$720.00</h5>
-		                                </td>
-		                            </tr>                        
-		                            <tr>
-		                                <td>
-		
-		                                </td>
-		                                <td>
-		
-		                                </td>
-		                                <td>
-		                                    <h5>Subtotal</h5>
-		                                </td>
-		                                <td>
-		                                    <h5>$2160.00</h5>
-		                                </td>
-		                            </tr>
-		                        </tbody>
-		                    </table>
-		                </div>
-		            </div>
                 </div>
             </div>
         </div>
