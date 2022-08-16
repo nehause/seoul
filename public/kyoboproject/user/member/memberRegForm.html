@@ -67,7 +67,7 @@
 							</li>
 							<li class="nav-item submenu dropdown">
 								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-								 aria-expanded="false">외국도서</a>
+								 aria-expanded="false">마이룸</a>
 								<!-- <ul class="dropdown-menu">
 									<li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
 									<li class="nav-item"><a class="nav-link" href="single-blog.html">Blog Details</a></li>
@@ -200,7 +200,7 @@
 	                                <input type="text" class="form-control" id="zipCode" name="zipCode" placeholder="우편번호">
 	                           	</div>
 	                           	<div class="col-md-2 form-group">
-	                                <input type="button" class="form-control genric-btn success" id="regAddressSearch" name="regAddressSearch" value="주소검색">
+	                                <input type="button" class="form-control genric-btn primary" id="regAddressSearch" name="regAddressSearch" value="주소검색">
 	                            </div>
 	                            </div>
 	                            <div class="row">
@@ -273,12 +273,12 @@
 	                        <div class="row mb-5">
 							   <div class="col-2">
 							      <button type="button" class="genric-btn danger" id="regFormCancel" onclick="regCancel();">
-							      	<i class="fa-solid fa-xmark"></i> 취소
+							      	<i class="fa-solid fa-xmark"></i> 돌아가기
 							      </button>
 							   </div>
 							   <div class="col-2 offset-8">
-							     <button type="button" class="genric-btn info" id="regFormSubmit" onclick="regSubmit();">
-							     <i class="fa-solid fa-plus"></i> 추가
+							     <button type="button" class="genric-btn primary" id="regFormSubmit" onclick="regSubmit();">
+							     <i class="fa-solid fa-plus"></i> 가입하기
 							     </button>
 							   </div>
 							</div>
@@ -372,11 +372,8 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 			document.memberRegForm.regEmailLast.value = document.memberRegForm.regEmailLastSelect.value
 			
 		}
-		function logOut() {
-			location.href='memberLoginForm.html';
-		}
 		function regCancel() {
-			location.href='memberLoginForm.html';
+			location.href='loginForm.html';
 		}
 		
 		function regSubmit() {

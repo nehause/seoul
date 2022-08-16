@@ -75,7 +75,7 @@
 							</li>
 							<li class="nav-item submenu dropdown">
 								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-								 aria-expanded="false">외국도서</a>
+								 aria-expanded="false">마이룸</a>
 								<!-- <ul class="dropdown-menu">
 									<li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
 									<li class="nav-item"><a class="nav-link" href="single-blog.html">Blog Details</a></li>
@@ -131,71 +131,39 @@
     <!--================Checkout Area =================-->
     <section class="checkout_area section_gap">
         <div class="container">
-            <!-- <div class="returning_customer">
-                <div class="check_title">
-                    <h2>Returning Customer? <a href="#">Click here to login</a></h2>
-                </div>
-                <p>If you have shopped with us before, please enter your details in the boxes below. If you are a new
-                    customer, please proceed to the Billing & Shipping section.</p>
-                <form class="row contact_form" action="#" method="post" novalidate="novalidate">
-                    <div class="col-md-6 form-group p_star">
-                        <input type="text" class="form-control" id="name" name="name">
-                        <span class="placeholder" data-placeholder="Username or Email"></span>
-                    </div>
-                    <div class="col-md-6 form-group p_star">
-                        <input type="password" class="form-control" id="password" name="password">
-                        <span class="placeholder" data-placeholder="Password"></span>
-                    </div>
-                    <div class="col-md-12 form-group">
-                        <button type="submit" value="submit" class="primary-btn">login</button>
-                        <div class="creat_account">
-                            <input type="checkbox" id="f-option" name="selector">
-                            <label for="f-option">Remember me</label>
-                        </div>
-                        <a class="lost_pass" href="#">Lost your password?</a>
-                    </div>
-                </form>
-            </div> -->
-            <!-- <div class="cupon_area">
-                <div class="check_title">
-                    <h2>Have a coupon? <a href="#">Click here to enter your code</a></h2>
-                </div>
-                <input type="text" placeholder="Enter coupon code">
-                <a class="tp_btn" href="#">Apply Coupon</a>
-            </div> -->
             <div class="billing_details">
                 <div class="row">
                     <div class="col-lg-8">
                         <h3>배송 정보</h3>
                         <form class="row contact_form" action="#" method="post" novalidate="novalidate">
-                            <div class="col-md-4 	form-group p_star">
+                            <div class="col-md-5 form-group p_star">
                                 <input type="text" class="form-control" id="orderName" name="orderName" placeholder="이름*">
                             </div>
                             <div class="col-md-3">
-                                <input type="button" class="form-control genric-btn info" id="regUserNameOverlap" name="regUserNameOverlap" value="배송지 변경">
+                                <input type="button" class="form-control genric-btn primary" id="orderShippingChange" name="orderShippingChange" value="배송지 변경">
                             </div>
                             <div class="col-md-8 form-group p_star">
-                                <input type="text" class="form-control" id="number" name="number" placeholder="휴대폰 전화번호 (ex:01012345678)*" maxlength="11" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*)\./g, '$1');">
+                                <input type="text" class="form-control" id="orderNumber" name="orderNumber" placeholder="휴대폰 전화번호 (ex:01012345678)*" maxlength="11" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*)\./g, '$1');">
                             </div>
                             <div class="col-md-8 form-group p_star">
-                                <input type="text" class="form-control" id="email" name="compemailany" placeholder="집 전화번호 (ex:021234567)*" maxlength="9" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*)\./g, '$1');">
+                                <input type="text" class="form-control" id="orderHome" name="orderHome" placeholder="집 전화번호 (ex:021234567)*" maxlength="9" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*)\./g, '$1');">
                             </div>
                             <div class="col-md-5 form-group">
-                                <input type="text" class="form-control" id="zip" name="zip" placeholder="Postcode/ZIP">
+                                <input type="text" class="form-control" id="orderZip" name="orderZip" placeholder="우편 번호">
                             </div>
-                            <div class="col-md-3 form-group">
-                                <input type="button" class="form-control genric-btn success" id="regUserNameOverlap" name="regUserNameOverlap" value="주소 검색">
-                            </div>
-                            <div class="col-md-8 form-group p_star">
-                                <input type="text" class="form-control" id="add1" name="add1" placeholder="주소">
+                            <div class="col-md-3">
+                                <input type="button" class="form-control genric-btn primary" id="orderPostSearch" name="orderPostSearch" value="주소 검색">
                             </div>
                             <div class="col-md-8 form-group p_star">
-                                <input type="text" class="form-control" id="add2" name="add2" placeholder="상세 주소">
+                                <input type="text" class="form-control" id="orderAddress" name="orderAddress" placeholder="주소">
+                            </div>
+                            <div class="col-md-8 form-group p_star">
+                                <input type="text" class="form-control" id="orderAddressDetail" name="orderAddressDetail" placeholder="상세 주소">
                             </div>
                             <div class="col-md-12 form-group">
                                 <div class="creat_account">
-                                    <input type="checkbox" id="f-option2" name="selector">
-                                    <label for="f-option2">배송지를 저장하시겠습니까?</label>
+                                    <input type="checkbox" id="orderSaveShipping" name="orderSaveShipping">
+                                    <label for="orderSaveShipping">배송지를 저장하시겠습니까?</label>
                                 </div>
                             </div>
                             <div class="col-md-12 form-group" style="height: 30px;"></div>
@@ -229,11 +197,11 @@
 			                                </td>
 			                                <td>
 			                                    <div class="product_count">
-			                                        <input type="text" name="qty" id="sst" maxlength="12" value="1" title="Quantity:"
+			                                        <input type="text" name="orderQuantity1" id="orderQuantity1" maxlength="12" value="1" title="Quantity:"
 			                                            class="input-text qty">
-			                                        <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;;"
+			                                        <button onclick="var result = document.getElementById('orderQuantity1'); var orderQuantity1 = result.value; if( !isNaN( orderQuantity1 )) result.value++;;"
 			                                            class="increase items-count" type="button"><i class="lnr lnr-chevron-up"></i></button>
-			                                        <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) && sst > 0 ) result.value--;"
+			                                        <button onclick="var result = document.getElementById('orderQuantity1'); var orderQuantity1 = result.value; if( !isNaN( orderQuantity1 ) && orderQuantity1 > 1 ) result.value--;"
 			                                            class="reduced items-count" type="button"><i class="lnr lnr-chevron-down"></i></button>
 			                                    </div>
 			                                </td>
@@ -336,8 +304,7 @@
                                     <label for="f-option5">카드 결제수단</label>
                                     <div class="check"></div>
                                 </div>
-                                <p>Please send a check to Store Name, Store Street, Store Town, Store State / County,
-                                    Store Postcode.</p>
+                                <p>상점 이름, 상점 거리, 상점 타운, 상점 주/군, 상점 우편번호로 수표를 보내주십시오.</p>
                             </div>
                             <div class="payment_item active">
                                 <div class="radion_btn">
@@ -346,8 +313,7 @@
                                     <img src="../../template/karma/img/product/card.jpg" alt="">
                                     <div class="check"></div>
                                 </div>
-                                <p>Pay via PayPal; you can pay with your credit card if you don’t have a PayPal
-                                    account.</p>
+                                <p>페이팔을 통한 결제 PayPal이 없는 경우 신용 카드로 결제할 수 있습니다.</p>
                             </div>
                             <div class="creat_account">
                                 <input type="checkbox" id="f-option4" name="selector">
