@@ -139,20 +139,20 @@
 						<h3>로그인 해주세요</h3>
 						<form class="row login_form" action="../../template/karma/contact_process.php" method="post" id="contactForm" novalidate="novalidate">
 							<div class="col-md-12 form-group">
-								<input type="text" class="form-control" id="name" name="name" placeholder="아이디" onfocus="this.placeholder = ''" onblur="this.placeholder = '아이디'">
+								<input type="text" class="form-control" id="loginName" name="loginName" placeholder="아이디" onfocus="this.placeholder = ''" onblur="this.placeholder = '아이디'">
 							</div>
 							<div class="col-md-12 form-group">
-								<input type="text" class="form-control" id="name" name="name" placeholder="비밀번호" onfocus="this.placeholder = ''" onblur="this.placeholder = '비밀번호'">
+								<input type="text" class="form-control" id="loginPassword" name="loginPassword" placeholder="비밀번호" onfocus="this.placeholder = ''" onblur="this.placeholder = '비밀번호'">
 							</div>
 							<div class="col-md-12 form-group">
 								<div class="creat_account">
-									<input type="checkbox" id="f-option2" name="selector">
-									<label for="f-option2">로그인 상태 유지</label>
+									<input type="checkbox" id="loginMaintain" name=""loginMaintain"">
+									<label for=""loginMaintain"">로그인 상태 유지</label>
 								</div>
 							</div>
 							<div class="col-md-12 form-group">
 								<button type="submit" value="submit" class="primary-btn">로그인</button>
-								<a href="#">아이디/비밀번호 찾기</a>
+								<span><a href="#">아이디</a>/<a href="#">비밀번호 찾기</a></span>
 								<button type="submit" value="kakao" class="primary-btn genric-btn warning">
 									<i class="fa-solid fa-comment"></i> 카카오
 								</button>
