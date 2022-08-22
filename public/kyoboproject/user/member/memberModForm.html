@@ -163,21 +163,100 @@
 						</table>
 						<br>
 	                    <h3><b>회원정보수정</b></h3>
-	                     <table class="table col-lg-12">
-	                    	<tr>
+	                    <hr>
+	                    <caption style="caption-side: top;"><h5>필수입력사항</h5></caption>
+	                     <table class="table col-lg-12" style="text-align: center;">
+	                    	<tr class="row">
 	                    		<td class="col-lg-2">
 	                    			<span>아이디</span>
 	                    		</td>
-	                    		<td>
-	                    			<input type="text" class="form-control col-md-4" id="modCheckId" name="modCheckId" value="usersid" disabled>
+	                    		<td class="col-lg-4">
+	                    			<input type="text" class="form-control" id="modId" name="modId" value="usersid" disabled>
+	                    		</td>
+	                    		<td class="col-lg-2">
+	                    		</td>
+	                    		<td class="col-lg-4">
 	                    		</td>
 	                    	</tr>
-	                    	<tr>
+	                    	<tr class="row">
 	                    		<td class="col-lg-2">
-	                    			<span>비밀번호</span>
+	                    			<span>이름</span>
 	                    		</td>
-	                    		<td>
-	                    			<input type="password" class="form-control col-md-4" id="modCheckPassword" name="modCheckPassword">
+	                    		<td class="col-lg-4">
+	                    			<input type="text" class="form-control" id="modName" name="modName" value="회원이름" disabled>
+	                    		</td>
+	                    		<td class="col-lg-2">
+	                    		</td>
+	                    		<td class="col-lg-4">
+	                    		</td>
+	                    	</tr>
+	                    	<tr class="row">
+	                    		<td class="col-lg-2">
+	                    			<span>생년월일</span>
+	                    		</td>
+	                    		<td class="col-lg-4">
+	                    			<input type="text" class="form-control" id="modDob" name="modDob" value="19990101" disabled>
+	                    		</td>
+	                    		<td class="col-lg-2">
+	                    			<span>성별</span>
+	                    		</td>
+	                    		<td class="col-lg-4">
+	                    			<div class="col-lg-6" style="display:inline;">
+             			 				<input class="form-check-input" type="radio" id="modGenderWoman" name="modGender" value="woman" disabled>
+	                               		<label class="form-check-label" for="modGenderWoman">여성</label>
+                              		</div>
+                              		<div class="offset-4" style="display:inline;">	
+                              			<input class="form-check-input" type="radio" id="modGenderman" name="modGender" value="man" checked disabled>
+	                               		<label class="form-check-label" for="modGenderman">남성</label>
+	                            	</div>
+	                            </td>
+	                    	</tr>
+	                    	<tr class="row">
+	                    		<td class="col-lg-2">
+	                    			<span>휴대폰번호</span>
+	                    		</td>
+	                    		<td class="col-lg-4">
+	                    			<input type="text" class="form-control" id="modNumber" name="modNumber" value="010-1234-5678" disabled>
+	                    		</td>
+	                    		<td class="col-lg-2">
+	                    			<span>전화번호</span>
+	                    		</td>
+	                    		<td class="col-lg-4">
+               			 			<input type="text" class="form-control" id="modHome" name="modHome" value="02-123-4567" disabled>
+	                            </td>
+	                    	</tr>
+	                    	<tr class="row">
+	                    		<td class="col-lg-2">
+	                    			<span>Email</span>
+	                    		</td>
+	                    		<td class="col-lg-10">
+	                    			<input type="text" class="form-control" id="modEmail" name="modEmail" value="userEamil@Email.com" disabled>
+	                    		</td>
+	                    	</tr>
+	                    	<tr class="row">
+	                    		<td class="col-lg-2">
+	                    			<span>마케팅(광고)<br>수신동의 여부</span>
+	                    		</td>
+	                    		<td class="col-lg-10">
+		                            <div class="col-lg-4" style="display: inline;">
+	                                    <input type="checkbox" id="modAdAllReceive" name="modAdAllReceive" value="modAdAllReceive" onclick="selectAll(this);">
+	                                    <label for="modAdAllReceive" style="font-weight: bolder;">광고 전체 수신 동의</label>
+		                            </div>
+	                            	<div style="height: 20px;"></div>
+		                            <div class="col-lg-12">
+		                                <div class="col-lg-4" style="display: inline;">
+		                                    <input type="checkbox" id="modAdEmailReceive" name="modAdReceive" onclick="checkSelectAll();">
+		                                    <label for="modAdEmailReceive">이메일 수신</label>
+		                                </div>
+		                                <div class="col-lg-4" style="display: inline;">
+		                                    <input type="checkbox" id="modAdKakaoReceive" name="modAdReceive" onclick="checkSelectAll();">
+		                                    <label for="modAdKakaoReceive">카카오톡 수신</label>
+		                                </div>
+		                                <div class="col-lg-4" style="display: inline;">
+		                                    <input type="checkbox" id="modAdSmsReceive" name="modAdReceive" onclick="checkSelectAll();">
+		                                    <label for="modAdSmsReceive">SMS 수신 동의</label>
+		                                </div>
+		                            </div>
 	                    		</td>
 	                    	</tr>
 	                    </table>
@@ -265,6 +344,29 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 		</div>
 	</footer>
 	<!-- End footer Area -->
+	<script type="text/javascript">
+	function checkSelectAll()  {
+
+		const checkboxes = document.querySelectorAll('input[name="modAdReceive"]');
+
+		const checked = document.querySelectorAll('input[name="modAdReceive"]:checked');
+
+		const selectAll = document.querySelector('input[name="modAdAllReceive"]');
+		  
+		if(checkboxes.length === checked.length)  {
+		  selectAll.checked = true;
+		}else {
+		  selectAll.checked = false;
+		}
+	}
+	function selectAll(selectAll)  {
+		const checkboxes = document.getElementsByName('modAdReceive');
+		
+		checkboxes.forEach((checkbox) => {
+	    checkbox.checked = selectAll.checked
+	  })
+	}
+	</script>
 	<script src="../../template/karma/js/vendor/jquery-2.2.4.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
 	 crossorigin="anonymous"></script>
