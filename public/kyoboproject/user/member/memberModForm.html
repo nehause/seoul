@@ -165,7 +165,7 @@
 	                    <h3><b>회원정보수정</b></h3>
 	                    <hr>
 	                    <caption style="caption-side: top;"><h5>필수입력사항</h5></caption>
-	                     <table class="table col-lg-12" style="text-align: center;">
+	                     <table class="table col-lg-12">
 	                    	<tr class="row">
 	                    		<td class="col-lg-2">
 	                    			<span>아이디</span>
@@ -216,21 +216,35 @@
 	                    			<span>휴대폰번호</span>
 	                    		</td>
 	                    		<td class="col-lg-4">
-	                    			<input type="text" class="form-control" id="modNumber" name="modNumber" value="010-1234-5678" disabled>
+	                    			<input type="text" class="form-control" id="modNumber" name="modNumber" value="010-1234-5678">
 	                    		</td>
 	                    		<td class="col-lg-2">
 	                    			<span>전화번호</span>
 	                    		</td>
 	                    		<td class="col-lg-4">
-               			 			<input type="text" class="form-control" id="modHome" name="modHome" value="02-123-4567" disabled>
+               			 			<input type="text" class="form-control" id="modHome" name="modHome" value="02-123-4567">
 	                            </td>
 	                    	</tr>
 	                    	<tr class="row">
 	                    		<td class="col-lg-2">
 	                    			<span>Email</span>
 	                    		</td>
-	                    		<td class="col-lg-10">
-	                    			<input type="text" class="form-control" id="modEmail" name="modEmail" value="userEamil@Email.com" disabled>
+	                    		<td class="col-lg-3">
+	                    			<input type="text" class="form-control" id="modEmailFirst" name="modEmailFirst" value="userEamil">
+	                    		</td>
+	                    		<td class="col-lg-1">
+	                    			<span> @ </span>
+	                    		</td>
+	                    		<td class="col-lg-3">
+	                    			<input type="text" class="form-control" id="regEmailLast" name="modEmailLast" value="Email.com">
+	                    		</td>
+	                    		<td class="col-lg-3">
+	                    			<select class="country_select" id="modEmailLastSelect" name="modEmailLastSelect" onchange="selectEmail();">
+	                                    <option value="">직접입력</option>
+	                                    <option value="naver.com">네이버</option>
+	                                    <option value="gmail.com">구글</option>
+	                                    <option value="kakao.com">카카오</option>
+	                                </select>
 	                    		</td>
 	                    	</tr>
 	                    	<tr class="row">
@@ -238,14 +252,14 @@
 	                    			<span>마케팅(광고)<br>수신동의 여부</span>
 	                    		</td>
 	                    		<td class="col-lg-10">
-		                            <div class="col-lg-4" style="display: inline;">
+		                            <div class="col-lg-4" style="display: inline; text-align: left">
 	                                    <input type="checkbox" id="modAdAllReceive" name="modAdAllReceive" value="modAdAllReceive" onclick="selectAll(this);">
 	                                    <label for="modAdAllReceive" style="font-weight: bolder;">광고 전체 수신 동의</label>
 		                            </div>
 	                            	<div style="height: 20px;"></div>
 		                            <div class="col-lg-12">
 		                                <div class="col-lg-4" style="display: inline;">
-		                                    <input type="checkbox" id="modAdEmailReceive" name="modAdReceive" onclick="checkSelectAll();">
+		                                    <input type="checkbox" id="modAdEmailReceive" name="modAdReceive" onclick="checkSelectAll();" checked>
 		                                    <label for="modAdEmailReceive">이메일 수신</label>
 		                                </div>
 		                                <div class="col-lg-4" style="display: inline;">
@@ -253,10 +267,31 @@
 		                                    <label for="modAdKakaoReceive">카카오톡 수신</label>
 		                                </div>
 		                                <div class="col-lg-4" style="display: inline;">
-		                                    <input type="checkbox" id="modAdSmsReceive" name="modAdReceive" onclick="checkSelectAll();">
+		                                    <input type="checkbox" id="modAdSmsReceive" name="modAdReceive" onclick="checkSelectAll();" checked>
 		                                    <label for="modAdSmsReceive">SMS 수신 동의</label>
 		                                </div>
 		                            </div>
+	                    		</td>
+	                    	</tr>
+	                    	<tr class="row">
+	                    		<td class=col-lg-12>
+	                    		</td>
+	                    	</tr>
+	                    </table>
+	                    <div style="height: 10px;"></div>
+	                    <caption style="caption-side: top;"><h5>선택입력사항</h5></caption>
+	                    <table class="table col-lg-12">
+	                    	<tr class="row">
+	                    		<td class="col-lg-2">
+	                    			<span>기본주소[집]</span>
+	                    		</td>
+	                    		<td class="col-lg-10">
+	                    			<input type="text" id="modAddress" name="modAddress" value="">
+	                    		</td>
+	                    	</tr>
+	                    	<tr class="row">
+	                    		<td class="col-lg-2">
+	                    			<span>개인정보 <br> 유효기간</span>
 	                    		</td>
 	                    	</tr>
 	                    </table>
@@ -345,6 +380,10 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	</footer>
 	<!-- End footer Area -->
 	<script type="text/javascript">
+	function selectEmail() {
+		document.memberModForm.modEmailLast.value = document.memberModForm.modEmailLastSelect.value
+		
+	}
 	function checkSelectAll()  {
 
 		const checkboxes = document.querySelectorAll('input[name="modAdReceive"]');
