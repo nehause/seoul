@@ -162,100 +162,52 @@
 							</tr>
 						</table>
 	                	<div style="height: 20px;"></div>
-	                    <h3><b>비밀번호 변경</b></h3>
+	                    <h3><b>나의 주소록</b></h3>
+	                    <div class="border row" style="background-color: #F0F0F0;">
+	                    	<div class="col-lg-2" style="margin:10px;">
+	                    		<span>입력된 주소 </span> <span><b>1개</b></span>
+	                    	</div>
+	                    	<div class="col-lg-3 offset-6">
+	                    		<button type="button" class="genric-btn default" style="" id="modPasswordFormSubmit" onclick="modPasswordSubmit();"> 
+                   					<i class="fa-solid fa-caret-right"></i> 새로운 주소 추가
+                				</button>
+                			</div>
+	                    </div>
 						<div style="height: 10px;"></div>
 	                    <table class="table col-lg-12">
 	                    	<tr>
-	                    		<td class="col-lg-2">
-	                    			<span>현재 비밀번호</span>
-	                    		</td>
-	                    		<td class="col-lg-4">
-	                    			<input type="text" class="form-control" id="nowPassword" name="nowPassword">
-	                    		</td>
-	                    		<td>
-	                    		</td>
-	                    		<td>
-	                    		</td>
+	                    		
 	                    	</tr>
 	                    	<tr>
-	                    		<td class="col-lg-2">
-	                    			<span>새 비밀번호</span>
-	                    		</td>
-	                    		<td class="col-lg-4">
-	                    			<input type="password" class="form-control" id="modPassword" name="modPassword" onkeyup="securityCheck();">
-	                    		</td>
-	                    		<td class="col-lg-2">
-	                    			<span>비밀번호 안전도 <a id="passwordSecurity" style="color: red">낮음</a></span>
-	                    		</td>
-	                    		<td class="col-lg-4">
-	                    			<span>8~15자리의 영문+숫자+특수문자 조합이 가장 안전합니다.</span>
-	                    		</td>
+	                    		
 	                    	</tr>
 	                    	<tr>
-	                    		<td class="col-lg-2">
-	                    			<span>새 비밀번호 확인</span>
-	                    		</td>
-	                    		<td class="col-lg-4">
-	                    			<input type="password" class="form-control" id="checkModPassword" name="checkModPassword">
-	                    		</td>
-	                    		</td>
-	                    		<td>
-	                    		</td>
-	                    		<td>
-	                    		</td>
+	                    		
 	                    	</tr>
 	                    	<tr>
-	                    		</td>
-	                    		<td>
-	                    		</td>
-	                    		<td>
-	                    		</td>
-		                    	<td>
-		                    	</td>
-		                    	<td>
-		                    	</td>
+	                    		
 	                    	</tr>
 	                    </table>
                    		<button type="button" class="genric-btn primary col-lg-2" style="float:right;" id="modPasswordFormSubmit" onclick="modPasswordSubmit();"> 
                    			<i class="fa-solid fa-pencil"></i> 수정
                 		</button>
+                		<button type="button" class="genric-btn danger col-lg-2" style="float:right; margin-right:10px;" id="modPasswordFormSubmit" onclick="modPasswordSubmit();"> 
+                   			<i class="fa-solid fa-trash-can"></i> 삭제
+                		</button>
                     </form>
                     <div style="height: 80px;"></div>
                    	<div class="border">
                    		<div style="background-color: #F0F0F0;">
-                   			<h4><b><i class="fa-solid fa-circle-exclamation"></i></b> 비밀번호 변경 관련 안내 </h4>
+                   			<h4><b><i class="fa-solid fa-circle-exclamation"></i></b> 주소록 안내 </h4>
                    		</div>
                    		<div>
-                   			<ul>
-                   				<li>
-                   					<h5>비밀번호 사용이 불가한 경우</h5>
-                   				</li>
-                   				<li>
-	                    			<ol>
-	                    				<li>8자리 미만 15자리 초과될 경우</li>
-	                    				<li>아이디와 동일하게 설정될 경우</li>
-	                    				<li>현재 사용중인 비밀번호와 동일한 경우</li>
-	                    				<li>공백이 포함된 경우</li>
-	                    			</ol>
-                    			</li>
-                    			<li>
-                    				<h5>비밀번호 생성방법</h5>
-                    			</li>
-                    			<li>
-                    				<ol>
-                    					<li>공백없이 8~15자리의 영문(대/소문자 구분), 숫자, 특수문자를 포함해서 생성하세요.</li>
-										<li>영문+숫자+특수문자 중 3개 조합 8자리 이상 또는 2개 조합 10자리 이상 (단, 최대 15자리)</li>
-										<li>영문+숫자+특수문자가 조합된 경우가 가장 안전한 비밀번호 입니다.</li>
-										<li>연속된 숫자나 문자, 개인정보가 포함된 비밀번호의 경우 노출 위험이 있으니 사용을 삼가해주세요.</li>
-										<li>사용가능한 특수문자는 아래와 같습니다.
-										    <br>~ ` ! @ # $ % ^ & * ( ) _ - + = | { [ } ] : ; < , > . ? / " ' \</li>
-                    				</ol>
-                    			</li>
-                    			<div style="height: 20px;"></div>
-                    			<li>
-                    				<h5><b>가장 최적의 비밀번호 조합은 13~15자리의 영문+숫자+특수문자를 조합</b>하였을 때이며,
-                    				<br> 비밀번호 안전도가 가장 높습니다.</h5>
-                    			</li>
+                   			<ul style="margin: 10px; padding:10px;">
+                   				<li>기본 주소는 집 또는 직장 주소 중에서만 설정 가능하며, 기타로 구분되어 있는 주소는 설정 하실 수 없습니다.</li>
+								<li>기본 주소는 수정 가능하며, 삭제 할 수 없습니다.</li>
+								<li>기본 주소로 설정 하시면 회원정보 수정의 주소도 같이 변경되며, 주문/결제시 배송지정보에서 회원정보 동일에 적용됩니다.</li>
+								<li>등록된 주소의 구분(집, 직장, 기타) 수정은 불가합니다.</li>
+								<li>집과 직장 주소는 각 1개씩만 등록 가능하며, 기타주소는 최대 99개까지 등록할수 있습니다.</li>
+								<li>집과 직장 주소가 이미 1개씩 등록된 경우, 추가 하실 수 없으며 해당 주소를 선택하시어 수정 바랍니다.</li>
                    			</ul>
                    		</div>
                     </div>
