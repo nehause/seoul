@@ -59,12 +59,18 @@
 								<ul class="dropdown-menu">
 									<li class="nav-item"><a class="nav-link" href="../book/bookList.html">책 목록</a></li>
 									<li class="nav-item"><a class="nav-link" href="../book/bookView.html">책 상세</a></li>
-									<!-- <li class="nav-item"><a class="nav-link" href="checkout.html">Product Checkout</a></li>
-									<li class="nav-item"><a class="nav-link" href="cart.html">Shopping Cart</a></li>
-									<li class="nav-item"><a class="nav-link" href="confirmation.html">Confirmation</a></li> -->
 								</ul>
 							</li>
-							<li class="nav-item active"><a class="nav-link" href="memberRoomForm.html">마이룸</a></li>
+							<li class="nav-item submenu dropdown active">
+								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+								 aria-expanded="false">마이룸</a>
+								<ul class="dropdown-menu">
+									<li class="nav-item"><a class="nav-link" href="memberRoomForm.html">주문/배송 조회</a></li>
+									<li class="nav-item"><a class="nav-link" href="memberModCheckForm.html">회원정보 수정</a></li>
+									<li class="nav-item"><a class="nav-link" href="memberModPasswordForm.html">비밀번호 변경</a></li>
+									<li class="nav-item"><a class="nav-link" href="memberTarnsport.html">나의 주소록</a></li>
+								</ul>
+							</li>
 						</ul>
 						<ul class="nav navbar-nav navbar-right">
 							<li class="nav-item">
@@ -174,9 +180,40 @@
                 			</div>
 	                    </div>
 						<div style="height: 10px;"></div>
-	                    <table class="table col-lg-12">
-	                    	<tr>
-	                    		
+	                    <table class="table col-lg-12" style="text-align:center; vertical-align:middle;">
+	                    	<tr class="row">
+	                    		<th class="col-lg-1">
+	                    			<span>구분</span>
+	                    		</th>
+	                    		<th class="col-lg-1">
+	                    			<span>이름</span>
+	                    		</th>
+	                    		<th class="col-lg-3">
+	                    			<span>전화번호</span><br><span>[휴대전화번호]</span>
+	                    		</th>
+	                    		<th class="col-lg-6">
+	                    			<span>주소</span>
+	                    		</th>
+	                    		<th class="col-lg-1">
+	                    			<span>선택</span>
+	                    		</th>
+	                    	</tr>
+	                    	<tr class="row">
+	                    		<td class="col-lg-1">
+	                    			<span id="baseTransfort"><b>기본</b></span><br><span>집</span>
+	                    		</td>
+	                    		<td class="col-lg-1">
+	                    			<span>이용자</span>
+	                    		</td>
+	                    		<td class="col-lg-3">
+	                    			<span>010-1234-5678</span>
+	                    		</td>
+	                    		<td class="col-lg-6">
+	                    			<span>어떤시 어떤구 어떤어떤로 12길 34-5, 6789동 0123호</span>
+	                    		</td>
+	                    		<td class="col-lg-1">
+	                    			<input type="radio" id="transport1" name="transportCheck">
+	                    		</td>
 	                    	</tr>
 	                    	<tr>
 	                    		
@@ -184,10 +221,23 @@
 	                    	<tr>
 	                    		
 	                    	</tr>
-	                    	<tr>
-	                    		
-	                    	</tr>
+	                    	<tr class="row" style="background-color: #F0F0F0;">
+                           		<td class="col-lg-12">
+	                           		<a href="#"><b><i class="fa-solid fa-angles-left"></i></b></a>
+	                           		<a href="#"><b><i class="fa-solid fa-angle-left"></i></b></a>
+	                           		<a href="#"><span style="color:gray">1</span></a>
+	                           		<a href="#"><b><i class="fa-solid fa-angle-right"></i></b></a>
+	                           		<a href="#"><b><i class="fa-solid fa-angles-right"></i></b></a>
+                           		</td>
+                            </tr>
+                            <tr class="row">
+                            	<td class="col-lg-12">
+                            	</td>
+                            </tr>
 	                    </table>
+	                    <button type="button" class="genric-btn default" style="float:left;" id="modPasswordFormSubmit" onclick="modPasswordSubmit();"> 
+                   			<i class="fa-solid fa-caret-right"></i> 기본주소 설정
+                		</button>
                    		<button type="button" class="genric-btn primary col-lg-2" style="float:right;" id="modPasswordFormSubmit" onclick="modPasswordSubmit();"> 
                    			<i class="fa-solid fa-pencil"></i> 수정
                 		</button>
@@ -198,7 +248,7 @@
                     <div style="height: 80px;"></div>
                    	<div class="border">
                    		<div style="background-color: #F0F0F0;">
-                   			<h4><b><i class="fa-solid fa-circle-exclamation"></i></b> 주소록 안내 </h4>
+                   			<h4 style="padding: 10px;"><b><i class="fa-solid fa-circle-exclamation"></i></b> 주소록 안내 </h4>
                    		</div>
                    		<div>
                    			<ul style="margin: 10px; padding:10px;">
