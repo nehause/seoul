@@ -174,7 +174,7 @@
 	                    		<span>입력된 주소 </span> <span><b>1개</b></span>
 	                    	</div>
 	                    	<div class="col-lg-3 offset-6">
-	                    		<button type="button" class="genric-btn default" style="" id="modPasswordFormSubmit" onclick="modPasswordSubmit();"> 
+	                    		<button type="button" class="genric-btn default" style="" id="modPasswordFormSubmit" data-toggle="modal" data-target="#addTransportModal"> 
                    					<i class="fa-solid fa-caret-right"></i> 새로운 주소 추가
                 				</button>
                 			</div>
@@ -345,10 +345,36 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 		</div>
 	</footer>
 	<!-- End footer Area -->
+	
+	<!-- start modal area -->
+	<form name="addTransportForm" method="get" action="memberTransport.html" id="addTransportForm">
+		<div class="modal fade" id="addTransportModal" tabindex="-1" aria-labelledby="addTransportModalLabel" aria-hidden="true">
+		  <div class="modal-dialog modal-dialog-centered">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <h5 class="modal-title" id="addTransportModalLabel">새로운 주소 입력</h5>
+		        <button type="button" class="border-0" style="background-color: white;" data-dismiss="modal"><i class="fa-solid fa-xmark fa-2x" style="color:gray"></i></button>
+		      </div>
+		      <div class="modal-body">
+		        <span>지금까지 기입한 정보가 전부 초기화 됩니다. 돌아가시겠습니까?</span>
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="genric-btn default border-0" data-dismiss="modal">닫기</button>
+		        <button type="button" class="genric-btn primary" onclick="addTransportSubmit();">등록</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+	</form>
+	<!-- end modal area -->
+	
 	<script type="text/javascript">
 		function modCheckSubmit() {
 				document.getElementById("memberModCheckForm").submit();
 			}
+		function addTransportSubmit() {
+			document.getElementById("addTransportForm").submit();
+		}
 	</script>
 	<script src="../../template/karma/js/vendor/jquery-2.2.4.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
