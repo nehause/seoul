@@ -263,13 +263,13 @@
 	                        <div class="row" style="height: 40px;"></div>
 	                        <div class="row mb-5">
 							   <div class="col-2">
-							      <button type="button" class="genric-btn danger" id="regFormCancel" onclick="regCancel();">
-							      	<i class="fa-solid fa-xmark"></i> 돌아가기
+							      <button type="button" class="genric-btn danger" id="regFormCancel" data-toggle="modal" data-target="#regCancelModal">
+							      	<i class="fa-solid fa-xmark"></i> 취소
 							      </button>
 							   </div>
 							   <div class="col-2 offset-8">
 							     <button type="button" class="genric-btn primary" id="regFormSubmit" onclick="regSubmit();">
-							    	 <i class="fa-solid fa-plus"></i> 가입하기
+							    	 <i class="fa-solid fa-plus"></i> 가입
 							     </button>
 							   </div>
 							</div>
@@ -357,6 +357,26 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 		</div>
 	</footer>
 	<!-- End footer Area -->
+	
+	<!-- start modal area -->
+	<div class="modal fade" id="regCancelModal" tabindex="-1" aria-labelledby="regCancelModalLabel" aria-hidden="true">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title" id="regCancelModalLabel">돌아가시겠습니까?</h5>
+	        <button type="button" class="border-0" style="background-color: white;" data-dismiss="modal"><i class="fa-solid fa-xmark fa-2x" style="color:gray"></i></button>
+	      </div>
+	      <div class="modal-body">
+	        <span>지금까지 기입한 정보가 전부 초기화 됩니다. 돌아가시겠습니까?</span>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="genric-btn default border-0" data-dismiss="modal">닫기</button>
+	        <button type="button" class="genric-btn danger" onclick="regCancel();">취소</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<!-- end modal area -->
 	
 	<script type="text/javascript">
 		function selectEmail() {

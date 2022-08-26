@@ -346,10 +346,10 @@
 	                    	</tr>
 	                    	<caption style="caption-side: bottom; float:right;">
 						   		<button type="button" class="genric-btn primary" id="modFormSubmit" onclick="modSubmit();">
-						   			<i class="fa-solid fa-pencil"></i> 수정하기
+						   			<i class="fa-solid fa-pencil"></i> 수정
 						    	</button>
-						    	<button type="button" class="genric-btn danger" id="modFormCancel" onclick="modCancel();">
-						    		<i class="fa-solid fa-xmark"></i> 돌아가기
+						    	<button type="button" class="genric-btn danger" id="modFormCancel" data-toggle="modal" data-target="#modCancelModal">
+						    		<i class="fa-solid fa-xmark"></i> 취소
 						    	</button>
 							</caption>
 	                    </table>
@@ -437,6 +437,27 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 		</div>
 	</footer>
 	<!-- End footer Area -->
+	
+	<!-- start modal area -->
+	<div class="modal fade" id="modCancelModal" tabindex="-1" aria-labelledby="modCancelModalLabel" aria-hidden="true">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title" id="modCancelModalLabel">돌아가시겠습니까?</h5>
+	        <button type="button" class="border-0" style="background-color: white;" data-dismiss="modal"><i class="fa-solid fa-xmark fa-2x" style="color:gray"></i></button>
+	      </div>
+	      <div class="modal-body">
+	        <span>지금까지 기입한 정보가 전부 초기화 됩니다. 돌아가시겠습니까?</span>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="genric-btn default border-0" data-dismiss="modal">닫기</button>
+	        <button type="button" class="genric-btn danger" onclick="modCancel();">취소</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<!-- end modal area -->
+	
 	<script type="text/javascript">
 	function modCancel() {
 		location.href='memberRoomForm.html';
