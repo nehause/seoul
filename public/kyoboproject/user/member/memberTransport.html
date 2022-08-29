@@ -32,6 +32,20 @@
 	<link rel="stylesheet" href="../../template/karma/css/main.css">
 	<script src="https://kit.fontawesome.com/dca973ab96.js" crossorigin="anonymous"></script>
 	<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+	<style>
+		.textCenter{
+			text-align: center;
+		}
+		.allCenter{
+			text-align: center;
+			justify-content: center; 
+			align-items: center;
+		}
+		.marginSpace{
+			margin-top: 10px;
+		    margin-bottom: 10px;
+		}
+	</style>
 </head>
 
 <body>
@@ -174,7 +188,7 @@
 	                    		<span>입력된 주소 </span> <span><b>1개</b></span>
 	                    	</div>
 	                    	<div class="col-lg-3 offset-6">
-	                    		<button type="button" class="genric-btn default" style="" id="modPasswordFormSubmit" data-toggle="modal" data-target="#addTransportModal"> 
+	                    		<button type="button" class="genric-btn default" id="modPasswordFormSubmit" data-toggle="modal" data-target="#addTransportModal"> 
                    					<i class="fa-solid fa-caret-right"></i> 새로운 주소 추가
                 				</button>
                 			</div>
@@ -241,7 +255,7 @@
                    		<button type="button" class="genric-btn primary col-lg-2" style="float:right;" id="modPasswordFormSubmit" onclick="modPasswordSubmit();"> 
                    			<i class="fa-solid fa-pencil"></i> 수정
                 		</button>
-                		<button type="button" class="genric-btn danger col-lg-2" style="float:right; margin-right:10px;" id="modPasswordFormSubmit" onclick="modPasswordSubmit();"> 
+                		<button type="button" class="genric-btn danger col-lg-2" style="float:right; margin-right:10px;" data-toggle="modal" data-target="#delectTransportModal" id="modPasswordFormSubmit" onclick="modPasswordSubmit();"> 
                    			<i class="fa-solid fa-trash-can"></i> 삭제
                 		</button>
                     </form>
@@ -348,7 +362,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	
 	<!-- start modal area -->
 	<form name="addTransportForm" method="get" action="memberTransport.html" id="addTransportForm">
-		<div class="modal fade" id="addTransportModal" tabindex="-1" aria-labelledby="addTransportModalLabel" aria-hidden="true">
+		<div class="modal fade" id="addTransportModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="addTransportModalLabel" aria-hidden="true">
 		  <div class="modal-dialog modal-dialog-centered">
 		    <div class="modal-content">
 		      <div class="modal-header">
@@ -356,7 +370,61 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 		        <button type="button" class="border-0" style="background-color: white;" data-dismiss="modal"><i class="fa-solid fa-xmark fa-2x" style="color:gray"></i></button>
 		      </div>
 		      <div class="modal-body">
-		        <span>지금까지 기입한 정보가 전부 초기화 됩니다. 돌아가시겠습니까?</span>
+		        <div class="col-lg-12">
+		        	<div class="row marginSpace">
+		        		<div class="col-lg-3 textCenter">
+		        			<b>이름</b>
+		        		</div>
+		        		<div class="col-lg-9">
+		        			<input type="text" class="form-control col-lg-4" id="addTransportName" name="addTransportName">
+		        		</div>
+		        	</div>
+		        	<div class="row marginSpace">
+		        		<div class="col-lg-3 allCenter">
+		        			<b>주소</b>
+		        		</div>
+		        		<div class="col-lg-9">
+		        			<input type="text" class="form-control col-lg-4" style="display: inline;" id="addTransportZipCode" name="addTransportZipCode">
+			        		<input type="button" class="form-control genric-btn primary col-lg-4" id="addTransportSearch" name="addTransportAddressSearch" value="주소검색">
+		        			<input type="text" class="form-control" id="addTransportAddress" name="addTransportAddress">
+		        			<input type="text" class="form-control" id="addTransportAddressDetail" name="addTransportAddressDetail">
+		        		</div>
+		        	</div>
+		        	<div class="row marginSpace">
+		        		<div class="col-lg-3 textCenter">
+		        			<b>전화번호</b>
+		        		</div>
+		        		<div class="col-lg-9">
+		        			<select class="country_select col-lg-3" style="display: inline;" id="addTransportHomeStart" name="addTransportHomeStart">
+                                <option value=" 02">02</option>
+                                <option value="031">031</option>
+                                <option value="032">032</option>
+                                <option value="033">033</option>
+                            </select>
+                            <span class="col-lg-1"> - </span>
+                            <input type="text" class="form-control col-lg-3" style="display: inline;" id="addTransportHomeCenter" name="addTransportHomeCenter">
+                            <span class="col-lg-1"> - </span>
+			        		<input type="text" class="form-control col-lg-3" style="display: inline;" id="addTransportHomeEnd" name="addTransportHomeEnd">
+		        		</div>
+		        	</div>
+		        	<div class="row marginSpace">
+		        		<div class="col-lg-3 textCenter">
+		        			<b>핸드폰</b>
+		        		</div>
+		        		<div class="col-lg-9">
+		        			<select class="country_select col-lg-3" id="addTransportNumberStart" name="addTransportNumberStart">
+                                 <option value="010">010</option>
+                                 <option value="011">011</option>
+                                 <option value="017">017</option>
+                                 <option value="019">019</option>
+                             </select>
+                             <span class="col-lg-1"> - </span>
+                            <input type="text" class="form-control col-lg-3" style="display: inline;" id="addTransportNumberCenter" name="addTransportNumberCenter">
+                            <span class="col-lg-1"> - </span>
+			        		<input type="text" class="form-control col-lg-3" style="display: inline;" id="addTransportNumberEnd" name="addTransportNumberEnd">
+		        		</div>
+		        	</div>
+	        	</div>
 		      </div>
 		      <div class="modal-footer">
 		        <button type="button" class="genric-btn default border-0" data-dismiss="modal">닫기</button>
@@ -366,6 +434,24 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 		  </div>
 		</div>
 	</form>
+	
+	<div class="modal fade" id="delectTransportModal" tabindex="-1" aria-labelledby="delectTransportModalLabel" aria-hidden="true">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title" id="delectTransportModalLabel">Modal title</h5>
+	        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+	      </div>
+	      <div class="modal-body">
+	        ...
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+	        <button type="button" class="btn btn-primary">Save changes</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
 	<!-- end modal area -->
 	
 	<script type="text/javascript">
