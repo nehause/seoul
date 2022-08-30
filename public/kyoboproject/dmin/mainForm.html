@@ -3,11 +3,12 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
 	<title>mainForm</title>
+	<link rel="canonical" href="https://getbootstrap.kr/docs/5.1/examples/sidebars/">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-	<script src="https://kit.fontawesome.com/dca973ab96.js" crossorigin="anonymous"></script>
-	<!-- cdn = 온라인 해석기 --> 
-	<style type="text/css">
+	<!-- cdn = 온라인 해석기 -->
+	<style> 
 		a:hover {
 			font-weight: bolder;
 		}
@@ -15,6 +16,8 @@
 			color: white;
 		}
 	</style>
+	<script src="https://kit.fontawesome.com/dca973ab96.js" crossorigin="anonymous"></script>
+	<link href="../css/sideBars.css" rel="stylesheet">
 </head>
 <body>
 <!-- start -->
@@ -73,63 +76,64 @@
 		    </div>
 		  </div>
 		</nav>
+		<div class="container-fluid">
 			<div class="row" style="padding-left: 20px; padding-right: 20px;">
-			 <div class="flex-shrink-0 p-3 bg-white" style="width: 280px;">
-			    <ul class="list-unstyled ps-0">
-			      <li class="mb-1">
-			        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">
-			          Home
-			        </button>
-			        <div class="collapse show" id="home-collapse">
-			          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-			            <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Overview</a></li>
-			            <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Updates</a></li>
-			            <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Reports</a></li>
-			          </ul>
-			        </div>
-			      </li>
-			      <li class="mb-1">
-			        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
-			          Dashboard
-			        </button>
-			        <div class="collapse" id="dashboard-collapse">
-			          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-			            <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Overview</a></li>
-			            <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Weekly</a></li>
-			            <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Monthly</a></li>
-			            <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Annually</a></li>
-			          </ul>
-			        </div>
-			      </li>
-			      <li class="mb-1">
-			        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#orders-collapse" aria-expanded="false">
-			          Orders
-			        </button>
-			        <div class="collapse" id="orders-collapse">
-			          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-			            <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">New</a></li>
-			            <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Processed</a></li>
-			            <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Shipped</a></li>
-			            <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Returned</a></li>
-			          </ul>
-			        </div>
-			      </li>
-			      <li class="border-top my-3"></li>
-			      <li class="mb-1">
-			        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#account-collapse" aria-expanded="false">
-			          Account
-			        </button>
-			        <div class="collapse" id="account-collapse">
-			          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-			            <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">New...</a></li>
-			            <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Profile</a></li>
-			            <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Settings</a></li>
-			            <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Sign out</a></li>
-			          </ul>
-			        </div>
-			      </li>
-			    </ul>
-			  </div>
+				<div class="flex-shrink-0 p-3 bg-white" style="width: 280px;">
+				    <ul class="list-unstyled ps-0">
+				      <li class="mb-1">
+				        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">
+				          Home
+				        </button>
+				        <div class="collapse show" id="home-collapse">
+				          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+				            <li><a href="#" class="link-dark rounded">Overview</a></li>
+				            <li><a href="#" class="link-dark rounded">Updates</a></li>
+				            <li><a href="#" class="link-dark rounded">Reports</a></li>
+				          </ul>
+				        </div>
+				      </li>
+				      <li class="mb-1">
+				        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
+				          Dashboard
+				        </button>
+				        <div class="collapse" id="dashboard-collapse">
+				          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+				            <li><a href="#" class="link-dark rounded">Overview</a></li>
+				            <li><a href="#" class="link-dark rounded">Weekly</a></li>
+				            <li><a href="#" class="link-dark rounded">Monthly</a></li>
+				            <li><a href="#" class="link-dark rounded">Annually</a></li>
+				          </ul>
+				        </div>
+				      </li>
+				      <li class="mb-1">
+				        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#orders-collapse" aria-expanded="false">
+				          Orders
+				        </button>
+				        <div class="collapse" id="orders-collapse">
+				          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+				            <li><a href="#" class="link-dark rounded">New</a></li>
+				            <li><a href="#" class="link-dark rounded">Processed</a></li>
+				            <li><a href="#" class="link-dark rounded">Shipped</a></li>
+				            <li><a href="#" class="link-dark rounded">Returned</a></li>
+				          </ul>
+				        </div>
+				      </li>
+				      <li class="border-top my-3"></li>
+				      <li class="mb-1">
+				        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#account-collapse" aria-expanded="false">
+				          Account
+				        </button>
+				        <div class="collapse" id="account-collapse">
+				          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+				            <li><a href="#" class="link-dark rounded">New...</a></li>
+				            <li><a href="#" class="link-dark rounded">Profile</a></li>
+				            <li><a href="#" class="link-dark rounded">Settings</a></li>
+				            <li><a href="#" class="link-dark rounded">Sign out</a></li>
+				          </ul>
+				        </div>
+				      </li>
+				    </ul>
+				  </div>
 				<div class="col-lg-10">
 					<div class="row" style="height: 20px;"></div>
 					<div class="row" style="height: 100px;">
@@ -207,27 +211,8 @@
 										<i class="fa-solid fa-arrow-rotate-right"></i>
 									</button>
 								</form>	
+							</div>
 						</div>
-						<!-- <div class="row" style="height: 20px;"></div>
-						<div class="row">
-							<div class="col" style="width: 1px;"></div>
-							<form class="d-flex" role="search">
-								<select class="form-select bg-light" aria-label="selectsearch" style="width: 150px;">
-									<option selected>검색기준</option>
-									<option value="idword">아이디</option>
-									<option value="name">이름</option>
-									<option value="moblie">전화번호</option>
-								</select>
-								<input class="form-control" type="search" placeholder="Search" aria-label="Search" style="width:300px;">
-								<button class="col-1 btn btn-outline-dark" type="submit" style="width: 80px;">
-									<i class="fa fa-search" aria-hidden="true"></i>
-								</button>
-								<button class="col-1 btn btn-warning" type="reset" style="width: 80px;">
-									<i class="fa-solid fa-arrow-rotate-left"></i>
-								</button>
-							</form>
-						</div> -->
-					</div>
 					<div class="row">
 						<div class="col">
 							<table class="table table-striped table-hover border" id="membertable" style="text-align:center;">
@@ -401,6 +386,8 @@
 					</div>
 				</div>
 			</div>
+		</div>
+	</div>
 	</form>
 	<script type="text/javascript">
 		function checkSelectAll()  {
@@ -431,6 +418,8 @@
 		}
 		
 	</script>
+	<script src="../js/bootStrapSidebar.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <script src="sidebars.js"></script>
 	
 <!-- end -->
 
