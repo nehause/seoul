@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>3.UI_Iimplement</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+	<script src="https://kit.fontawesome.com/dca973ab96.js" crossorigin="anonymous"></script>
+	<!-- cdn = 온라인 해석기 --> 	
+</head>
+<body>
+
+<!-- start -->
+<form>
+	<div class="header">
+		<div class="row" style="height: 50px;">
+			<div class="col-sm-2 offset-1">
+				<h1>KAIONEX</h1>
+			</div>
+			<div class="col-sm-2 gy-3">
+				<span><b>ABC Management System</b></span>
+			</div>
+			<div class="col-sm-2 offset-3">
+				<div style="float:left">
+					<i class="fa-solid fa-circle-user" style="font-size:50px; padding-right: 20px;"></i>
+				</div>
+				<span style="text-align: center;"> Hwijae Jin <br> administrator </span>			
+			</div>
+			<div class="col-sm-1">
+				<select class="form-select">
+					<option>언어</option>
+					<option>한국어</option>
+					<option>영어</option>
+					<option>일본어</option>
+				</select>
+			</div>
+		</div>
+	</div>
+	<nav class="navbar navbar-expand-lg" style="background-color: #e3f2fd;">
+	  <div class="container-fluid">
+	    <a class="navbar-brand" href="#">Navbar</a>
+	    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+	      <span class="navbar-toggler-icon"></span>
+	    </button>
+	    <div class="collapse navbar-collapse" id="navbarNav">
+	      <ul class="navbar-nav">
+	        <li class="nav-item">
+	          <a class="nav-link active" aria-current="page" href="#">회원관리</a>
+	        </li>
+	        <li class="nav-item">
+	          <a class="nav-link" href="#">서비스관리</a>
+	        </li>
+	        <li class="nav-item">
+	          <a class="nav-link" href="#">사이트관리</a>
+	        </li>
+			<li class="nav-item">
+	          <a class="nav-link" href="#">로그관리</a>
+	        </li>
+	        <li class="nav-item">
+	          <a class="nav-link" href="#">시스템관리</a>
+	        </li>
+	        <li class="nav-item">
+	          <a class="nav-link" href="#">시스템관리</a>
+	        </li>
+	      </ul>
+	    </div>
+	  </div>
+	</nav>
+	<h1>Code</h1>
+	<div class="row">
+		<div class="col-sm-5 gy-4 offset-1">
+			<label for="testCodeid">아이디</label>
+			<input type="text" class="form-control" id="testCodeid" placeholder="영문(대소문자),숫자,특수문자(),4~20자리 조합">
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-5 gy-4 offset-1">
+			<label for="testCodePassword">비밀번호</label>
+			<input type="text" class="form-control" id="testCodePassword" placeholder="영문(대소문자),숫자,특수문자(),8~20자리 조합">
+		</div>
+		<div class="col-sm-5 gy-4">
+			<label for="testCodePasswordCheck">비밀번호 확인</label>
+			<input type="text" class="form-control" id="testCodePasswordCheck">
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-5 gy-4 offset-1">
+			<label for="testCodeName">이름</label>
+			<input type="text" class="form-control" id="testCodeName">
+		</div>
+		<div class="col-sm-5 gy-4">
+			<label for="testCodeNameEng">이름 (영문)</label>
+			<input type="text" class="form-control" id="testCodeNameEng">
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-5 gy-4 offset-1">
+			<label for="testCodeNameFirst">이름</label>
+			<input type="text" class="form-control" id="testCodeNameFirst">
+		</div>
+		<div class="col-sm-5 gy-4">
+			<label for="testCodeNameLast">성</label>
+			<input type="text" class="form-control" id="testCodeNameLast">
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-5 gy-4 offset-1">
+			<label for="testCodeNameEngFirst">이름 (영문)</label>
+			<input type="text" class="form-control" id="testCodeNameEngFirst">
+		</div>
+		<div class="col-sm-5 gy-4">
+			<label for="testCodeNameEngLast">성 (영문)</label>
+			<input type="text" class="form-control" id="testCodeNameEngLast">
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-5 gy-4 offset-1">
+			<label for="testCodeGender">성별</label>
+			<select class="form-select">
+					<option>:: 선택 ::</option>
+					<option>남성</option>
+					<option>여성</option>
+				</select>
+		</div>
+		<div class="col-sm-5 gy-4">
+			<label for="testCodeBirth">생일</label>
+			<input type="text" class="form-control" id="testCodeBirth">
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-5 gy-4 offset-1">
+			<label for="testCodeEmail">Email</label>
+			<input type="text" class="form-control" id="testCodeEmail" placeholder="name@example.com">
+		</div>
+		<div class="col-sm-5 gy-4">
+			<label>이메일 정보 마케팅 사용 동의</label>
+			<br>
+			<input class="form-check-input" type="checkbox" value="" id="testCodeEmailAd">
+  			<label class="form-check-label" for="testCodeEmailAd">
+   			 동의합니다
+   			</label>
+		</div>
+	</div>
+</form>
+
+<!-- end -->
+
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+</html>
