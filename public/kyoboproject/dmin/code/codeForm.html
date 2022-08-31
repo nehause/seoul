@@ -151,32 +151,32 @@
 					<div class="row">
 						<h1>코드 관리</h1>
 						<div class="col-sm-5 gy-4 offset-1">
-							<label for="testCodeName">사용여부</label>
-							<select class="form-select" id="codeGroupUseNy">
+							<label for="useCodeUseNy">사용여부</label>
+							<select class="form-select" id="codeUseNy">
 								<option>선택하세요</option>
-								<option>Y</option>
-								<option>N</option>
+								<option value="y">Y</option>
+								<option value="n">N</option>
 							</select>
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-sm-5 gy-4 offset-1">
-							<label for="testCodeid">코드</label>
-							<input type="text" class="form-control" id="testCodeid" value="자동생성" disabled>
+							<label for="codeCode">코드</label>
+							<input type="text" class="form-control" id="codeCode" value="자동생성" disabled>
 						</div>
 						<div class="col-sm-5 gy-4">
-							<label for="testCodePasswordCheck">코드(Another)</label>
-							<input type="text" class="form-control" id="testCodePasswordCheck" placeholder="영문(대소문자),숫자">
+							<label for="codeCodeAnother">코드(Another)</label>
+							<input type="text" class="form-control" id="codeCodeAnother" placeholder="영문(대소문자),숫자">
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-sm-5 gy-4 offset-1">
-							<label for="testCodePassword">코드 이름(한글)</label>
-							<input type="text" class="form-control" id="testCodePassword" placeholder="한글, 숫자">
+							<label for="codeNameKor">코드 이름(한글)</label>
+							<input type="text" class="form-control" id="codeNameKor" placeholder="한글, 숫자">
 						</div>
 						<div class="col-sm-5 gy-4">
-							<label for="testCodePasswordCheck">코드 이름(영문)</label>
-							<input type="text" class="form-control" id="testCodePasswordCheck" placeholder="영문(대소문자), 숫자">
+							<label for="codeNameEng">코드 이름(영문)</label>
+							<input type="text" class="form-control" id="codeNameEng" placeholder="영문(대소문자), 숫자">
 						</div>
 					</div>
 					<div class="row">
@@ -188,17 +188,17 @@
 							</select>
 						</div>
 						<div class="col-sm-5 gy-4">
-							<label for="testCodeNameEng">순서</label>
-							<input type="text" class="form-control" id="testCodeNameEng" placeholder="숫자">
+							<label for="codeSequence">순서</label>
+							<input type="text" class="form-control" id="codeSequence" placeholder="숫자">
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-sm-5 gy-4 offset-1">
-							<label for="testCodeNameFirst">설명</label>
-							<textarea class="form-control"></textarea>
+							<label for="codeExplanation">설명</label>
+							<textarea class="form-control" id="codeExplanation" name="codeExplanation"></textarea>
 						</div>
 						<div class="col-sm-5 gy-4">
-							<label for="testCodeNameLast">삭제여부</label>
+							<label for="codeDelNy">삭제여부</label>
 							<select class="form-select" id="codeDelNy">
 								<option>Y</option>
 								<option>N</option>
@@ -207,34 +207,34 @@
 					</div>
 					<div class="row">
 						<div class="col-sm-5 gy-4 offset-1">
-							<label for="testCodeNameEngFirst">예비1 (varchar type)</label>
-							<input type="text" class="form-control" id="testCodeNameEngFirst" placeholder="영문(대소문자), 숫자">
+							<label for="codeSpareVarchar1">예비1 (varchar type)</label>
+							<input type="text" class="form-control" id="codeSpareVarchar1" placeholder="영문(대소문자), 숫자">
 						</div>
 						<div class="col-sm-5 gy-4">
-							<label for="testCodeNameEngFirst">예비2 (varchar type)</label>
-							<input type="text" class="form-control" id="testCodeNameEngFirst" placeholder="영문(대소문자), 숫자">
+							<label for="codeSpareVarchar2">예비2 (varchar type)</label>
+							<input type="text" class="form-control" id="codeSpareVarchar2" placeholder="영문(대소문자), 숫자">
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-sm-5 gy-4 offset-1">
-							<label for="testCodeNameEngFirst">예비3 (varchar type)</label>
-							<input type="text" class="form-control" id="testCodeNameEngFirst" placeholder="영문(대소문자), 숫자">
+							<label for="codeSpareVarchar3">예비3 (varchar type)</label>
+							<input type="text" class="form-control" id="codeSpareVarchar3" placeholder="영문(대소문자), 숫자">
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-sm-5 gy-4 offset-1">
-							<label for="testCodeNameEngFirst">예비1 (int type)</label>
-							<input type="text" class="form-control" id="testCodeNameEngFirst" placeholder="숫자">
+							<label for="codeSpareInt1">예비1 (int type)</label>
+							<input type="text" class="form-control" id="codeSpareInt1" placeholder="숫자">
 						</div>
 						<div class="col-sm-5 gy-4">
-							<label for="testCodeNameEngFirst">예비2 (int type)</label>
-							<input type="text" class="form-control" id="testCodeNameEngFirst" placeholder="숫자">
+							<label for="codeSpareInt2">예비2 (int type)</label>
+							<input type="text" class="form-control" id="codeSpareInt2" placeholder="숫자">
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-sm-5 gy-4 offset-1">
-							<label for="testCodeNameEngFirst">예비3 (int type)</label>
-							<input type="text" class="form-control" id="testCodeNameEngFirst" placeholder="숫자">
+							<label for="codeSpareInt3">예비3 (int type)</label>
+							<input type="text" class="form-control" id="codeSpareInt3" placeholder="숫자">
 						</div>
 					</div>
 					<div style="height: 20px;"></div>
