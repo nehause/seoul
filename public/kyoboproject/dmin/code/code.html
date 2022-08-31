@@ -153,75 +153,52 @@
 						<h1>코드 관리</h1>
 						<div class="row" style="height: 20px;"></div>
 					</div>
-					<div class="container-fluid border border-dark">
+					<div class="container-fluid border border-gray">
 						<!-- 빈공간을 위해 col은 10까지만 -->
-						<div class="row">
+						<div class="row" style="margin-top: 10px;">
 							<div class="col-2">
-								<select class="form-select bg-light" name="membernumber" aria-label="membernumber">
-									<option value="" selected>회원번호</option>
-									<option value="asmembernumber">오름차순</option>
-									<option value="dsmembernumber">내림차순</option>
+								<select class="form-select bg-light" id="codeUse" name="codeUse" aria-label="codeUse">
+									<option value="" selected>N</option>
+									<option value="CodeUseAsc">오름차순</option>
+									<option value="CodeUseDes">내림차순</option>
 								</select>
 							</div>
 							<div class="col-2">
-								<select class="form-select bg-light" name="gender" aria-label="gender">
-									<option value="" selected>성별</option>
-									<option value="man">남자</option>
-									<option value="woman">여자</option>
+								<select class="form-select bg-light" id="codeDoc" name="codeDoc" aria-label="codeDoc"> <!-- doc = "day of correction" -->
+									<option value="" selected>수정일</option>
+									<option value="codeDocAsc">오름차순</option>
+									<option value="codeDocDes">내림차순</option>
 								</select>
 							</div>
 							<div class="col-2">
-								<select class="form-select bg-light" name="grade" aria-label="grade">
-									<option value=""  selected>회원등급</option>
-									<option value="asgrade">오름차순</option>
-									<option value="dsgrade">내림차순</option>
-								</select>
+								<input type="text" class="form-control" id="codeDos" name="codeDos" placeholder="시작일"> <!-- dos = "day of start" -->
 							</div>
 							<div class="col-2">
-								<select class="form-select bg-light" name="birthday" aria-label="birthday">
-									<option value="" selected>생일</option>
-									<option value="asbirthday">오름차순</option>
-									<option value="dsbirthday">내림차순</option>
-								</select>
-							</div>	
-							<div class="col-2">
-								<select class="form-select bg-light" name="joinday" aria-label="joinday">
-									<option value="" selected>가입일</option>
-									<option value="asjoinday">오름차순</option>
-									<option value="dsjoinday">내림차순</option>
-								</select>
-							</div>
-							<div class="col-2">
-								<select class="form-select bg-light" name="finallogin" aria-label="finallogin">
-									<option value="" selected>최종 로그인</option>
-									<option value="asfinallogin">오름차순</option>
-									<option value="dsfinallogin">내림차순</option>
-								</select>
+								<input type="text" class="form-control" id="codeDoe" name="codeDoe" placeholder="종료일"> <!-- doe = "day of end" -->
 							</div>
 						</div>
-						<div class="row" style="height: 20px;"></div>
-						<div class="row">
-							<div class="col-2">
-								<select class="form-select bg-light" name="Response" aria-label="Response">
-									<option value="" selected>수신 동의</option>
-									<option value="Responseyes">O</option>
-									<option value="Responseno">X</option>
-								</select>
-							</div>
+						<div class="row" style="height: 10px;"></div>
+						<div class="row" style="margin-bottom: 10px;">
 							<form class="d-flex" role="search">
-								<select class="form-select bg-light" aria-label="selectsearch" style="width: 120px; margin-left:12px; margin-right: 20px;">
-									<option selected>검색기준</option>
-									<option value="idword">아이디</option>
-									<option value="name">이름</option>
-									<option value="moblie">전화번호</option>
-								</select>
-								<input class="form-control" type="search" placeholder="Search" aria-label="Search" style="width:300px; margin-right: 10px;">
-								<button class="col-1 btn btn-outline-dark" type="submit" style="width: 40px; margin-right: 10px;">
-									<i class="fa fa-search" aria-hidden="true"></i>
-								</button>
-								<button class="col-1 btn btn-warning" type="reset" style="width: 40px; margin-right: 10px;">
-									<i class="fa-solid fa-arrow-rotate-right"></i>
-								</button>
+								<div class="col-lg-2">
+									<select class="form-select bg-light" id="codeSearchType" name="codeSearchType" aria-label="selectsearch">
+										<option selected>검색기준</option>
+										<option value="typeCode">코드그룹 코드</option>
+										<option value="typeNameKor">코드그룹 이름(한글)</option>
+										<option value="typeNameEng">코드그룹 이름(영문)</option>
+									</select>
+								</div>
+								<div class="col-lg-2">
+									<input type="search" class="form-control" id="codeSearchValue" name="codeSearchValue" placeholder="검색어" aria-label="Search" >
+								</div>
+								<div class="col-lg-2">
+									<button class="col-1 btn btn-outline-dark" type="submit" style="width: 40px; margin-right: 10px;">
+										<i class="fa fa-search" aria-hidden="true"></i>
+									</button>
+									<button class="col-1 btn btn-warning" type="reset" style="width: 40px; margin-right: 10px;">
+										<i class="fa-solid fa-arrow-rotate-right"></i>
+									</button>
+								</div>
 							</form>	
 						</div>
 					</div>
@@ -233,18 +210,18 @@
 										<span>total: 42</span>
 									</div>
 									<div style="float:right;">
-										<select style="width: 50px;">
-											<option>10</option>
-											<option>15</option>
-											<option>20</option>
-											<option>25</option>
+										<select class="form-select" id="showBoard" name="showBoard">
+											<option value="10">10</option>
+											<option value="15">15</option>
+											<option value="20">20</option>
+											<option value="25">25</option>
 										</select>
 									</div>
 								</caption>
 								<thead>
 									<tr style="background-color: black">
 										<td class="checkboxsize"> 
-											<input class="form-check-input" type="checkbox" name="allmembercheck" value="allmemberchecked" onclick="selectall(this);">
+											<input class="form-check-input" type="checkbox" name="allCodeCheck" value="allCodeChecked" onclick="selectAll(this);">
 										</td>
 										<th>#</th>
 										<th>코드그룹 코드</th>
@@ -262,7 +239,7 @@
 								<tbody>
 									<tr>
 										<td>
-											<input class="form-check-input" type="checkbox" name="membercheck" value="memberchecked" onclick="checkSelectAll();">
+											<input class="form-check-input" type="checkbox" name="codeCheck" value="codeChecked" onclick="checkSelectAll();">
 										</td>
 										<td>1</td>
 										<td>1</td>
@@ -278,7 +255,7 @@
 									</tr>
 									<tr>
 										<td>
-											<input class="form-check-input" type="checkbox" name="membercheck" value="memberchecked" onclick="checkSelectAll();">
+											<input class="form-check-input" type="checkbox" name="codeCheck" value="codeChecked" onclick="checkSelectAll();">
 										</td>
 										<td>1</td>
 										<td>1</td>
@@ -294,7 +271,7 @@
 									</tr>
 									<tr>
 										<td>
-											<input class="form-check-input" type="checkbox" name="membercheck" value="memberchecked" onclick="checkSelectAll();">
+											<input class="form-check-input" type="checkbox" name="codeCheck" value="codeChecked" onclick="checkSelectAll();">
 										</td>
 										<td>1</td>
 										<td>1</td>
@@ -310,7 +287,7 @@
 									</tr>
 									<tr>
 										<td>
-											<input class="form-check-input" type="checkbox" name="membercheck" value="memberchecked" onclick="checkSelectAll();">
+											<input class="form-check-input" type="checkbox" name="codeCheck" value="codeChecked" onclick="checkSelectAll();">
 										</td>
 										<td>1</td>
 										<td>1</td>
@@ -326,7 +303,7 @@
 									</tr>
 									<tr>
 										<td>
-											<input class="form-check-input" type="checkbox" name="membercheck" value="memberchecked" onclick="checkSelectAll();">
+											<input class="form-check-input" type="checkbox" name="codeCheck" value="codeChecked" onclick="checkSelectAll();">
 										</td>
 										<td>1</td>
 										<td>1</td>
@@ -344,29 +321,29 @@
 							</table>
 							<div class="d-flex justify-content-center">
 								<nav aria-label="Page navigation example">
-								<ul class="pagination">
-									<li class="page-item"><a class="page-link" href="#"><<</a></li>
-									<li class="page-item"><a class="page-link" href="#"><</a></li>
-									<li class="page-item active"><a class="page-link" href="#">1</a></li>
-									<li class="page-item"><a class="page-link" href="#">2</a></li>
-									<li class="page-item"><a class="page-link" href="#">3</a></li>
-									<li class="page-item"><a class="page-link" href="#">4</a></li>
-									<li class="page-item"><a class="page-link" href="#">5</a></li>
-									<li class="page-item"><a class="page-link" href="#">></a></li>
-									<li class="page-item"><a class="page-link" href="#">>></a></li>
-								</ul>
+									<ul class="pagination">
+										<li class="page-item"><a class="page-link" href="#"><<</a></li>
+										<li class="page-item"><a class="page-link" href="#"><</a></li>
+										<li class="page-item active"><a class="page-link" href="#">1</a></li>
+										<li class="page-item"><a class="page-link" href="#">2</a></li>
+										<li class="page-item"><a class="page-link" href="#">3</a></li>
+										<li class="page-item"><a class="page-link" href="#">4</a></li>
+										<li class="page-item"><a class="page-link" href="#">5</a></li>
+										<li class="page-item"><a class="page-link" href="#">></a></li>
+										<li class="page-item"><a class="page-link" href="#">>></a></li>
+									</ul>
 								</nav>
 							</div>
 							<div>
 								<div style="float: left;">
-									<button type="button" class="btn btn-danger" name="tabledelect" id="tabledelect" data-bs-toggle="modal" data-bs-target="#tabledelectmodal">
+									<button type="button" class="btn btn-danger" name="codeDelect" id="codeDelect" data-bs-toggle="modal" data-bs-target="#codeDelectModal">
 										<i class="fa-solid fa-trash"></i> 삭제
 									</button>
-									<div class="modal fade" id="tabledelectmodal" tabindex="-1" aria-labelledby="tabledelectmodallabel" aria-hidden="true">
+									<div class="modal fade" id="codeDelectModal" tabindex="-1" aria-labelledby="#codeDelectModalLabel" aria-hidden="true">
 										<div class="modal-dialog">
 											<div class="modal-content">
 												<div class="modal-header">
-													<h5 class="modal-title" id="tabledelectmodalLabel">테이블에서 삭제하시겠습니까?</h5>
+													<h5 class="modal-title" id="codeDelectModalLabel">테이블에서 삭제하시겠습니까?</h5>
 													<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 												</div>
 												<div class="modal-body">
@@ -383,14 +360,14 @@
 											</div>
 										</div>
 									</div>
-									<button type="button" class="btn btn-outline-danger" id="listdelect" data-bs-toggle="modal" data-bs-target="#listdelectmodal">
+									<button type="button" class="btn btn-outline-danger" id="codeListDelect" data-bs-toggle="modal" data-bs-target="#codeListDelectModal">
 										<i class="fa-regular fa-trash-can"></i> 삭제
 									</button>
-									<div class="modal fade" id="listdelectmodal" tabindex="-1" aria-labelledby="listdelectmodallabel" aria-hidden="true">
+									<div class="modal fade" id="codeListDelectModal" tabindex="-1" aria-labelledby="codeListDelectLabel" aria-hidden="true">
 										<div class="modal-dialog">
 											<div class="modal-content">
 												<div class="modal-header">
-													<h5 class="modal-title" id="listdelectmodalLabel">리스트에서 삭제하시겠습니까?</h5>
+													<h5 class="modal-title" id="codeListDelectModalLabel">리스트에서 삭제하시겠습니까?</h5>
 													<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 												</div>
 												<div class="modal-body">
@@ -426,11 +403,11 @@
 	<script type="text/javascript">
 		function checkSelectAll()  {
 
-			const checkboxes = document.querySelectorAll('input[name="membercheck"]');
+			const checkboxes = document.querySelectorAll('input[name="codeCheck"]');
 
-			const checked = document.querySelectorAll('input[name="membercheck"]:checked');
+			const checked = document.querySelectorAll('input[name="codeCheck"]:checked');
 
-			const selectAll = document.querySelector('input[name="allmembercheck"]');
+			const selectAll = document.querySelector('input[name="allCodeCheck"]');
 			  
 			if(checkboxes.length === checked.length)  {
 			  selectAll.checked = true;
@@ -439,12 +416,8 @@
 			}
 			
 		}
-		function logOut() {
-			location.href='memberLoginForm.html';
-		}
-		
-		function selectall(selectall)  {
-			const checkboxes = document.getElementsByName('membercheck');
+		function selectAll(selectall)  {
+			const checkboxes = document.getElementsByName('codeCheck');
 			
 			checkboxes.forEach((checkbox) => {
 		    checkbox.checked = selectall.checked
