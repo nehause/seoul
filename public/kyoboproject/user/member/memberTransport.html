@@ -435,19 +435,20 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 		</div>
 	</form>
 	
+	<!-- start modal area -->
 	<div class="modal fade" id="delectTransportModal" tabindex="-1" aria-labelledby="delectTransportModalLabel" aria-hidden="true">
 	  <div class="modal-dialog">
 	    <div class="modal-content">
 	      <div class="modal-header">
-	        <h5 class="modal-title" id="delectTransportModalLabel">Modal title</h5>
-	        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+	        <h5 class="modal-title" id="delectTransportModalLabel">삭제하시겠습니까?</h5>
+	        <button type="button" class="border-0" style="background-color: white;" data-dismiss="modal"><i class="fa-solid fa-xmark fa-2x" style="color:gray"></i></button>
 	      </div>
 	      <div class="modal-body">
-	        ...
+	        <span>선택된 주소 정보가 삭제됩니다. 삭제하시겠습니까?</span>
 	      </div>
 	      <div class="modal-footer">
-	        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-	        <button type="button" class="btn btn-primary">Save changes</button>
+	        <button type="button" class="genric-btn default border-0" data-dismiss="modal">닫기</button>
+	        <button type="button" class="genric-btn danger" onclick="delectTransport();">삭제</button>
 	      </div>
 	    </div>
 	  </div>
