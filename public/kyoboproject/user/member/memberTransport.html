@@ -188,7 +188,7 @@
 	                    		<span>입력된 주소 </span> <span><b>1개</b></span>
 	                    	</div>
 	                    	<div class="col-lg-3 offset-6">
-	                    		<button type="button" class="genric-btn default" id="modPasswordFormSubmit" data-toggle="modal" data-target="#addTransportModal"> 
+	                    		<button type="button" class="genric-btn default" id="regTrasport" data-toggle="modal" data-target="#regTransportModal"> 
                    					<i class="fa-solid fa-caret-right"></i> 새로운 주소 추가
                 				</button>
                 			</div>
@@ -252,7 +252,7 @@
 	                    <button type="button" class="genric-btn default" style="float:left;" id="modPasswordFormSubmit" onclick="modPasswordSubmit();"> 
                    			<i class="fa-solid fa-caret-right"></i> 기본주소 설정
                 		</button>
-                   		<button type="button" class="genric-btn primary col-lg-2" style="float:right;" id="modPasswordFormSubmit" onclick="modPasswordSubmit();"> 
+                   		<button type="button" class="genric-btn primary col-lg-2" style="float:right;" id="modTransport" data-toggle="modal" data-target="#modTransportModal"> 
                    			<i class="fa-solid fa-pencil"></i> 수정
                 		</button>
                 		<button type="button" class="genric-btn danger col-lg-2" style="float:right; margin-right:10px;" data-toggle="modal" data-target="#delectTransportModal" id="modPasswordFormSubmit" onclick="modPasswordSubmit();"> 
@@ -360,13 +360,13 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	</footer>
 	<!-- End footer Area -->
 	
-	<!-- start modal area -->
-	<form name="addTransportForm" method="get" action="memberTransport.html" id="addTransportForm">
-		<div class="modal fade" id="addTransportModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="addTransportModalLabel" aria-hidden="true">
+	<!-- start new Transport modal area -->
+	<form name="regTransportForm" method="get" action="memberTransport.html" id="addTransportForm">
+		<div class="modal fade" id="regTransportModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="regTransportModalLabel" aria-hidden="true">
 		  <div class="modal-dialog modal-dialog-centered">
 		    <div class="modal-content">
 		      <div class="modal-header">
-		        <h5 class="modal-title" id="addTransportModalLabel">새로운 주소 입력</h5>
+		        <h5 class="modal-title" id="regTransportModalLabel">새로운 주소 입력</h5>
 		        <button type="button" class="border-0" style="background-color: white;" data-dismiss="modal"><i class="fa-solid fa-xmark fa-2x" style="color:gray"></i></button>
 		      </div>
 		      <div class="modal-body">
@@ -376,7 +376,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 		        			<b>이름</b>
 		        		</div>
 		        		<div class="col-lg-9">
-		        			<input type="text" class="form-control col-lg-4" id="addTransportName" name="addTransportName">
+		        			<input type="text" class="form-control col-lg-4" id="regTransportName" name="regTransportName">
 		        		</div>
 		        	</div>
 		        	<div class="row marginSpace">
@@ -384,10 +384,10 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 		        			<b>주소</b>
 		        		</div>
 		        		<div class="col-lg-9">
-		        			<input type="text" class="form-control col-lg-4" style="display: inline;" id="addTransportZipCode" name="addTransportZipCode">
-			        		<input type="button" class="form-control genric-btn primary col-lg-4" id="addTransportSearch" name="addTransportAddressSearch" value="주소검색">
-		        			<input type="text" class="form-control" id="addTransportAddress" name="addTransportAddress">
-		        			<input type="text" class="form-control" id="addTransportAddressDetail" name="addTransportAddressDetail">
+		        			<input type="text" class="form-control col-lg-4" style="display: inline;" id="regTransportZipCode" name="regTransportZipCode">
+			        		<input type="button" class="form-control genric-btn primary col-lg-4" id="regTransportSearch" name="regTransportAddressSearch" value="주소검색">
+		        			<input type="text" class="form-control" id="regTransportAddress" name="regTransportAddress">
+		        			<input type="text" class="form-control" id="regTransportAddressDetail" name="regTransportAddressDetail">
 		        		</div>
 		        	</div>
 		        	<div class="row marginSpace">
@@ -395,16 +395,16 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 		        			<b>전화번호</b>
 		        		</div>
 		        		<div class="col-lg-9">
-		        			<select class="country_select col-lg-3" style="display: inline;" id="addTransportHomeStart" name="addTransportHomeStart">
+		        			<select class="country_select col-lg-3" style="display: inline;" id="regTransportHomeStart" name="regTransportHomeStart">
                                 <option value=" 02">02</option>
                                 <option value="031">031</option>
                                 <option value="032">032</option>
                                 <option value="033">033</option>
                             </select>
                             <span class="col-lg-1"> - </span>
-                            <input type="text" class="form-control col-lg-3" style="display: inline;" id="addTransportHomeCenter" name="addTransportHomeCenter">
+                            <input type="text" class="form-control col-lg-3" style="display: inline;" id="regTransportHomeCenter" name="regTransportHomeCenter">
                             <span class="col-lg-1"> - </span>
-			        		<input type="text" class="form-control col-lg-3" style="display: inline;" id="addTransportHomeEnd" name="addTransportHomeEnd">
+			        		<input type="text" class="form-control col-lg-3" style="display: inline;" id="regTransportHomeEnd" name="regTransportHomeEnd">
 		        		</div>
 		        	</div>
 		        	<div class="row marginSpace">
@@ -412,28 +412,105 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 		        			<b>핸드폰</b>
 		        		</div>
 		        		<div class="col-lg-9">
-		        			<select class="country_select col-lg-3" id="addTransportNumberStart" name="addTransportNumberStart">
+		        			<select class="country_select col-lg-3" id="regTransportNumberStart" name="regTransportNumberStart">
                                  <option value="010">010</option>
                                  <option value="011">011</option>
                                  <option value="017">017</option>
                                  <option value="019">019</option>
                              </select>
                              <span class="col-lg-1"> - </span>
-                            <input type="text" class="form-control col-lg-3" style="display: inline;" id="addTransportNumberCenter" name="addTransportNumberCenter">
+                            <input type="text" class="form-control col-lg-3" style="display: inline;" id="regTransportNumberCenter" name="regTransportNumberCenter">
                             <span class="col-lg-1"> - </span>
-			        		<input type="text" class="form-control col-lg-3" style="display: inline;" id="addTransportNumberEnd" name="addTransportNumberEnd">
+			        		<input type="text" class="form-control col-lg-3" style="display: inline;" id="regTransportNumberEnd" name="regTransportNumberEnd">
 		        		</div>
 		        	</div>
 	        	</div>
 		      </div>
 		      <div class="modal-footer">
 		        <button type="button" class="genric-btn default border-0" data-dismiss="modal">닫기</button>
-		        <button type="button" class="genric-btn primary" onclick="addTransportSubmit();">등록</button>
+		        <button type="button" class="genric-btn primary" onclick="regTransportSubmit();">등록</button>
 		      </div>
 		    </div>
 		  </div>
 		</div>
 	</form>
+	<!-- end new Transport modal area -->
+	
+	<!-- start new Transport modal area -->
+	<form name="modTransportForm" method="get" action="memberTransport.html" id="modTransportForm">
+		<div class="modal fade" id="modTransportModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="modTransportModalLabel" aria-hidden="true">
+		  <div class="modal-dialog modal-dialog-centered">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <h5 class="modal-title" id="modTransportModalLabel">주소 수정</h5>
+		        <button type="button" class="border-0" style="background-color: white;" data-dismiss="modal"><i class="fa-solid fa-xmark fa-2x" style="color:gray"></i></button>
+		      </div>
+		      <div class="modal-body">
+		        <div class="col-lg-12">
+		        	<div class="row marginSpace">
+		        		<div class="col-lg-3 textCenter">
+		        			<b>이름</b>
+		        		</div>
+		        		<div class="col-lg-9">
+		        			<input type="text" class="form-control col-lg-4" id="modTransportName" name="modTransportName">
+		        		</div>
+		        	</div>
+		        	<div class="row marginSpace">
+		        		<div class="col-lg-3 allCenter">
+		        			<b>주소</b>
+		        		</div>
+		        		<div class="col-lg-9">
+		        			<input type="text" class="form-control col-lg-4" style="display: inline;" id="modTransportZipCode" name="modTransportZipCode">
+			        		<input type="button" class="form-control genric-btn primary col-lg-4" id="modTransportSearch" name="modTransportAddressSearch" value="주소검색">
+		        			<input type="text" class="form-control" id="modTransportAddress" name="modTransportAddress">
+		        			<input type="text" class="form-control" id="modTransportAddressDetail" name="modTransportAddressDetail">
+		        		</div>
+		        	</div>
+		        	<div class="row marginSpace">
+		        		<div class="col-lg-3 textCenter">
+		        			<b>전화번호</b>
+		        		</div>
+		        		<div class="col-lg-9">
+		        			<select class="country_select col-lg-3" style="display: inline;" id="modTransportHomeStart" name="modTransportHomeStart">
+                                <option value=" 02">02</option>
+                                <option value="031">031</option>
+                                <option value="032">032</option>
+                                <option value="033">033</option>
+                            </select>
+                            <span class="col-lg-1"> - </span>
+                            <input type="text" class="form-control col-lg-3" style="display: inline;" id="modTransportHomeCenter" name="modTransportHomeCenter">
+                            <span class="col-lg-1"> - </span>
+			        		<input type="text" class="form-control col-lg-3" style="display: inline;" id="modTransportHomeEnd" name="modTransportHomeEnd">
+		        		</div>
+		        	</div>
+		        	<div class="row marginSpace">
+		        		<div class="col-lg-3 textCenter">
+		        			<b>핸드폰</b>
+		        		</div>
+		        		<div class="col-lg-9">
+		        			<select class="country_select col-lg-3" id="modTransportNumberStart" name="modTransportNumberStart">
+                                 <option value="010">010</option>
+                                 <option value="011">011</option>
+                                 <option value="017">017</option>
+                                 <option value="019">019</option>
+                             </select>
+                             <span class="col-lg-1"> - </span>
+                            <input type="text" class="form-control col-lg-3" style="display: inline;" id="modTransportNumberCenter" name="modTransportNumberCenter">
+                            <span class="col-lg-1"> - </span>
+			        		<input type="text" class="form-control col-lg-3" style="display: inline;" id="modTransportNumberEnd" name="modTransportNumberEnd">
+		        		</div>
+		        	</div>
+	        	</div>
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="genric-btn default border-0" data-dismiss="modal">닫기</button>
+		        <button type="button" class="genric-btn primary" onclick="modTransportSubmit();">등록</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+	</form>
+	<!-- end new Transport modal area -->
 	
 	<!-- start modal area -->
 	<div class="modal fade" id="delectTransportModal" tabindex="-1" aria-labelledby="delectTransportModalLabel" aria-hidden="true">
@@ -459,8 +536,11 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 		function modCheckSubmit() {
 				document.getElementById("memberModCheckForm").submit();
 			}
-		function addTransportSubmit() {
-			document.getElementById("addTransportForm").submit();
+		function regTransportSubmit() {
+			document.getElementById("regTransportForm").submit();
+		}
+		function modTransportSubmit() {
+			document.getElementById("modTransportForm").submit();
 		}
 	</script>
 	<script src="../../template/karma/js/vendor/jquery-2.2.4.min.js"></script>
