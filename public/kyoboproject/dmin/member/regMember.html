@@ -208,16 +208,19 @@
 					</div>
 					<div class="row">
 						<div class="col-sm-5 gy-4 offset-1">
+							<div style="padding-bottom: 10px;">
+								성별
+							</div>
+							<input type="radio" class="col-sm-1" id="regGenderWoman" name="regGender" value="woman">
+							<label for="regGenderWoman">남성</label>
+							<input type="radio" class="col-sm-1" id="regGenderWoman" name="regGender" value="woman">
+							<label for="regGenderWoman">여성</label>
+						</div>
+						<div class="col-sm-5 gy-4">
 							<label for="codeSequence">생일</label>
 							<input type="text" class="form-control" id="codeSequence" placeholder="숫자">
 						</div>
-						<div class="col-sm-5 gy-4">
-							<label for="testCodeName">성별</label>
-							<select class="form-select" id="codeUseNy">
-								<option>남자</option>
-								<option>여자</option>
-							</select>
-						</div>
+						
 					</div>
 					<div class="row">
 						<div class="col-sm-5 gy-4 offset-1">
@@ -241,12 +244,6 @@
 					</div>
 					<div class="row">
 						<div class="col-sm-5 gy-4 offset-1">
-							<label for="codeSpareVarchar3">우편번호</label>
-							<input type="text" class="form-control" id="codeSpareVarchar3" placeholder="영문(대소문자), 숫자">
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-sm-5 gy-4 offset-1">
 							<label for="codeSpareInt1">주소</label>
 							<input type="text" class="form-control" id="codeSpareInt1" placeholder="숫자">
 						</div>
@@ -257,8 +254,44 @@
 					</div>
 					<div class="row">
 						<div class="col-sm-5 gy-4 offset-1">
+							<div style="padding-bottom: 10px;">
+                                <span>개인정보 유효기간</span>
+                            </div>
+                            <input type="radio" class="col-sm-1" id="regPrivacy1" name="regPrivacy" value="1">
+                            <label for="regPrivacy1">1년</label>
+                       
+                            <input type="radio" class="col-sm-1" id="regPrivacy2" name="regPrivacy" value="2">
+                            <label for="regPrivacy2">3년</label>
+                        
+                            <input type="radio" class="col-sm-1" id="regPrivacy3" name="regPrivacy" value="3">
+                            <label for="regPrivacy3">5년</label>
+                 
+                            <input type="radio" class="col-sm-1" id="regPrivacy4" name="regPrivacy" value="4">
+                            <label for="regPrivacy4">탈퇴시까지</label>
+                        </div>
+						<div class="col-sm-5 gy-4">
+                              <div style="padding-bottom: 10px;">
+                                   <input type="checkbox" id="adAllReceive" name="adAllReceive" value="adAllReceive" onclick="selectAll(this);">
+                                   <label for="adAllReceive" style="font-weight: bolder;">광고 전체 수신 동의</label>
+                               </div>
+                               <div style="display:inline;">
+                                   <input type="checkbox" id="adEmailReceive" name="adReceive" onclick="checkSelectAll();">
+                                   <label for="adEmailReceive">이메일 수신</label>
+                               </div>
+                               <div style="display:inline; margin-left: 20px;">
+                                   <input type="checkbox" id="adKakaoReceive" name="adReceive" onclick="checkSelectAll();">
+                                   <label for="adKakaoReceive">카카오톡 수신</label>
+                               </div>
+                               <div style="display:inline; margin-left: 20px;">
+                                   <input type="checkbox" id="adSmsReceive" name="adReceive" onclick="checkSelectAll();">
+                                   <label for="adSmsReceive">SMS 수신 동의</label>
+                               </div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-5 gy-4 offset-1"
 							<label for="codeSpareInt3">적립금</label>
-							<input type="text" class="form-control" id="codeSpareInt3" placeholder="숫자">
+							<input type="text" class="form-control" id="codeSpareInt3" placeholder="숫자" disable>
 						</div>
 					</div>
 					<div style="height: 20px;"></div>
@@ -284,7 +317,29 @@
 			</div>
 		</div>
 	</form>
+	<script type="text/javascript">
+		function checkSelectAll()  {
 
+			const checkboxes = document.querySelectorAll('input[name="adReceive"]');
+
+			const checked = document.querySelectorAll('input[name="adReceive"]:checked');
+
+			const selectAll = document.querySelector('input[name="adAllReceive"]');
+			  
+			if(checkboxes.length === checked.length)  {
+			  selectAll.checked = true;
+			}else {
+			  selectAll.checked = false;
+			}
+		}
+		function selectAll(selectAll)  {
+			const checkboxes = document.getElementsByName('adReceive');
+			
+			checkboxes.forEach((checkbox) => {
+		    checkbox.checked = selectAll.checked
+		  })
+		}
+	</script>
 <!-- end -->
 	<script src="../js/bootStrapSidebar.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
     <script src="../js/sidebar.js"></script>
